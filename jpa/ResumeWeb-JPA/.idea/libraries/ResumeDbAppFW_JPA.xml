@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ResumeDbAppFW-JPA">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../ResumeDbAppFW-JPA" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../ResumeDbAppFW-JPA/src/main/java" />
+    </SOURCES>
+  </library>
+</component>
