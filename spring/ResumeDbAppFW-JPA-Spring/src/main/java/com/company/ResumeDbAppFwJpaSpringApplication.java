@@ -31,8 +31,13 @@ public class ResumeDbAppFwJpaSpringApplication {
 //					System.out.println("User " + (i + 1) + " - " + user.getName() + " - " + user.getEmail() + " - " + user.getPassword());
 //                }
 
-                System.out.println(userService.getById(1).getName());
-                System.out.println(userService.getByEmail("elvarkhudiev@mail.ru").getName());
+                System.out.println(userService.getAll(null, null, null));
+
+//                User user = new User();
+//                user.setEmail("elvarkhudiev" +
+//                        (userService.getAll(null, null, null).size() + 1)
+//                        + "@mail.ru");
+//                System.out.println(userService.add(user));
 
 //                List<UserSkill> list = userSkillRepo.getAllUserSkill();
 //                System.out.println(list);

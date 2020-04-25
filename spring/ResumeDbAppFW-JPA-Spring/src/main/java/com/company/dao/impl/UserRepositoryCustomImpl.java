@@ -7,21 +7,27 @@ package com.company.dao.impl;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.company.entity.User;
+import com.company.service.impl.UserServiceImpl;
+import com.company.service.inter.UserServiceInter;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 /**
- *
  * @author HP
  */
 
+@Repository
 public class UserRepositoryCustomImpl implements UserRepositoryCustom {
 
     @PersistenceContext
@@ -78,18 +84,71 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
         return null;
     }
 
+    // CriteriaBuilder
     @Override
     public User getByEmail(String email) {
-        Query query = em.createNativeQuery("select * from user where email = ?", User.class);
-        query.setParameter(1, email);
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<User> q1 = cb.createQuery(User.class);
+
+        Root<User> postRoot = q1.from(User.class);
+        CriteriaQuery<User> q2 = q1
+                .where(cb.equal(postRoot.get("email"), email));
+
+        Query query = em.createQuery(q2);
 
         List<User> list = query.getResultList();
-
         if (list.size() == 1) {
             return list.get(0);
         }
+
         return null;
     }
+
+//     JPQL
+//    @Override
+//    public User getByEmail(String email) {
+//        String jpql = "select a from User a where a.email = :e";
+//
+//        Query query = em.createQuery(jpql, User.class);
+//        query.setParameter("e", email);
+//
+//        List<User> list = query.getResultList();
+//
+//        if(list.size() == 1) {
+//            return list.get(0);
+//        }
+//
+//        return null;
+//    }
+
+//     NamedQuery
+//    @Override
+//    public User getByEmail(String email) {
+//        Query query = em.createNamedQuery("User.findByEmail", User.class);
+//        query.setParameter("email", email);
+//
+//        List<User> list = query.getResultList();
+//
+//        if (list.size() == 1) {
+//            return list.get(0);
+//        }
+//
+//        return null;
+//    }
+
+    //     Native SQL
+//    @Override
+//    public User getByEmail(String email) {
+//        Query query = em.createNativeQuery("select * from user where email = ?", User.class);
+//        query.setParameter(1, email);
+//
+//        List<User> list = query.getResultList();
+//
+//        if (list.size() == 1) {
+//            return list.get(0);
+//        }
+//        return null;
+//    }
 
     @Override
     public boolean update(User user) {
@@ -100,9 +159,20 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
     private static BCryptPasswordEncoder crypt = new BCryptPasswordEncoder();
 
     @Override
-    public boolean add(User u) {
-        u.setPassword(crypt.encode(u.getPassword()));
-        em.persist(u);
+    public boolean add(User user) {
+        user.setPassword(crypt.encode(user.getPassword()));
+        Query query = em.createNativeQuery("" +
+                "insert into " +
+                "user (name, surname, email, password, phone) " +
+                "values (?, ?, ?, ?, ?)", User.class);
+        query.setParameter(1, user.getName());
+        query.setParameter(2, user.getSurname());
+        query.setParameter(3, user.getEmail());
+        query.setParameter(4, user.getPassword());
+        query.setParameter(5, user.getPhone());
+
+        query.executeUpdate();
+
         return true;
     }
 
@@ -112,4 +182,16 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
         em.remove(user);
         return true;
     }
+
+//    public Integer getI() {
+//        return 1;
+//    }
+//
+//    public String test() {
+//        Integer i = getI();
+//        System.out.println(i.toString());
+//        System.out.println("test called");
+//
+//        return "test";
+//    }
 }

@@ -23,15 +23,17 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity
 @Table(name = "user")
 @XmlRootElement
-//@NamedQueries({
+@NamedQueries({
 //    @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
 //    @NamedQuery(name = "User.findById", query = "SELECT u FROM User u WHERE u.id = :id"),
 //    @NamedQuery(name = "User.findByName", query = "SELECT u FROM User u WHERE u.name = :name"),
 //    @NamedQuery(name = "User.findBySurname", query = "SELECT u FROM User u WHERE u.surname = :surname"),
-//    @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email"),
+
 //    @NamedQuery(name = "User.findByPhone", query = "SELECT u FROM User u WHERE u.phone = :phone"),
 //    @NamedQuery(name = "User.findByAddress", query = "SELECT u FROM User u WHERE u.address = :address"),
-//    @NamedQuery(name = "User.findByBirthdate", query = "SELECT u FROM User u WHERE u.birthdate = :birthdate")})
+//    @NamedQuery(name = "User.findByBirthdate", query = "SELECT u FROM User u WHERE u.birthdate = :birthdate"),
+    @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email")
+})
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
