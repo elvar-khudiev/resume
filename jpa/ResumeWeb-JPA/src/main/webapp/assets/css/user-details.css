@@ -1,0 +1,88 @@
+body{
+    background-image: url("../images/image3.jpg");
+    background-size: cover;
+    margin: 30px;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+h5{
+    margin: 10px 0 0 0;
+    border: 2px #827e7e solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+label{
+    display: contents;
+}
+
+.dt-container{
+    background-color: #f5eded;
+    opacity: 0.9;
+    margin:35px auto;
+    padding: 20px;
+    border-top-right-radius: 150px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.dt-container div{
+    margin: 25px 0;
+}
+
+.div-image{
+    position: absolute;
+    top: 133px;
+    left: 600px;
+    width: 450px;
+    height: 350px;
+    background-image: url("../images/sorry.png");
+    border: 3px gray solid;
+    border-radius: 15px;
+}
+
+.btn-save{
+    width: 150px;
+    height: 40px;
+    color: #ebe4e4;
+    font-size: 17px;
+    background-color: #4CAF50
+}
+
+.div-side-by-side{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+    float: left;
+}
+
+.div-3{
+    height: 120px;
+}
+
+.birth-date{
+    padding: 0;
+}
+
+.ad {
+    overflow: hidden;
+    background-color: #d0c9c9;
+    padding: 93px 10px;
+    position: fixed;
+    top: 30px;
+    left: 12px;
+    width: 194px;
+}
+
+.ad2 {
+    overflow: hidden;
+    background-color: #d0c9c9;
+    padding: 150px 10px;
+    position: fixed;
+    top: 288px;
+    left: 12px;
+    width: 194px;
+}

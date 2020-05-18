@@ -1,0 +1,57 @@
+body{
+    background-image: url("../images/image1.jpg");
+    background-size: cover;
+}
+
+.user_container{
+    background-color: #f5eded;
+    opacity: 0.9;
+    margin:35px auto;
+    padding: 20px;
+    border-top-right-radius: 200px;
+    width: 70%;
+}
+
+.table{
+    margin-top: 10px;
+    width: 100%;
+    border-color: #847f7f;
+}
+
+.table_user{
+    margin-top: 20px;
+}
+
+.col-5{
+    padding: 0;
+}
+
+.table td{
+    vertical-align: inherit;
+}
+
+.btn_table{
+    margin: 0 5px;
+    padding: 0;
+    width: 38px;
+    height: 40px;
+    border: 1px;
+}
+
+.btn_delete{
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.btn_update{
+    border-radius: 5px;
+    font-size: 27px;
+}
+
+.form-group{
+    width: 270px;
+}
+
+.div-2 {
+    position: absolute;
+}

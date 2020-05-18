@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="ResumeDbAppFW">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../ResumeDbAppFW" />
+      <root url="file://$MAVEN_REPOSITORY$/com/company/ResumeDbAppFW/1.0" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../ResumeDbAppFW/src/main/java" />
+    </SOURCES>
+    <jarDirectory url="file://$MAVEN_REPOSITORY$/com/company/ResumeDbAppFW/1.0" recursive="false" />
+  </library>
+</component>

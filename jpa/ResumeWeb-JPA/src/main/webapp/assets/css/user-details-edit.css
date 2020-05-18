@@ -1,0 +1,84 @@
+body{
+    background-image: url("../images/image2.jpg");
+    background-size: cover;
+    margin: 30px 30px 60px 30px;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.dt-container{
+    background-color: #f5eded;
+    opacity: 0.9;
+    margin:35px auto;
+    padding: 20px;
+    border-top-right-radius: 150px;
+    width: 70%;
+
+    margin: 0 auto;
+}
+
+.dt-container div{
+    margin: 25px 0;
+}
+
+.btn-save{
+    width: 150px;
+    height: 40px;
+    color: #ebe4e4;
+    font-size: 17px;
+    background-color: #4CAF50;
+    position: absolute;
+    right: 523px;
+}
+
+.btn-back{
+    width: 150px;
+    height: 40px;
+    color: #ebe4e4;
+    font-size: 17px;
+    position: relative;
+    left: 270px;
+    bottom: 50px;
+}
+
+.div-side-by-side{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    width: 33%;
+    float: left;
+}
+
+.input-xlarge{
+    margin-top: -10px;
+}
+
+.div-3{
+    height: 120px;
+}
+
+.birth-date{
+    padding: 0 60px;
+}
+
+.ad {
+    overflow: hidden;
+    background-color: #d0c9c9;
+    padding: 93px 10px;
+    position: fixed;
+    top: 30px;
+    left: 12px;
+    width: 194px;
+}
+
+.ad2 {
+    overflow: hidden;
+    background-color: #d0c9c9;
+    padding: 150px 10px;
+    position: fixed;
+    top: 288px;
+    left: 12px;
+    width: 194px;
+}
