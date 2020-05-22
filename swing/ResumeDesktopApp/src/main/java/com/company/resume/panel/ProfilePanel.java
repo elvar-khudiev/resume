@@ -1,19 +1,22 @@
 package com.company.resume.panel;
 
+import com.company.dao.inter.UserDaoInter;
 import com.company.resume.Config;
 import com.company.entity.User;
+import com.company.main.Context;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author HP
  */
 public class ProfilePanel extends javax.swing.JPanel {
+    
+    private UserDaoInter userDao = Context.instanceUserDao();
 
     /**
      * Creates new form ProfilePanel
@@ -21,11 +24,11 @@ public class ProfilePanel extends javax.swing.JPanel {
     public ProfilePanel() {
         initComponents();
     }
-    
+
     public void fillUserComponents() {
         txtAreaProfile.setText(Config.loggedInUser.getProfileDescription());
     }
-    
+
     public void fillUser(User user) {
         user.setProfileDescription(txtAreaProfile.getText());
     }
@@ -41,25 +44,81 @@ public class ProfilePanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaProfile = new javax.swing.JTextArea();
+        btnClear = new javax.swing.JButton();
+        btnSave = new javax.swing.JButton();
+        btnIgnore = new javax.swing.JButton();
 
         txtAreaProfile.setColumns(20);
         txtAreaProfile.setRows(5);
         jScrollPane1.setViewportView(txtAreaProfile);
+
+        btnClear.setText("Clear");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
+
+        btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
+
+        btnIgnore.setText("Ignore Changes");
+        btnIgnore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIgnoreActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnClear)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnIgnore)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnSave)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnIgnore)
+                    .addComponent(btnClear))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        User user = Config.loggedInUser;
+        fillUser(user);
+        userDao.update(user);
+    }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        txtAreaProfile.setText("");
+    }//GEN-LAST:event_btnClearActionPerformed
+
+    private void btnIgnoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgnoreActionPerformed
+        txtAreaProfile.setText(Config.loggedInUser.getProfileDescription());
+    }//GEN-LAST:event_btnIgnoreActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnIgnore;
+    private javax.swing.JButton btnSave;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea txtAreaProfile;
     // End of variables declaration//GEN-END:variables

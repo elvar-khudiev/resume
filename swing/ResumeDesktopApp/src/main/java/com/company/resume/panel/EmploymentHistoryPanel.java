@@ -96,7 +96,7 @@ public class EmploymentHistoryPanel extends javax.swing.JPanel {
         txtAreaDescription = new javax.swing.JTextArea();
         pnlButton = new javax.swing.JPanel();
         btnDelete = new javax.swing.JButton();
-        btnEdit = new javax.swing.JButton();
+        btnSave = new javax.swing.JButton();
         btnAdd = new javax.swing.JButton();
         btnShow = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -159,10 +159,10 @@ public class EmploymentHistoryPanel extends javax.swing.JPanel {
             }
         });
 
-        btnEdit.setText("Edit");
-        btnEdit.addActionListener(new java.awt.event.ActionListener() {
+        btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditActionPerformed(evt);
+                btnSaveActionPerformed(evt);
             }
         });
 
@@ -173,7 +173,7 @@ public class EmploymentHistoryPanel extends javax.swing.JPanel {
             }
         });
 
-        btnShow.setText("Show");
+        btnShow.setText("Show history");
         btnShow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnShowActionPerformed(evt);
@@ -186,20 +186,21 @@ public class EmploymentHistoryPanel extends javax.swing.JPanel {
         pnlButton.setLayout(pnlButtonLayout);
         pnlButtonLayout.setHorizontalGroup(
             pnlButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlButtonLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(btnShow)
-                .addGap(18, 18, 18)
-                .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(2, 2, 2)
-                .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(2, 2, 2)
-                .addComponent(btnEdit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(6, 6, 6))
             .addGroup(pnlButtonLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(pnlButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlButtonLayout.createSequentialGroup()
+                        .addComponent(btnShow, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(2, 2, 2)
+                        .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(2, 2, 2)
+                        .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(6, 6, 6))
+                    .addGroup(pnlButtonLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         pnlButtonLayout.setVerticalGroup(
             pnlButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,7 +208,7 @@ public class EmploymentHistoryPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(pnlButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnShow))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -247,6 +248,9 @@ public class EmploymentHistoryPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        pnlTable.setToolTipText("");
+        pnlTable.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
         pnlTable.setViewportView(tblHistory);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -256,7 +260,7 @@ public class EmploymentHistoryPanel extends javax.swing.JPanel {
             .addComponent(pnlMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlDate, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(pnlButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(pnlTable)
         );
@@ -311,7 +315,7 @@ public class EmploymentHistoryPanel extends javax.swing.JPanel {
         fillTable();
     }//GEN-LAST:event_btnDeleteActionPerformed
 
-    private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
 
         try {
             list = historyDao.getAll();
@@ -350,7 +354,7 @@ public class EmploymentHistoryPanel extends javax.swing.JPanel {
             ex.printStackTrace();
         }
         fillUserComponents(0);
-    }//GEN-LAST:event_btnEditActionPerformed
+    }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowActionPerformed
         fillUserComponents(tblHistory.getSelectedRow());
@@ -360,7 +364,7 @@ public class EmploymentHistoryPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnEdit;
+    private javax.swing.JButton btnSave;
     private javax.swing.JButton btnShow;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblBeginDate;

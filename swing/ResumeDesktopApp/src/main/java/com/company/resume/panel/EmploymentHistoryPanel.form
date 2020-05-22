@@ -19,7 +19,7 @@
           <Component id="pnlMain" alignment="0" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
               <Component id="pnlDate" min="-2" pref="148" max="-2" attributes="0"/>
-              <EmptySpace pref="9" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="pnlButton" min="-2" max="-2" attributes="0"/>
           </Group>
           <Component id="pnlTable" alignment="0" max="32767" attributes="0"/>
@@ -127,21 +127,24 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                  <Component id="btnShow" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnAdd" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                  <Component id="btnDelete" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                  <Component id="btnEdit" max="32767" attributes="0"/>
-                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="btnShow" min="-2" pref="101" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="btnAdd" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Component id="btnDelete" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Component id="btnSave" max="32767" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel1" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -151,7 +154,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="2" attributes="0">
                       <Component id="btnDelete" alignment="2" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="btnEdit" alignment="2" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="btnSave" alignment="2" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="btnAdd" alignment="2" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="btnShow" alignment="2" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -170,12 +173,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnEdit">
+        <Component class="javax.swing.JButton" name="btnSave">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Edit"/>
+            <Property name="text" type="java.lang.String" value="Save"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnAdd">
@@ -188,7 +191,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnShow">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Show"/>
+            <Property name="text" type="java.lang.String" value="Show history"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnShowActionPerformed"/>
@@ -257,6 +260,12 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JScrollPane" name="pnlTable">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Hand Cursor"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>

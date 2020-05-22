@@ -64,21 +64,20 @@
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           <Component id="txtSkill" min="-2" pref="85" max="-2" attributes="0"/>
                           <EmptySpace pref="22" max="32767" attributes="0"/>
                           <Component id="txtPower" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="sliderPower" min="-2" pref="146" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="btnSave" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="btnSave" min="-2" pref="85" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -95,19 +94,19 @@
                       </Group>
                       <Component id="sliderPower" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="btnSave" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="btnDelete" alignment="1" max="32767" attributes="0"/>
-                              <Component id="btnAdd" alignment="1" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="btnAdd" pref="34" max="32767" attributes="0"/>
+                              <Component id="btnDelete" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="25" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="btnSave" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

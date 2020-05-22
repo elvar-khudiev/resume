@@ -7,6 +7,7 @@ package com.company.resume.panel;
 
 import com.company.resume.Config;
 import com.company.dao.inter.CountryDaoInter;
+import com.company.dao.inter.UserDaoInter;
 import com.company.entity.Country;
 import com.company.entity.User;
 import com.company.main.Context;
@@ -21,7 +22,8 @@ import java.util.List;
  */
 public class DetailsPanel extends javax.swing.JPanel {
 
-    CountryDaoInter countryDao = Context.instanceCountryDao();
+    private UserDaoInter userDao = Context.instanceUserDao();
+    private CountryDaoInter countryDao = Context.instanceCountryDao();
 
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -34,7 +36,7 @@ public class DetailsPanel extends javax.swing.JPanel {
 
     public void fillUserComponents() {                   // loggedInUser --> text fields
         fillWindow();
-        
+
         User loggedInUser = Config.loggedInUser;
 
         Date dt = loggedInUser.getBirthDate();
@@ -74,9 +76,14 @@ public class DetailsPanel extends javax.swing.JPanel {
 
     private void fillWindow() {                           // JComboBox dolduruldu
         List<Country> countries = countryDao.getAll();
-        for (Country c : countries) {
-            cbBirthplace.addItem(c);
-            cbNationality.addItem(c);
+        if (cbBirthplace.getItemCount() < countries.size()) {
+            for (Country c : countries) {
+                cbBirthplace.addItem(c);
+                cbNationality.addItem(c);
+                System.out.println("cb size: " + cbBirthplace.getItemCount());
+                System.out.println("birthplace size: " + cbBirthplace.getComponentCount());
+                System.out.println("nationality size: " + cbBirthplace.getComponentCount());
+            }
         }
     }
 
@@ -103,6 +110,8 @@ public class DetailsPanel extends javax.swing.JPanel {
         lblBirthplace = new javax.swing.JLabel();
         lblNationality = new javax.swing.JLabel();
         cbBirthplace = new javax.swing.JComboBox<>();
+        btnSave = new javax.swing.JButton();
+        btnIgnore = new javax.swing.JButton();
         cbNationality = new javax.swing.JComboBox<>();
 
         jScrollPane1.setViewportView(jEditorPane1);
@@ -120,6 +129,26 @@ public class DetailsPanel extends javax.swing.JPanel {
         lblBirthplace.setText("Birthplace");
 
         lblNationality.setText("Nationality");
+
+        cbBirthplace.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbBirthplaceActionPerformed(evt);
+            }
+        });
+
+        btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
+
+        btnIgnore.setText("Ignore changes");
+        btnIgnore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIgnoreActionPerformed(evt);
+            }
+        });
 
         cbNationality.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,13 +170,17 @@ public class DetailsPanel extends javax.swing.JPanel {
                     .addComponent(lblNationality, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblBirthplace, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtBirthdate)
-                    .addComponent(txtAddress)
-                    .addComponent(txtPhone)
-                    .addComponent(txtEmail)
-                    .addComponent(cbBirthplace, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cbNationality, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnlDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(pnlDetailsLayout.createSequentialGroup()
+                        .addComponent(btnIgnore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtBirthdate, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtAddress, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtPhone, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cbBirthplace, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cbNationality, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(209, Short.MAX_VALUE))
         );
         pnlDetailsLayout.setVerticalGroup(
@@ -177,7 +210,11 @@ public class DetailsPanel extends javax.swing.JPanel {
                 .addGroup(pnlDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNationality)
                     .addComponent(cbNationality, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnIgnore, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -192,12 +229,28 @@ public class DetailsPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        User user = Config.loggedInUser;
+        fillUser(user);
+        userDao.update(user);
+    }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void btnIgnoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgnoreActionPerformed
+        fillUserComponents();
+    }//GEN-LAST:event_btnIgnoreActionPerformed
+
     private void cbNationalityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbNationalityActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbNationalityActionPerformed
 
+    private void cbBirthplaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbBirthplaceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbBirthplaceActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIgnore;
+    private javax.swing.JButton btnSave;
     private javax.swing.JComboBox<Country> cbBirthplace;
     private javax.swing.JComboBox<Country> cbNationality;
     private javax.swing.JEditorPane jEditorPane1;

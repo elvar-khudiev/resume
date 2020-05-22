@@ -63,7 +63,7 @@ public class Main extends javax.swing.JFrame {
         panelDetails = new com.company.resume.panel.DetailsPanel();
         panelSkills = new com.company.resume.panel.SkillsPanel();
         panelHistory = new com.company.resume.panel.EmploymentHistoryPanel();
-        jPanel1 = new javax.swing.JPanel();
+        pnlUserInfo = new javax.swing.JPanel();
         pnlUserInfo1 = new javax.swing.JPanel();
         lblName = new javax.swing.JLabel();
         lblSurname = new javax.swing.JLabel();
@@ -137,15 +137,17 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        lblImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Desktop\\Internet Explorer\\photo_2020-02-11_12-28-17.jpg")); // NOI18N
+        pnlImage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\IdeaProjects\\resume\\swing\\ResumeDesktopApp\\src\\main\\java\\com\\company\\resume\\panel\\Images\\image.jpg")); // NOI18N
 
         javax.swing.GroupLayout pnlImageLayout = new javax.swing.GroupLayout(pnlImage);
         pnlImage.setLayout(pnlImageLayout);
         pnlImageLayout.setHorizontalGroup(
             pnlImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlImageLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0)
+                .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 95, Short.MAX_VALUE))
         );
         pnlImageLayout.setVerticalGroup(
             pnlImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,20 +194,20 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlUserInfoLayout = new javax.swing.GroupLayout(pnlUserInfo);
+        pnlUserInfo.setLayout(pnlUserInfoLayout);
+        pnlUserInfoLayout.setHorizontalGroup(
+            pnlUserInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlUserInfoLayout.createSequentialGroup()
                 .addComponent(pnlUserInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlUserInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+        pnlUserInfoLayout.setVerticalGroup(
+            pnlUserInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlUserInfoLayout.createSequentialGroup()
+                .addGroup(pnlUserInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(pnlUserInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlUserInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -217,16 +219,16 @@ public class Main extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(separator)
             .addComponent(tp, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlUserInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlUserInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tp, javax.swing.GroupLayout.PREFERRED_SIZE, 359, Short.MAX_VALUE))
+                .addComponent(tp, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE))
         );
 
         pack();
@@ -239,11 +241,7 @@ public class Main extends javax.swing.JFrame {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
 
         User user = Config.loggedInUser;
-
         fillUser(user);
-        panelProfile.fillUser(user);
-        panelDetails.fillUser(user);
-
         userDao.update(user);
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -298,7 +296,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnHide;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnShow;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblImage;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblSurname;
@@ -307,6 +304,7 @@ public class Main extends javax.swing.JFrame {
     private com.company.resume.panel.ProfilePanel panelProfile;
     private com.company.resume.panel.SkillsPanel panelSkills;
     private javax.swing.JPanel pnlImage;
+    private javax.swing.JPanel pnlUserInfo;
     private javax.swing.JPanel pnlUserInfo1;
     private javax.swing.JPanel pnlUserInfo2;
     private javax.swing.JSeparator separator;

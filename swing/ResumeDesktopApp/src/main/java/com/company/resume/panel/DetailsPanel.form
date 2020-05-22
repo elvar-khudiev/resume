@@ -58,13 +58,18 @@
                       <Component id="lblBirthplace" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="btnIgnore" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnSave" min="-2" pref="57" max="-2" attributes="0"/>
+                      </Group>
                       <Component id="txtBirthdate" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtAddress" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtPhone" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtEmail" alignment="0" max="32767" attributes="0"/>
                       <Component id="cbBirthplace" alignment="0" max="32767" attributes="0"/>
-                      <Component id="cbNationality" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                      <Component id="cbNationality" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="209" max="32767" attributes="0"/>
               </Group>
@@ -103,7 +108,12 @@
                       <Component id="lblNationality" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cbNationality" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="86" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnSave" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="btnIgnore" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="36" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -153,9 +163,28 @@
               <StringArray count="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbBirthplaceActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Country&gt;"/>
           </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnSave">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Save"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnIgnore">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ignore changes"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIgnoreActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="cbNationality">
           <Properties>
