@@ -46,7 +46,7 @@ public class ProfilePanel extends javax.swing.JPanel {
         txtAreaProfile = new javax.swing.JTextArea();
         btnClear = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
-        btnIgnore = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
 
         txtAreaProfile.setColumns(20);
         txtAreaProfile.setRows(5);
@@ -59,6 +59,7 @@ public class ProfilePanel extends javax.swing.JPanel {
             }
         });
 
+        btnSave.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,10 +67,10 @@ public class ProfilePanel extends javax.swing.JPanel {
             }
         });
 
-        btnIgnore.setText("Ignore Changes");
-        btnIgnore.addActionListener(new java.awt.event.ActionListener() {
+        btnCancel.setText("Cancel changes");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIgnoreActionPerformed(evt);
+                btnCancelActionPerformed(evt);
             }
         });
 
@@ -82,7 +83,7 @@ public class ProfilePanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(btnClear)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnIgnore)
+                .addComponent(btnCancel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSave)
                 .addContainerGap())
@@ -90,13 +91,13 @@ public class ProfilePanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnIgnore)
-                    .addComponent(btnClear))
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -110,14 +111,14 @@ public class ProfilePanel extends javax.swing.JPanel {
         txtAreaProfile.setText("");
     }//GEN-LAST:event_btnClearActionPerformed
 
-    private void btnIgnoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgnoreActionPerformed
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         txtAreaProfile.setText(Config.loggedInUser.getProfileDescription());
-    }//GEN-LAST:event_btnIgnoreActionPerformed
+    }//GEN-LAST:event_btnCancelActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnClear;
-    private javax.swing.JButton btnIgnore;
     private javax.swing.JButton btnSave;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea txtAreaProfile;

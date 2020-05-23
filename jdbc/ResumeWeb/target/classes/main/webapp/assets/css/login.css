@@ -1,9 +1,0 @@
-body {
-    background-image: url("../images/image5.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.btn-w-login :hover {
-    text-decoration-line: underline;
-}

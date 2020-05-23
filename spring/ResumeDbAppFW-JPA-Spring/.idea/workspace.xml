@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1362dbc0-5761-45a3-a6ea-121144be181e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeDbAppFW" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeDbAppFW" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/ErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/ErrorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/UserCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/UserCreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/UserDeatilsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/UserDeatilsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/UserDetailsEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/UserDetailsEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/com/company/ResumeWeb/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/webapp/user-create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/webapp/user-create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/webapp/user-details-edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/src/main/webapp/user-details-edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/target/ResumeWeb.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/target/ResumeWeb.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/target/ResumeWeb/user-create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/target/ResumeWeb/user-create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/target/ResumeWeb/user-details-edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/target/ResumeWeb/user-details-edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/ResumeWeb-JPA/controller/ErrorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/ResumeWeb-JPA/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/ResumeWeb-JPA/controller/UserCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserCreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/ResumeWeb-JPA/controller/UserDeatilsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserDeatilsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/ResumeWeb-JPA/controller/UserDetailsEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserDetailsEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/ResumeWeb-JPA/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/ResumeWeb-JPA/filter/JSPFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/filter/JSPFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/ResumeWeb-JPA/filter/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/filter/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/ResumeWeb-JPA/util/ControllerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/util/ControllerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/ResumeWeb-JPA/WEB-INF/classes/com/company/resume/controller/ErrorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/ResumeWeb-JPA/WEB-INF/classes/com/company/resume/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/ResumeWeb-JPA/WEB-INF/classes/com/company/resume/controller/UserCreateController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/ResumeWeb-JPA/WEB-INF/classes/com/company/resume/controller/UserDeatilsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/ResumeWeb-JPA/WEB-INF/classes/com/company/resume/controller/UserDetailsEditController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/ResumeWeb-JPA/WEB-INF/classes/com/company/resume/controller/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/ResumeWeb-JPA/WEB-INF/lib/ResumeDbAppFW-JPA-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/ResumeWeb-JPA/WEB-INF/lib/ResumeDbAppFW-JPA-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/classes/com/company/resume/controller/ErrorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/classes/com/company/resume/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/classes/com/company/resume/controller/UserCreateController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/classes/com/company/resume/controller/UserDeatilsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/classes/com/company/resume/controller/UserDetailsEditController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/target/classes/com/company/resume/controller/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/nb-configuration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/nb-configuration.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/4.2.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/4.2.1/fileContent/annotation-processors.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/4.2.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/4.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/4.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/4.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/4.2.1/taskHistory/fileSnapshots.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/4.2.1/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/4.2.1/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/build/classes/java/main/sample/OAuth2LoginApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/build/classes/java/main/sample/web/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/build/libs/springone2017-demo-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/build/resources/main/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/build/resources/main/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/build/resources/main/templates/userinfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/src/main/java/sample/OAuth2LoginApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/src/main/java/sample/web/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springone2017-demo/src/main/resources/templates/userinfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../swing/ResumeDbApp" beforeDir="false" afterPath="$PROJECT_DIR$/../../swing/ResumeDbApp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../swing/ResumeDesktopApp" beforeDir="false" afterPath="$PROJECT_DIR$/../../swing/ResumeDesktopApp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\HP\Desktop" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1ZLd7yCZSmAiNjACa3xjYwC2jNT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.company" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.company.entity" />
+      <recent name="com.company.service.inter" />
+      <recent name="com.company.service.impl" />
+      <recent name="com.company.dao.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\spring\ResumeDbAppFW-JPA-Spring\src\test" />
+      <recent name="C:\Users\HP\IdeaProjects\spring\ResumeDbAppFW-JPA-Spring\src\main\java\com\company\service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ResumeDbAppFwJpaSpringApplication">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.main.Main" />
+      <module name="ResumeDbAppFW-JPA-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResumeDbAppFwJpaSpringApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.ResumeDbAppFwJpaSpringApplication" />
+      <module name="ResumeDbAppFW-JPA-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="outer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryCustomImplIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ResumeDbAppFW-JPA-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.UserRepositoryCustomImplIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryCustomImplIT.testGetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ResumeDbAppFW-JPA-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.UserRepositoryCustomImplIT" />
+      <option name="METHOD_NAME" value="testGetAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ResumeDbAppFW-JPA-Spring" />
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.testGivenAllParamsGetAllByFilter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ResumeDbAppFW-JPA-Spring" />
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.UserServiceTest" />
+      <option name="METHOD_NAME" value="testGivenAllParamsGetAllByFilter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResumeDbAppFwJpaSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ResumeDbAppFW-JPA-Spring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.ResumeDbAppFwJpaSpringApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResumeDbAppFwJpaSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ResumeDbAppFW-JPA-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="outer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.ResumeDbAppFwJpaSpringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.ResumeDbAppFwJpaSpringApplication" />
+      <item itemvalue="JUnit.UserServiceTest" />
+      <item itemvalue="JUnit.UserServiceTest.testGivenAllParamsGetAllByFilter" />
+      <item itemvalue="JUnit.UserRepositoryCustomImplIT.testGetAll" />
+      <item itemvalue="JUnit.UserRepositoryCustomImplIT" />
+      <item itemvalue="Spring Boot.ResumeDbAppFwJpaSpringApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserRepositoryCustomImplIT" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserRepositoryCustomImplIT.testGetAll" />
+        <item itemvalue="JUnit.UserServiceTest.testGivenAllParamsGetAllByFilter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1362dbc0-5761-45a3-a6ea-121144be181e" name="Default Changelist" comment="" />
+      <created>1584622144220</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584622144220</updated>
+      <workItem from="1584622148188" duration="4420000" />
+      <workItem from="1584681175755" duration="5514000" />
+      <workItem from="1584714168860" duration="1684000" />
+      <workItem from="1584722660857" duration="1637000" />
+      <workItem from="1584800875677" duration="7505000" />
+      <workItem from="1584938498805" duration="8717000" />
+      <workItem from="1584953145302" duration="3518000" />
+      <workItem from="1584965256388" duration="3619000" />
+      <workItem from="1584976117171" duration="4450000" />
+      <workItem from="1585028197942" duration="13154000" />
+      <workItem from="1585047264030" duration="1675000" />
+      <workItem from="1585060059122" duration="891000" />
+      <workItem from="1585135245681" duration="31000" />
+      <workItem from="1585289356815" duration="5865000" />
+      <workItem from="1585313622255" duration="2055000" />
+      <workItem from="1585393636279" duration="1161000" />
+      <workItem from="1585492264264" duration="224000" />
+      <workItem from="1585493382650" duration="1945000" />
+      <workItem from="1585495697115" duration="43000" />
+      <workItem from="1585496454689" duration="65000" />
+      <workItem from="1585496540164" duration="90000" />
+      <workItem from="1585496662345" duration="715000" />
+      <workItem from="1585815232399" duration="2081000" />
+      <workItem from="1586097157623" duration="518000" />
+      <workItem from="1586173462689" duration="366000" />
+      <workItem from="1586272281793" duration="3531000" />
+      <workItem from="1586279777425" duration="54000" />
+      <workItem from="1586349043147" duration="714000" />
+      <workItem from="1586360137802" duration="5724000" />
+      <workItem from="1586366545414" duration="62000" />
+      <workItem from="1586436756094" duration="889000" />
+      <workItem from="1586437696400" duration="206000" />
+      <workItem from="1586501719210" duration="39000" />
+      <workItem from="1586532969823" duration="92000" />
+      <workItem from="1586534422296" duration="4276000" />
+      <workItem from="1586589354202" duration="42000" />
+      <workItem from="1586615851648" duration="2315000" />
+      <workItem from="1586854784382" duration="608000" />
+      <workItem from="1586869417562" duration="658000" />
+      <workItem from="1586880919155" duration="6238000" />
+      <workItem from="1586887394901" duration="567000" />
+      <workItem from="1586940376255" duration="478000" />
+      <workItem from="1587466490045" duration="51000" />
+      <workItem from="1587662358403" duration="3166000" />
+      <workItem from="1587707747597" duration="8649000" />
+      <workItem from="1587724214727" duration="17652000" />
+      <workItem from="1587795855429" duration="3054000" />
+      <workItem from="1588175528946" duration="319000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ResumeDbAppFW_JPA_Spring$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1587715168854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

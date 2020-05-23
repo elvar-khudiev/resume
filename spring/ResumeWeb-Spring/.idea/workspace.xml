@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ResumeWeb-Spring:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7f3a1a05-440f-4a55-a462-265996b5b8ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/IdeaProjects.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeDbAppFW" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeDbAppFW" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/controller/DummyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../swing/ResumeDbApp" beforeDir="false" afterPath="$PROJECT_DIR$/../../swing/ResumeDbApp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../swing/ResumeDesktopApp" beforeDir="false" afterPath="$PROJECT_DIR$/../../swing/ResumeDesktopApp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1ZZEBhKfocJStasyjNU3GtEXMrL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.33962265" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\spring\ResumeWeb-Spring\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\HP\IdeaProjects\spring\ResumeWeb-Spring\src\main\webapp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\spring\ResumeWeb-Spring\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\HP\IdeaProjects\spring\ResumeWeb-Spring\src\main\webapp" />
+      <recent name="C:\Users\HP\IdeaProjects\spring\ResumeWeb-Spring\src\main\resources\static\views" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.31">
+    <configuration name="ResumeApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ResumeWeb-Spring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.ResumeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResumeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ResumeWeb-Spring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.ResumeApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8083/ResumeWeb-Spring/users" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="ResumeWeb-Spring:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ResumeWeb-Spring" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ResumeWeb-Spring" />
+        <option name="HTTP_PORT" value="8083" />
+        <option name="JNDI_PORT" value="1095" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52766" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ResumeWeb-Spring:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ResumeApplication" />
+      <item itemvalue="Spring Boot.ResumeApplication (1)" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.31" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f3a1a05-440f-4a55-a462-265996b5b8ef" name="Default Changelist" comment="" />
+      <created>1585038081285</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585038081285</updated>
+      <workItem from="1585038083959" duration="1022000" />
+      <workItem from="1585039658882" duration="129000" />
+      <workItem from="1585039795563" duration="4504000" />
+      <workItem from="1585059897504" duration="751000" />
+      <workItem from="1585122304636" duration="738000" />
+      <workItem from="1585493391824" duration="3557000" />
+      <workItem from="1586097194184" duration="1743000" />
+      <workItem from="1586151115063" duration="1531000" />
+      <workItem from="1586162571474" duration="3659000" />
+      <workItem from="1586168711371" duration="3276000" />
+      <workItem from="1586186122614" duration="5603000" />
+      <workItem from="1586246691208" duration="18092000" />
+      <workItem from="1586271728035" duration="6021000" />
+      <workItem from="1586333568981" duration="14887000" />
+      <workItem from="1586355060110" duration="3898000" />
+      <workItem from="1586424144951" duration="7763000" />
+      <workItem from="1586619653903" duration="632000" />
+      <workItem from="1586781702358" duration="1445000" />
+      <workItem from="1586783686751" duration="14000" />
+      <workItem from="1586783802413" duration="78000" />
+      <workItem from="1586856049200" duration="159000" />
+      <workItem from="1586883616811" duration="53000" />
+      <workItem from="1586885012676" duration="18000" />
+      <workItem from="1586940214208" duration="1681000" />
+      <workItem from="1587041786737" duration="764000" />
+      <workItem from="1587113911460" duration="4974000" />
+      <workItem from="1587128575347" duration="6384000" />
+      <workItem from="1587287993136" duration="5625000" />
+      <workItem from="1587373052424" duration="4063000" />
+      <workItem from="1587741823253" duration="679000" />
+      <workItem from="1588348691067" duration="3323000" />
+      <workItem from="1588423636405" duration="5236000" />
+      <workItem from="1588432707330" duration="53000" />
+      <workItem from="1588606539207" duration="3700000" />
+      <workItem from="1588676425064" duration="733000" />
+      <workItem from="1588688687930" duration="259000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

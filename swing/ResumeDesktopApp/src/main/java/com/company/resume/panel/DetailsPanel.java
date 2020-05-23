@@ -111,7 +111,7 @@ public class DetailsPanel extends javax.swing.JPanel {
         lblNationality = new javax.swing.JLabel();
         cbBirthplace = new javax.swing.JComboBox<>();
         btnSave = new javax.swing.JButton();
-        btnIgnore = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
         cbNationality = new javax.swing.JComboBox<>();
 
         jScrollPane1.setViewportView(jEditorPane1);
@@ -136,6 +136,7 @@ public class DetailsPanel extends javax.swing.JPanel {
             }
         });
 
+        btnSave.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,10 +144,10 @@ public class DetailsPanel extends javax.swing.JPanel {
             }
         });
 
-        btnIgnore.setText("Ignore changes");
-        btnIgnore.addActionListener(new java.awt.event.ActionListener() {
+        btnCancel.setText("Cancel changes");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIgnoreActionPerformed(evt);
+                btnCancelActionPerformed(evt);
             }
         });
 
@@ -172,7 +173,7 @@ public class DetailsPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(pnlDetailsLayout.createSequentialGroup()
-                        .addComponent(btnIgnore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(txtBirthdate, javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,7 +214,7 @@ public class DetailsPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(pnlDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnIgnore, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
@@ -235,9 +236,9 @@ public class DetailsPanel extends javax.swing.JPanel {
         userDao.update(user);
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void btnIgnoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgnoreActionPerformed
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         fillUserComponents();
-    }//GEN-LAST:event_btnIgnoreActionPerformed
+    }//GEN-LAST:event_btnCancelActionPerformed
 
     private void cbNationalityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbNationalityActionPerformed
         // TODO add your handling code here:
@@ -249,7 +250,7 @@ public class DetailsPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnIgnore;
+    private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnSave;
     private javax.swing.JComboBox<Country> cbBirthplace;
     private javax.swing.JComboBox<Country> cbNationality;

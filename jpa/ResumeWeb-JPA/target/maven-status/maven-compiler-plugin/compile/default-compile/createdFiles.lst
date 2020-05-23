@@ -1,8 +1,0 @@
-com\company\controller\UserDetailsEditController.class
-com\company\controller\LoginController.class
-com\company\controller\UsersController.class
-com\company\resume\filter\JSPFilter.class
-com\company\resume\util\ControllerUtil.class
-com\company\controller\UserDeatilsController.class
-com\company\controller\UserCreateController.class
-com\company\controller\ErrorController.class

@@ -1,0 +1,10 @@
+/collection/CollectionsAPI/target/
+/thread/AppInThread/target/
+/spring/ResumeDbAppFW-JPA-Spring/target/
+/spring/ResumeWeb-Spring/target/
+/rest_api/ResumeRestAPI/target/
+/rest_api/ResumeRestClietn/target/
+/jpa/ResumeDbAppFW-JPA/target/
+/jpa/ResumeWeb-JPA/target/
+/jdbc/ResumeDbAppFW/target/
+/jdbc/ResumeWeb/target/

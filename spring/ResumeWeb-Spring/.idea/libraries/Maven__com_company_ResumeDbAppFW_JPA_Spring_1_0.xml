@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: com.company:ResumeDbAppFW-JPA-Spring:1.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/company/ResumeDbAppFW-JPA-Spring/1.0/ResumeDbAppFW-JPA-Spring-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/company/ResumeDbAppFW-JPA-Spring/1.0/ResumeDbAppFW-JPA-Spring-1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/company/ResumeDbAppFW-JPA-Spring/1.0/ResumeDbAppFW-JPA-Spring-1.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/company/ResumeWeb-Spring/1.0/ResumeWeb-Spring-1.0.war!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/company/ResumeWeb-Spring/1.0/ResumeWeb-Spring-1.0.war!/META-INF/maven/com.company/ResumeWeb-Spring" />
+    </SOURCES>
+  </library>
+</component>
