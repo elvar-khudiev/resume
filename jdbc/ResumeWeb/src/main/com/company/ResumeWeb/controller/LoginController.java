@@ -25,14 +25,12 @@ public class LoginController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
             String email = request.getParameter("email");
             String password = request.getParameter("password");
 
             Admin admin = adminDao.getByEmail(email);
-
-            System.out.println(admin);
 
             if (admin == null) {
                 throw new IllegalArgumentException("User doesn't exist !");

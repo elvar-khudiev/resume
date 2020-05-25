@@ -57,6 +57,8 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        profilePanel1 = new com.company.resume.panel.ProfilePanel();
+        skillsPanel1 = new com.company.resume.panel.SkillsPanel();
         separator = new javax.swing.JSeparator();
         tp = new javax.swing.JTabbedPane();
         panelProfile = new com.company.resume.panel.ProfilePanel();
@@ -228,7 +230,7 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tp, javax.swing.GroupLayout.PREFERRED_SIZE, 385, Short.MAX_VALUE))
+                .addComponent(tp, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE))
         );
 
         pack();
@@ -307,7 +309,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel pnlUserInfo;
     private javax.swing.JPanel pnlUserInfo1;
     private javax.swing.JPanel pnlUserInfo2;
+    private com.company.resume.panel.ProfilePanel profilePanel1;
     private javax.swing.JSeparator separator;
+    private com.company.resume.panel.SkillsPanel skillsPanel1;
     private javax.swing.JTabbedPane tp;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtSurname;

@@ -17,7 +17,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        AdminDaoInter adminDao = Context.instanceAdminDao();
-        adminDao.add(new Admin(1, "Admin1", "Admin01", "admin1@mail.ru", "12345"));
+//        AdminDaoInter adminDao = Context.instanceAdminDao();
+//        adminDao.add(new Admin(1, "Admin1", "Admin01", "admin1@mail.ru", "12345"));
     }
 }
