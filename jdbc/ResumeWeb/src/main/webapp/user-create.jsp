@@ -41,8 +41,6 @@
     </script>
 <body>
 <%
-    if (request.getSession().getAttribute("loggedInUser") != null) {
-
         CountryDaoInter countryDao = com.company.main.Context.instanceCountryDao();
 %>
 <div class="dt-container">
@@ -116,14 +114,5 @@
         <button type="submit" class="btn-back btn btn-secondary" name="action" value="back">Back</button>
     </form>
 </div>
-<%
-} else {
-%>
-
-<center>
-    <h2>ACCESS DENIED</h2>
-</center>
-
-<%}%>
 </body>
 </html>

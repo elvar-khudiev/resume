@@ -65,6 +65,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
             if (nationalityId != null) {
                 sql += "and u.nationality_id=? ";
             }
+            sql += " ORDER BY id ASC";
 
             PreparedStatement stmt = c.prepareStatement(sql);
 

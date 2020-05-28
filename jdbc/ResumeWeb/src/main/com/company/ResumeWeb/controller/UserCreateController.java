@@ -46,10 +46,6 @@ public class UserCreateController extends HttpServlet {
             String birthPlace = request.getParameter("birthPlace");
             String nationality = request.getParameter("nationality");
 
-            System.out.println("datepicker=" + datepicker);
-            System.out.println("bp=" + birthPlace);
-            System.out.println("nat=" + nationality);
-
             if (datepicker != null && !datepicker.equals("")) {
                 java.sql.Date sqlDate = java.sql.Date.valueOf(datepicker);        // String sql.Date-e chevrilir
                 user.setBirthDate(sqlDate);

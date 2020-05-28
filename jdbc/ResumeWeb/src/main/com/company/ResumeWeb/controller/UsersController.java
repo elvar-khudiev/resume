@@ -25,19 +25,13 @@ public class UsersController extends HttpServlet {
 
         String nationalityIdStr = request.getParameter("nid");
         Integer nationalityId = null;
-        if(nationalityIdStr != null && !nationalityIdStr.trim().isEmpty()) {
+        if (nationalityIdStr != null && !nationalityIdStr.trim().isEmpty()) {
             nationalityId = Integer.parseInt(nationalityIdStr);
         }
 
         List<User> users = userDao.getAll(name, surname, nationalityId);
 
-        if (request.getParameter("delete") == "Delete") {
-            Integer id = Integer.parseInt(request.getParameter("id"));
-            userDao.delete(id);
-        }
-
         request.setAttribute("users", users);
-
         request.getRequestDispatcher("users.jsp").forward(request, response);
     }
 
