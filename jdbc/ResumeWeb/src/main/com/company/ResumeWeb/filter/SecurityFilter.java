@@ -14,7 +14,6 @@ public class SecurityFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
-        System.out.println(req.getRequestURI());
         if (req.getSession().getAttribute("loggedInUser") == null &&
                 !req.getRequestURI().equals("/ResumeWeb/users") &&
                 !req.getRequestURI().equals("/ResumeWeb/user-details") &&
