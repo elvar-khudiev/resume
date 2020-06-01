@@ -53,7 +53,7 @@
         </div>
         <div style="float: left;">
             <%
-                if (request.getSession().getAttribute("loggedInUser") == null) {
+                if (request.getSession().getAttribute("admin") == null) {
             %>
 
             <div class="div-2" style="padding-left: 495px; bottom: 16px;">
@@ -74,7 +74,7 @@
 
             <%
                 }
-                if (request.getSession().getAttribute("loggedInUser") != null) {
+                if (request.getSession().getAttribute("admin") != null) {
             %>
             <div class="div-2" style="bottom: -38px; left: 780px">
                 <form action="user-create" method="GET">
@@ -92,7 +92,7 @@
                 <th>Surname</th>
                 <th>Nationality</th>
                 <%
-                    if (request.getSession().getAttribute("loggedInUser") != null) {
+                    if (request.getSession().getAttribute("admin") != null) {
                 %>
                 <th></th>
                 <th></th>
@@ -112,7 +112,7 @@
                 <td><%=u.getNationality().getNationality() == null ? "N/A" : u.getNationality().getNationality()%>
                 </td>
                 <%
-                    if (request.getSession().getAttribute("loggedInUser") != null) {
+                    if (request.getSession().getAttribute("admin") != null) {
                 %>
                 <td style="width: 1px">
                     <form action="user-details-edit" method="GET">

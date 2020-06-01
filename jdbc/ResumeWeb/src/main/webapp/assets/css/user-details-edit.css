@@ -12,8 +12,6 @@ body{
     padding: 20px;
     border-top-right-radius: 150px;
     width: 70%;
-
-    margin: 0 auto;
 }
 
 .dt-container div{
@@ -40,8 +38,20 @@ body{
     bottom: 50px;
 }
 
+.birthPlace {
+    margin-bottom: -7px;
+}
+
+.nationality {
+    margin-bottom: -7px;
+}
+
+.control-label {
+    margin-top: -5px;
+}
+
 .div-side-by-side{
-    display: flex;
+    display: grid;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -51,14 +61,17 @@ body{
     float: left;
 }
 
-.input-xlarge{
-    margin-top: -10px;
+.input-xlarge {
+    padding: 3px;
+    margin-bottom: 25px;
+    width: 110px;
 }
 
 .div-3{
     height: 120px;
 }
 
-.birth-date{
-    padding: 0 60px;
+#from-datepicker {
+    padding-left: 5px;
+    margin-bottom: 22px;
 }

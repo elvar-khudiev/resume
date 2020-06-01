@@ -151,7 +151,6 @@ public class AdminDaoImpl extends AbstractDAO implements AdminDaoInter {
     public boolean add(Admin admin) {
 
         EntityManager em = em();
-
         em.getTransaction().begin();
 
         admin.setPassword(crypt.hashToString(4, admin.getPassword().toCharArray()));
@@ -161,11 +160,9 @@ public class AdminDaoImpl extends AbstractDAO implements AdminDaoInter {
         query.setParameter(2, admin.getSurname());
         query.setParameter(3, admin.getEmail());
         query.setParameter(4, admin.getPassword());
-
         query.executeUpdate();
 
         em.getTransaction().commit();
-
         em.close();
         return true;
     }

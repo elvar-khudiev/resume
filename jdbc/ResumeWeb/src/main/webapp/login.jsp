@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="assets/css/login.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
 </head>
 <body>
 <div class="cont">
@@ -21,13 +21,6 @@
                 <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 5px; border-radius: 0;">Sign in</button>
 <%--                if (getAttribute == )--%>
 <%--                ....--%>
-            </form>
-            <form action="users" method="POST">
-                <button class="btn-w-login" name="action" value="withoutLogin" style="border: none; background: none; cursor: pointer;">
-                    <small>
-                        Without login
-                    </small>
-                </button>
             </form>
         </div>
     </center>

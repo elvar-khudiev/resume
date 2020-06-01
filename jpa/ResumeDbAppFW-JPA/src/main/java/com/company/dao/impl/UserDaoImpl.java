@@ -5,6 +5,7 @@
  */
 package com.company.dao.impl;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.company.dao.inter.AbstractDAO;
 import com.company.dao.inter.UserDaoInter;
 import com.company.entity.User;
@@ -145,10 +146,13 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
         return true;
     }
 
+    private static BCrypt.Hasher crypt = BCrypt.withDefaults();
+
     @Override
     public boolean add(User user) {
-        EntityManager em = em();
+        //        user.setPassword(crypt.hashToString(4, user.getPassword().toCharArray()));
 
+        EntityManager em = em();
         em.getTransaction().begin();
 
         Query query = em.createNativeQuery("INSERT INTO user (name, surname, email, phone, profile_description, address, birthdate, birthplace_id, nationality_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);");

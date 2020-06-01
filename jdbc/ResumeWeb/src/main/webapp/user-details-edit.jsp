@@ -89,9 +89,9 @@
                 Date utilDate = new Date(u.getBirthDate().getTime());
                 String dateStr = format.format(utilDate);
             %>
-            <div class="div-side-by-side birth-date">
+            <div class="div-side-by-side">
                 <label class="control-label" for="datepicker">Birth Date</label>
-                <input style="padding-left: 5px; margin-top: 8px;" type="text" id="from-datepicker" name="datepicker"
+                <input type="text" id="from-datepicker" name="datepicker"
                        value="<%=dateStr%>" placeholder="Select birthdate"/>
             </div>
 

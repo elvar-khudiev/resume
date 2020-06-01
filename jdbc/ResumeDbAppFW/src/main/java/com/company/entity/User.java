@@ -18,7 +18,9 @@ public class User {
     private String name;
     private String surname;
     private String email;
+    private String password;
     private String phone;
+    private String authority;
     private Date birthDate;
     private String address;
     private String profileDescription;
@@ -44,7 +46,6 @@ public class User {
         this.profileDescription = profileDescription;
         this.nationality = nationality;
         this.birthPlace = birthPlace;
-        this.skills = skills;
     }
     
     public int getId() {
@@ -79,6 +80,14 @@ public class User {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -86,7 +95,15 @@ public class User {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    
+
+    public String getAuthority() {
+        return authority;
+    }
+
+    public void setAuthority(String authority) {
+        this.authority = authority;
+    }
+
     public Date getBirthDate() {
         return birthDate;
     }
@@ -137,6 +154,19 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name=" + name + ", surname=" + surname + ", email=" + email + ", phone=" + phone + ", birthDate=" + birthDate + ", address=" + address + ", profileDescription=" + profileDescription + "nationality=" + nationality + ", birthPlace=" + birthPlace + ", skills=" + skills + '}';
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
+                ", birthDate=" + birthDate +
+                ", address='" + address + '\'' +
+                ", profileDescription='" + profileDescription + '\'' +
+                ", nationality=" + nationality +
+                ", birthPlace=" + birthPlace +
+                ", skills=" + skills +
+                '}';
     }
 }

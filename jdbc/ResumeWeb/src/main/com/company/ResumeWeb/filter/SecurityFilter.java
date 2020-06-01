@@ -14,10 +14,17 @@ public class SecurityFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
-        if (req.getSession().getAttribute("loggedInUser") == null &&
+        System.out.println(req.getRequestURI());
+
+        if (req.getSession().getAttribute("user") == null &&
+                !req.getRequestURI().equals("/ResumeWeb/login") &&
+                !req.getRequestURI().contains("assets/")) {
+            res.sendRedirect("login");
+        } else if (req.getSession().getAttribute("admin") == null &&
                 !req.getRequestURI().equals("/ResumeWeb/users") &&
+                !req.getRequestURI().equals("/ResumeWeb/login") &&
                 !req.getRequestURI().equals("/ResumeWeb/user-details") &&
-                !req.getRequestURI().contains("/login")) {
+                !req.getRequestURI().contains("assets/")) {
             res.sendRedirect("login");
         } else {
             chain.doFilter(request, response);

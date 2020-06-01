@@ -19,6 +19,8 @@ public interface UserDaoInter {
 
     public User getById(int userId);
 
+    public User getByEmail(String email);
+
     public boolean update(User u);
 
     public boolean add(User u);

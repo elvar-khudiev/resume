@@ -19,10 +19,6 @@ public class Context {
         return new UserDaoImpl();
     }
 
-    public static AdminDaoInter instanceAdminDao() {
-        return new AdminDaoImpl();
-    }
-    
     public static UserSkillDaoInter instanceUserSkillDao() {
         return new UserSkillDaoImpl();
     }
