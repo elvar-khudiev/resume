@@ -21,14 +21,15 @@ public class Main {
         SkillDaoInter dao3 = Context.instanceSkillDao();
 
 //        System.out.println(dao.getById(93));
-
 //        User u = dao2.getByEmail("elvarkhudiev@mail.ru");
 //        u.setEmail("test");
 //        dao2.add(u);
 //        System.out.println(dao2.getByEmail("test"));
 
-        Skill s = dao3.getByName("A");
-        System.out.println(s);
-        dao3.delete(s.getId());
+        Skill s0 = new Skill(100, "A");
+        Skill s1 = dao3.getByName("A");
+        dao3.add(s1);
+        System.out.println(s1);
+        dao3.delete(s1.getId());
     }
 }
