@@ -59,7 +59,7 @@ public class User implements Serializable {
     @Column(name = "surname")
     private String surname;
     @Basic(optional = false)
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     private String email;
     @Basic(optional = false)
     @Column(name = "password")
