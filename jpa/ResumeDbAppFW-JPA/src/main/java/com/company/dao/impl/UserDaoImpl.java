@@ -155,16 +155,21 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
         EntityManager em = em();
         em.getTransaction().begin();
 
-        Query query = em.createNativeQuery("INSERT INTO user (name, surname, email, phone, profile_description, address, birthdate, birthplace_id, nationality_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);");
+        Query query = em.createNativeQuery("INSERT INTO" +
+                "user(name, surname, email," +
+                "phone, profile_description," +
+                "address, birthdate, birthplace_id," +
+                "nationality_id)" +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);");
         query.setParameter(1, user.getName());
         query.setParameter(2, user.getSurname());
         query.setParameter(3, user.getEmail());
         query.setParameter(4, user.getPhone());
         query.setParameter(5, user.getProfileDescription());
         query.setParameter(6, user.getAddress());
-        query.setParameter(7, user.getBirthDate());
-        query.setParameter(8, user.getBirthPlace().getId());
-        query.setParameter(9, user.getNationality().getId());
+        query.setParameter(7, user.getBirthdate());
+        query.setParameter(8, user.getBirthplaceId().getId());
+        query.setParameter(9, user.getNationalityId().getId());
         query.executeUpdate();
 
         em.getTransaction().commit();

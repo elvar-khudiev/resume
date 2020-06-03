@@ -34,15 +34,16 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity
 @Table(name = "user")
 @XmlRootElement
-//@NamedQueries({
-//    @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
-//    @NamedQuery(name = "User.findById", query = "SELECT u FROM User u WHERE u.id = :id"),
-//    @NamedQuery(name = "User.findByName", query = "SELECT u FROM User u WHERE u.name = :name"),
-//    @NamedQuery(name = "User.findBySurname", query = "SELECT u FROM User u WHERE u.surname = :surname"),
-//    @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email"),
-//    @NamedQuery(name = "User.findByPhone", query = "SELECT u FROM User u WHERE u.phone = :phone"),
-//    @NamedQuery(name = "User.findByAddress", query = "SELECT u FROM User u WHERE u.address = :address"),
-//    @NamedQuery(name = "User.findByBirthdate", query = "SELECT u FROM User u WHERE u.birthdate = :birthdate")})
+@NamedQueries({
+    @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
+    @NamedQuery(name = "User.findById", query = "SELECT u FROM User u WHERE u.id = :id"),
+    @NamedQuery(name = "User.findByName", query = "SELECT u FROM User u WHERE u.name = :name"),
+    @NamedQuery(name = "User.findBySurname", query = "SELECT u FROM User u WHERE u.surname = :surname"),
+    @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email"),
+    @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password"),
+    @NamedQuery(name = "User.findByPhone", query = "SELECT u FROM User u WHERE u.phone = :phone"),
+    @NamedQuery(name = "User.findByAddress", query = "SELECT u FROM User u WHERE u.address = :address"),
+    @NamedQuery(name = "User.findByBirthdate", query = "SELECT u FROM User u WHERE u.birthdate = :birthdate")})
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -61,6 +62,9 @@ public class User implements Serializable {
     @Column(name = "email")
     private String email;
     @Basic(optional = false)
+    @Column(name = "password")
+    private String password;
+    @Basic(optional = false)
     @Column(name = "phone")
     private String phone;
     @Lob
@@ -70,17 +74,20 @@ public class User implements Serializable {
     private String address;
     @Column(name = "birthdate")
     @Temporal(TemporalType.DATE)
-    private Date birthDate;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private Date birthdate;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userId")
     private List<UserSkill> userSkillList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userId")
     private List<EmploymentHistory> employmentHistoryList;
+    @JoinColumn(name = "authority_id", referencedColumnName = "id")
+    @ManyToOne
+    private Authority authorityId;
     @JoinColumn(name = "nationality_id", referencedColumnName = "id")
     @ManyToOne
-    private Country nationality;
+    private Country nationalityId;
     @JoinColumn(name = "birthplace_id", referencedColumnName = "id")
     @ManyToOne
-    private Country birthPlace;
+    private Country birthplaceId;
 
     public User() {
     }
@@ -89,12 +96,30 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public User(Integer id, String name, String surname, String email, String phone) {
+    public User(Integer id, String name, String surname, String email, String password, String phone) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = email;
+        this.password = password;
         this.phone = phone;
+    }
+
+    public User(Integer id, String name, String surname, String email, String password, String phone, String profileDescription, String address, Date birthdate, List<UserSkill> userSkillList, List<EmploymentHistory> employmentHistoryList, Authority authorityId, Country nationalityId, Country birthplaceId) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+        this.profileDescription = profileDescription;
+        this.address = address;
+        this.birthdate = birthdate;
+        this.userSkillList = userSkillList;
+        this.employmentHistoryList = employmentHistoryList;
+        this.authorityId = authorityId;
+        this.nationalityId = nationalityId;
+        this.birthplaceId = birthplaceId;
     }
 
     public Integer getId() {
@@ -129,6 +154,14 @@ public class User implements Serializable {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -153,12 +186,12 @@ public class User implements Serializable {
         this.address = address;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
+    public Date getBirthdate() {
+        return birthdate;
     }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthdate(Date birthdate) {
+        this.birthdate = birthdate;
     }
 
     @XmlTransient
@@ -179,20 +212,28 @@ public class User implements Serializable {
         this.employmentHistoryList = employmentHistoryList;
     }
 
-    public Country getNationality() {
-        return nationality;
+    public Authority getAuthorityId() {
+        return authorityId;
     }
 
-    public void setNationality(Country nationality) {
-        this.nationality = nationality;
+    public void setAuthorityId(Authority authorityId) {
+        this.authorityId = authorityId;
     }
 
-    public Country getBirthPlace() {
-        return birthPlace;
+    public Country getNationalityId() {
+        return nationalityId;
     }
 
-    public void setBirthPlace(Country birthPlace) {
-        this.birthPlace = birthPlace;
+    public void setNationalityId(Country nationalityId) {
+        this.nationalityId = nationalityId;
+    }
+
+    public Country getBirthplaceId() {
+        return birthplaceId;
+    }
+
+    public void setBirthplaceId(Country birthplaceId) {
+        this.birthplaceId = birthplaceId;
     }
 
     @Override
@@ -214,10 +255,21 @@ public class User implements Serializable {
         }
         return true;
     }
-
+    
     @Override
     public String toString() {
-        return "com.company.entity.User[ id=" + id + " ]";
+        return "User{"
+                + "id=" + id
+                + ", name=" + name
+                + ", surname=" + surname
+                + ", email=" + email
+                + ", password=" + password
+                + ", phone=" + phone
+                + ", profileDescription=" + profileDescription
+                + ", address=" + address
+                + ", birthdate=" + birthdate
+                + ", authorityId=" + authorityId
+                + ", nationalityId=" + nationalityId
+                + ", birthplaceId=" + birthplaceId + '}';
     }
-
 }

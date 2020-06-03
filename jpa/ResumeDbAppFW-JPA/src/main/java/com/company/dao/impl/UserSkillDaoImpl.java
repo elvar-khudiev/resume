@@ -41,33 +41,6 @@ public class UserSkillDaoImpl extends AbstractDAO implements UserSkillDaoInter {
 
     @Override
     public List<UserSkill> getAllSkillByUserId(int userId) {
-//        List<UserSkill> result = new ArrayList<>();
-//        try (Connection c = connect()) {
-//            PreparedStatement stmt = c.prepareStatement("SELECT "
-//                    + "u.*, "
-//                    + "us.id as userSkillId, "
-//                    + "s.id, "
-//                    + "s.name AS skill_name, "
-//                    + "us.power "
-//                    + "FROM "
-//                    + "user_skill us "
-//                    + "LEFT JOIN user u ON us.user_id = u.id "
-//                    + "LEFT JOIN skill s ON us.skill_id = s.id "
-//                    + "WHERE "
-//                    + "us.user_id = ?");
-//
-//            stmt.setInt(1, userId);
-//            stmt.execute();
-//            ResultSet rs = stmt.getResultSet();
-//
-//            while (rs.next()) {
-//                UserSkill u = getUserSkill(rs);
-//                result.add(u);
-//            }
-//        } catch (Exception ex) {
-//            ex.printStackTrace();
-//        }
-//        return result;
         return null;
     }
 
@@ -84,17 +57,15 @@ public class UserSkillDaoImpl extends AbstractDAO implements UserSkillDaoInter {
     @Override
     public boolean add(UserSkill userSkill) {
         EntityManager em = em();
-
         em.getTransaction().begin();
 
         Query query = em.createNativeQuery("INSERT INTO user_skill (user_id, skill_id, power) VALUES (?, ?, ?);");
-        query.setParameter(1, userSkill.getUser().getId());
-        query.setParameter(2, userSkill.getSkill().getId());
+        query.setParameter(1, userSkill.getUserId().getId());
+        query.setParameter(2, userSkill.getSkillId().getId());
         query.setParameter(3, userSkill.getPower());
         query.executeUpdate();
 
         em.getTransaction().commit();
-
         em.close();
         return true;
     }

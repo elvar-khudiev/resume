@@ -30,12 +30,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @Table(name = "employment_history")
 @XmlRootElement
-//@NamedQueries({
-//    @NamedQuery(name = "EmploymentHistory.findAll", query = "SELECT e FROM EmploymentHistory e"),
-//    @NamedQuery(name = "EmploymentHistory.findById", query = "SELECT e FROM EmploymentHistory e WHERE e.id = :id"),
-//    @NamedQuery(name = "EmploymentHistory.findByHeader", query = "SELECT e FROM EmploymentHistory e WHERE e.header = :header"),
-//    @NamedQuery(name = "EmploymentHistory.findByBeginDate", query = "SELECT e FROM EmploymentHistory e WHERE e.beginDate = :beginDate"),
-//    @NamedQuery(name = "EmploymentHistory.findByEndDate", query = "SELECT e FROM EmploymentHistory e WHERE e.endDate = :endDate")})
+@NamedQueries({
+    @NamedQuery(name = "EmploymentHistory.findAll", query = "SELECT e FROM EmploymentHistory e"),
+    @NamedQuery(name = "EmploymentHistory.findById", query = "SELECT e FROM EmploymentHistory e WHERE e.id = :id"),
+    @NamedQuery(name = "EmploymentHistory.findByHeader", query = "SELECT e FROM EmploymentHistory e WHERE e.header = :header"),
+    @NamedQuery(name = "EmploymentHistory.findByBeginDate", query = "SELECT e FROM EmploymentHistory e WHERE e.beginDate = :beginDate"),
+    @NamedQuery(name = "EmploymentHistory.findByEndDate", query = "SELECT e FROM EmploymentHistory e WHERE e.endDate = :endDate")})
 public class EmploymentHistory implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -60,7 +60,7 @@ public class EmploymentHistory implements Serializable {
     private String jobDescription;
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     @ManyToOne(optional = false)
-    private User user;
+    private User userId;
 
     public EmploymentHistory() {
     }
@@ -76,15 +76,13 @@ public class EmploymentHistory implements Serializable {
         this.jobDescription = jobDescription;
     }
 
-    public EmploymentHistory(Integer id, String header, java.sql.Date beginDate, java.sql.Date endDate,
-            String jobDescription, User user) {
-        
+    public EmploymentHistory(Integer id, String header, Date beginDate, Date endDate, String jobDescription, User userId) {
         this.id = id;
         this.header = header;
         this.beginDate = beginDate;
         this.endDate = endDate;
         this.jobDescription = jobDescription;
-        this.user = user;
+        this.userId = userId;
     }
 
     public Integer getId() {
@@ -127,12 +125,12 @@ public class EmploymentHistory implements Serializable {
         this.jobDescription = jobDescription;
     }
 
-    public User getUser() {
-        return user;
+    public User getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserId(User userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -157,7 +155,13 @@ public class EmploymentHistory implements Serializable {
 
     @Override
     public String toString() {
-        return "com.company.entity.EmploymentHistory[ id=" + id + " ]";
+        return "EmploymentHistory{"
+                + "id=" + id
+                + ", header=" + header
+                + ", beginDate=" + beginDate
+                + ", endDate=" + endDate
+                + ", jobDescription=" + jobDescription
+                + ", user id=" + userId.getId()
+                + ", user name=" + userId.getName()+ '}';
     }
-
 }

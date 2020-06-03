@@ -19,5 +19,6 @@ public class Main {
         UserSkillDaoInter dao = Context.instanceUserSkillDao();
 
         System.out.println(dao.getById(93));
+//        dao.add(new UserSkill(5, new Skill(null, "test"), new User()));
     }
 }

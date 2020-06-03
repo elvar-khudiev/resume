@@ -102,7 +102,7 @@ public class EmploymentHistoryDaoImpl extends AbstractDAO implements EmploymentH
         query.setParameter(2, history.getBeginDate());
         query.setParameter(3, history.getEndDate());
         query.setParameter(4, history.getJobDescription());
-        query.setParameter(5, history.getUser().getId());
+        query.setParameter(5, history.getUserId().getId());
         query.executeUpdate();
 
         em.getTransaction().commit();

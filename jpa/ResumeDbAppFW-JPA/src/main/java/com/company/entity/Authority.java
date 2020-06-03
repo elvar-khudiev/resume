@@ -10,8 +10,6 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -25,43 +23,29 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author HP
  */
 @Entity
-@Table(name = "country")
+@Table(name = "authority")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Country.findAll", query = "SELECT c FROM Country c"),
-    @NamedQuery(name = "Country.findById", query = "SELECT c FROM Country c WHERE c.id = :id"),
-    @NamedQuery(name = "Country.findByName", query = "SELECT c FROM Country c WHERE c.name = :name"),
-    @NamedQuery(name = "Country.findByNationality", query = "SELECT c FROM Country c WHERE c.nationality = :nationality")})
-public class Country implements Serializable {
+    @NamedQuery(name = "Authority.findAll", query = "SELECT a FROM Authority a"),
+    @NamedQuery(name = "Authority.findById", query = "SELECT a FROM Authority a WHERE a.id = :id"),
+    @NamedQuery(name = "Authority.findByName", query = "SELECT a FROM Authority a WHERE a.name = :name")})
+public class Authority implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
-    @Basic(optional = false)
     @Column(name = "name")
     private String name;
-    @Basic(optional = false)
-    @Column(name = "nationality")
-    private String nationality;
-    @OneToMany(mappedBy = "nationalityId")
+    @OneToMany(mappedBy = "authorityId")
     private List<User> userList;
-    @OneToMany(mappedBy = "birthplaceId")
-    private List<User> userList1;
 
-    public Country() {
+    public Authority() {
     }
 
-    public Country(Integer id) {
+    public Authority(Integer id) {
         this.id = id;
-    }
-
-    public Country(Integer id, String name, String nationality) {
-        this.id = id;
-        this.name = name;
-        this.nationality = nationality;
     }
 
     public Integer getId() {
@@ -80,14 +64,6 @@ public class Country implements Serializable {
         this.name = name;
     }
 
-    public String getNationality() {
-        return nationality;
-    }
-
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
-    }
-
     @XmlTransient
     public List<User> getUserList() {
         return userList;
@@ -95,15 +71,6 @@ public class Country implements Serializable {
 
     public void setUserList(List<User> userList) {
         this.userList = userList;
-    }
-
-    @XmlTransient
-    public List<User> getUserList1() {
-        return userList1;
-    }
-
-    public void setUserList1(List<User> userList1) {
-        this.userList1 = userList1;
     }
 
     @Override
@@ -116,10 +83,10 @@ public class Country implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Country)) {
+        if (!(object instanceof Authority)) {
             return false;
         }
-        Country other = (Country) object;
+        Authority other = (Authority) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -128,8 +95,8 @@ public class Country implements Serializable {
 
     @Override
     public String toString() {
-        return "Country{" + "id=" + id
-                + ", name=" + name
-                + ", nationality=" + nationality + '}';
+        return "Authority{"
+                + "id=" + id
+                + ", name=" + name + '}';
     }
 }
