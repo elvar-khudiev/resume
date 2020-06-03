@@ -7,20 +7,13 @@ package com.company.dao.impl;
 
 import com.company.dao.inter.AbstractDAO;
 import com.company.dao.inter.SkillDaoInter;
-import com.company.entity.Admin;
 import com.company.entity.Skill;
+import com.company.entity.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -28,7 +21,7 @@ import java.util.logging.Logger;
  */
 public class SkillDaoImpl extends AbstractDAO implements SkillDaoInter {
 
-    private Skill getSkill(ResultSet rs) throws Exception{
+    private Skill getSkill(ResultSet rs) throws Exception {
         return new Skill(rs.getInt("id"), rs.getString("name"));
     }
 
@@ -54,9 +47,25 @@ public class SkillDaoImpl extends AbstractDAO implements SkillDaoInter {
     }
 
     @Override
-    public boolean add(Skill skill) {
+    public Skill getByName(String skillName) {
         EntityManager em = em();
 
+        String jpql = "SELECT s FROM Skill s WHERE s.name = :name";
+        Query query = em.createQuery(jpql, Skill.class);
+        query.setParameter("name", skillName);
+
+        List<Skill> list = query.getResultList();
+        em.close();
+        
+        if (list.size() == 1) {
+            return list.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public boolean add(Skill skill) {
+        EntityManager em = em();
         em.getTransaction().begin();
 
         Query query = em.createNativeQuery("INSERT INTO skill (name) VALUES (?);");
@@ -64,7 +73,6 @@ public class SkillDaoImpl extends AbstractDAO implements SkillDaoInter {
         query.executeUpdate();
 
         em.getTransaction().commit();
-
         em.close();
         return true;
     }

@@ -104,7 +104,6 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 //
 //        return null;
 //    }
-
 //     NamedQuery
 //    @Override
 //    public User getByEmail(String email) {
@@ -119,7 +118,6 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 //
 //        return null;
 //    }
-
     //     Native SQL
 //    @Override
 //    public User getByEmail(String email) {
@@ -133,7 +131,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 //        }
 //        return null;
 //    }
-
+    
     @Override
     public boolean update(User user) {
         EntityManager em = em();
@@ -150,26 +148,25 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 
     @Override
     public boolean add(User user) {
-        //        user.setPassword(crypt.hashToString(4, user.getPassword().toCharArray()));
+        user.setPassword(crypt.hashToString(4, user.getPassword().toCharArray()));
 
         EntityManager em = em();
         em.getTransaction().begin();
 
-        Query query = em.createNativeQuery("INSERT INTO" +
-                "user(name, surname, email," +
-                "phone, profile_description," +
-                "address, birthdate, birthplace_id," +
-                "nationality_id)" +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);");
+        Query query = em.createNativeQuery("INSERT INTO"
+                + "user(name, surname, email, phone, password, profile_description, address,"
+                + "birthdate, birthplace_id, nationality_id)"
+                + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
         query.setParameter(1, user.getName());
         query.setParameter(2, user.getSurname());
         query.setParameter(3, user.getEmail());
         query.setParameter(4, user.getPhone());
-        query.setParameter(5, user.getProfileDescription());
-        query.setParameter(6, user.getAddress());
-        query.setParameter(7, user.getBirthdate());
-        query.setParameter(8, user.getBirthplaceId().getId());
-        query.setParameter(9, user.getNationalityId().getId());
+        query.setParameter(5, user.getPassword());
+        query.setParameter(6, user.getProfileDescription());
+        query.setParameter(7, user.getAddress());
+        query.setParameter(8, user.getBirthdate());
+        query.setParameter(9, user.getBirthplaceId().getId());
+        query.setParameter(10, user.getNationalityId().getId());
         query.executeUpdate();
 
         em.getTransaction().commit();

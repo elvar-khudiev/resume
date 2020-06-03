@@ -19,6 +19,8 @@ public interface SkillDaoInter {
     public List<Skill> getAll();
 
     public Skill getById(int id);
+    
+    public Skill getByName(String skillName);
 
     public boolean add(Skill skill);
 

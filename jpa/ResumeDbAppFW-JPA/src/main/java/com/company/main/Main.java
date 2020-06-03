@@ -17,8 +17,18 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         UserSkillDaoInter dao = Context.instanceUserSkillDao();
+        UserDaoInter dao2 = Context.instanceUserDao();
+        SkillDaoInter dao3 = Context.instanceSkillDao();
 
-        System.out.println(dao.getById(93));
-//        dao.add(new UserSkill(5, new Skill(null, "test"), new User()));
+//        System.out.println(dao.getById(93));
+
+//        User u = dao2.getByEmail("elvarkhudiev@mail.ru");
+//        u.setEmail("test");
+//        dao2.add(u);
+//        System.out.println(dao2.getByEmail("test"));
+
+        Skill s = dao3.getByName("A");
+        System.out.println(s);
+        dao3.delete(s.getId());
     }
 }
