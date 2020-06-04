@@ -24,18 +24,18 @@ import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
  * @author HP
  */
 @Entity
 @Table(name = "employment_history")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "EmploymentHistory.findAll", query = "SELECT e FROM EmploymentHistory e"),
-    @NamedQuery(name = "EmploymentHistory.findById", query = "SELECT e FROM EmploymentHistory e WHERE e.id = :id"),
-    @NamedQuery(name = "EmploymentHistory.findByHeader", query = "SELECT e FROM EmploymentHistory e WHERE e.header = :header"),
-    @NamedQuery(name = "EmploymentHistory.findByBeginDate", query = "SELECT e FROM EmploymentHistory e WHERE e.beginDate = :beginDate"),
-    @NamedQuery(name = "EmploymentHistory.findByEndDate", query = "SELECT e FROM EmploymentHistory e WHERE e.endDate = :endDate")})
+        @NamedQuery(name = "EmploymentHistory.findAll", query = "SELECT e FROM EmploymentHistory e"),
+        @NamedQuery(name = "EmploymentHistory.findById", query = "SELECT e FROM EmploymentHistory e WHERE e.id = :id"),
+        @NamedQuery(name = "EmploymentHistory.findByUserId", query = "SELECT e FROM EmploymentHistory e WHERE e.userId.id = :userId"),
+        @NamedQuery(name = "EmploymentHistory.findByHeader", query = "SELECT e FROM EmploymentHistory e WHERE e.header = :header"),
+        @NamedQuery(name = "EmploymentHistory.findByBeginDate", query = "SELECT e FROM EmploymentHistory e WHERE e.beginDate = :beginDate"),
+        @NamedQuery(name = "EmploymentHistory.findByEndDate", query = "SELECT e FROM EmploymentHistory e WHERE e.endDate = :endDate")})
 public class EmploymentHistory implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -162,6 +162,6 @@ public class EmploymentHistory implements Serializable {
                 + ", endDate=" + endDate
                 + ", jobDescription=" + jobDescription
                 + ", user id=" + userId.getId()
-                + ", user name=" + userId.getName()+ '}';
+                + ", user name=" + userId.getName() + '}';
     }
 }

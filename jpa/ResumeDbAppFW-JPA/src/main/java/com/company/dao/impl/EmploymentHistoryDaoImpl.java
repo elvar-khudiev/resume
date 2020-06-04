@@ -7,19 +7,10 @@ package com.company.dao.impl;
 
 import com.company.dao.inter.AbstractDAO;
 import com.company.dao.inter.EmploymentHistoryDaoInter;
-import com.company.entity.Admin;
 import com.company.entity.EmploymentHistory;
-import com.company.entity.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import static java.sql.Statement.RETURN_GENERATED_KEYS;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,64 +19,34 @@ import java.util.List;
  */
 public class EmploymentHistoryDaoImpl extends AbstractDAO implements EmploymentHistoryDaoInter {
 
-    private EmploymentHistory getEmploymentHistory(ResultSet rs) throws Exception {
-        int id = rs.getInt("id");
-        String header = rs.getString("header");
-        Date beginDate = rs.getDate("begin_date");
-
-        Date endDate = null;
-        if (rs.getDate("end_date") != null) {
-            endDate = rs.getDate("end_date");
-        }
-
-        String jobDescription = rs.getString("job_description");
-        int userId = rs.getInt("user_id");
-
-        EmploymentHistory emp = new EmploymentHistory(id, header, beginDate, endDate, jobDescription, new User(userId));
-        return emp;
-    }
-
     @Override
     public List<EmploymentHistory> getAll() {
         EntityManager em = em();
 
-        String jpql = "select e from EmploymentHistory e";
-        Query query = em.createQuery(jpql, EmploymentHistory.class);
+        Query query = em.createQuery("select e from EmploymentHistory e", EmploymentHistory.class);
         List<EmploymentHistory> list = query.getResultList();
 
+        em.close();
         return list;
     }
 
     @Override
     public List<EmploymentHistory> getByUserId(int userId) {
-        List<EmploymentHistory> result = new ArrayList<>();
-        try (Connection c = connect()) {
-            PreparedStatement stmt = c.prepareStatement(""
-                    + "SELECT "
-                    + "* "
-                    + "FROM "
-                    + "employment_history "
-                    + "WHERE "
-                    + "user_id = ?");
+        EntityManager em = em();
 
-            stmt.setInt(1, userId);
-            stmt.execute();
-            ResultSet rs = stmt.getResultSet();
+        Query query = em.createNamedQuery("EmploymentHistory.findByUserId");
+        query.setParameter("userId", userId);
+        List<EmploymentHistory> list = query.getResultList();
 
-            while (rs.next()) {
-                result.add(getEmploymentHistory(rs));
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return result;
+        em.close();
+        return list;
     }
 
     @Override
-    public EmploymentHistory getById(int userId) {
+    public EmploymentHistory getById(int id) {
         EntityManager em = em();
 
-        EmploymentHistory employmentHistory = em.find(EmploymentHistory.class, userId);
+        EmploymentHistory employmentHistory = em.find(EmploymentHistory.class, id);
 
         em.close();
         return employmentHistory;
@@ -124,13 +85,23 @@ public class EmploymentHistoryDaoImpl extends AbstractDAO implements EmploymentH
     }
 
     @Override
-    public boolean delete(int userId) {
+    public boolean delete(EmploymentHistory employmentHistory) {
         EntityManager em = em();
 
-        User user = em.find(User.class, userId);
+        em.getTransaction().begin();
+        em.remove(em.find(EmploymentHistory.class, employmentHistory.getId()));
+        em.getTransaction().commit();
+
+        em.close();
+        return true;
+    }
+
+    @Override
+    public boolean deleteById(int id) {
+        EntityManager em = em();
 
         em.getTransaction().begin();
-        em.remove(user);
+        em.remove(em.find(EmploymentHistory.class, id));
         em.getTransaction().commit();
 
         em.close();

@@ -17,13 +17,15 @@ public interface UserSkillDaoInter {
     
     public List<UserSkill> getAllUserSkill();
     
-    public List<UserSkill> getAllSkillByUserId(int userId);
+    public List<UserSkill> getAllUserSkillByUserId(int userId);
 
     public UserSkill getById(int userId);
 
     public boolean add(UserSkill userSkill);
     
     public boolean update(UserSkill userSkill);
-    
-    public boolean delete(int id);
+
+    public boolean delete(UserSkill userSkill);
+
+    public boolean deleteById(int id);
 }

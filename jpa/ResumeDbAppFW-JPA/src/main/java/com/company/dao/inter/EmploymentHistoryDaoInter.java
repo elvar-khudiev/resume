@@ -24,6 +24,8 @@ public interface EmploymentHistoryDaoInter {
     public boolean add(EmploymentHistory history);
     
     public boolean update(EmploymentHistory history);
-        
-    public boolean delete(int id);
+
+    public boolean delete(EmploymentHistory employmentHistory);
+
+    public boolean deleteById(int id);
 }

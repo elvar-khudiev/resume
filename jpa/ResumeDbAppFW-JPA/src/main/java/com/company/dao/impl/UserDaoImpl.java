@@ -9,6 +9,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.company.dao.inter.AbstractDAO;
 import com.company.dao.inter.UserDaoInter;
 import com.company.entity.User;
+import com.company.main.Context;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -21,7 +22,7 @@ import javax.persistence.criteria.Root;
  * @author HP
  */
 public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
-
+    
     @Override
     public List<User> getAll(String name, String surname, Integer nationalityId) {
         EntityManager em = em();
@@ -31,13 +32,11 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
         if (name != null && !name.trim().isEmpty()) {
             jpql += "and u.name= :name ";
         }
-
         if (surname != null && !surname.trim().isEmpty()) {
             jpql += "and u.surname= :surname ";
         }
-
         if (nationalityId != null) {
-            jpql += "and u.nationality.id = :nid ";
+            jpql += "and u.nationalityId.id= :nid";
         }
 
         Query query = em.createQuery(jpql, User.class);
@@ -45,18 +44,23 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
         if (name != null && !name.trim().isEmpty()) {
             query.setParameter("name", name);
         }
-
         if (surname != null && !surname.trim().isEmpty()) {
             query.setParameter("surname", surname);
         }
-
-        if (nationalityId != null) {
-            query.setParameter("name", nationalityId);
+        if (nationalityId != null && nationalityId != 0) {
+            query.setParameter("nid", nationalityId);
         }
-
         return query.getResultList();
     }
 
+    @Override
+    public List<User> getAll() {
+        EntityManager em = em();
+        List<User> list = em.createNamedQuery("User.findAll", User.class).getResultList();
+        em.close();
+        return list;
+    }
+    
     @Override
     public User getById(int userId) {
         EntityManager em = em();
@@ -81,36 +85,42 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
         Query query = em.createQuery(q2);
 
         List<User> list = query.getResultList();
+        em.close();
+        
         if (list.size() == 1) {
             return list.get(0);
         }
 
         return null;
     }
-
 //     JPQL
 //    @Override
 //    public User getByEmail(String email) {
+//        EntityManager em = em();
+//        
 //        String jpql = "select a from User a where a.email = :e";
 //
 //        Query query = em.createQuery(jpql, User.class);
 //        query.setParameter("e", email);
 //
 //        List<User> list = query.getResultList();
-//
+//        em.close();
+//        
 //        if(list.size() == 1) {
 //            return list.get(0);
 //        }
-//
 //        return null;
 //    }
 //     NamedQuery
 //    @Override
 //    public User getByEmail(String email) {
+//        EntityManager em = em();
+//        
 //        Query query = em.createNamedQuery("User.findByEmail", User.class);
 //        query.setParameter("email", email);
 //
 //        List<User> list = query.getResultList();
+//        em.close();
 //
 //        if (list.size() == 1) {
 //            return list.get(0);
@@ -121,17 +131,19 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
     //     Native SQL
 //    @Override
 //    public User getByEmail(String email) {
+//        EntityManager em = em();
+//        
 //        Query query = em.createNativeQuery("select * from user where email = ?", User.class);
 //        query.setParameter(1, email);
 //
 //        List<User> list = query.getResultList();
+//        em.close();
 //
 //        if (list.size() == 1) {
 //            return list.get(0);
 //        }
 //        return null;
 //    }
-    
     @Override
     public boolean update(User user) {
         EntityManager em = em();
@@ -155,8 +167,8 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 
         Query query = em.createNativeQuery("INSERT INTO"
                 + "user(name, surname, email, phone, password, profile_description, address,"
-                + "birthdate, birthplace_id, nationality_id)"
-                + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+                + "birthdate, birthplace_id, nationality_id, authority_id)"
+                + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
         query.setParameter(1, user.getName());
         query.setParameter(2, user.getSurname());
         query.setParameter(3, user.getEmail());
@@ -167,8 +179,20 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
         query.setParameter(8, user.getBirthdate());
         query.setParameter(9, user.getBirthplaceId().getId());
         query.setParameter(10, user.getNationalityId().getId());
+        query.setParameter(11, user.getAuthorityId().getId());
         query.executeUpdate();
 
+        em.getTransaction().commit();
+        em.close();
+        return true;
+    }
+
+    @Override
+    public boolean delete(User user) {
+        EntityManager em = em();
+
+        em.getTransaction().begin();
+        em.remove(em.find(User.class, user.getId()));
         em.getTransaction().commit();
 
         em.close();
@@ -176,13 +200,23 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
     }
 
     @Override
-    public boolean delete(int userId) {
+    public boolean deleteById(int userId) {
         EntityManager em = em();
 
-        User user = em.find(User.class, userId);
+        em.getTransaction().begin();
+        em.remove(em.find(User.class, userId));
+        em.getTransaction().commit();
+
+        em.close();
+        return true;
+    }
+
+    @Override
+    public boolean deleteByEmail(String email) {
+        EntityManager em = em();
 
         em.getTransaction().begin();
-        em.remove(user);
+        em.remove(em.find(User.class, getByEmail(email).getId()));
         em.getTransaction().commit();
 
         em.close();

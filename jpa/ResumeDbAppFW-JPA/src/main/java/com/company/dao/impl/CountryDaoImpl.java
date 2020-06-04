@@ -37,10 +37,10 @@ public class CountryDaoImpl extends AbstractDAO implements CountryDaoInter {
     }
 
     @Override
-    public Country getById(int userId) {
+    public Country getById(int id) {
         EntityManager em = em();
 
-        Country country = em.find(Country.class, userId);
+        Country country = em.find(Country.class, id);
 
         em.close();
         return country;
@@ -48,27 +48,36 @@ public class CountryDaoImpl extends AbstractDAO implements CountryDaoInter {
 
     @Override
     public boolean update(Country c) {
-
         EntityManager em = em();
-
         em.getTransaction().begin();
-        em.merge(c);
-        em.getTransaction().commit();
 
+        em.merge(c);
+
+        em.getTransaction().commit();
         em.close();
         return true;
     }
 
     @Override
-    public boolean delete(int userId) {
+    public boolean delete(Country country) {
         EntityManager em = em();
-
-        Country country = em.find(Country.class, userId);
-
         em.getTransaction().begin();
-        em.remove(country);
-        em.getTransaction().commit();
 
+        em.remove(em.find(Country.class, country.getId()));
+
+        em.getTransaction().commit();
+        em.close();
+        return true;
+    }
+
+    @Override
+    public boolean deleteById(int id) {
+        EntityManager em = em();
+        em.getTransaction().begin();
+
+        em.remove(em.find(Country.class, id));
+
+        em.getTransaction().commit();
         em.close();
         return true;
     }

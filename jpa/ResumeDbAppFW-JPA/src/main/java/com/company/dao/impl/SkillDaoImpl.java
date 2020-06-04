@@ -21,15 +21,11 @@ import java.util.List;
  */
 public class SkillDaoImpl extends AbstractDAO implements SkillDaoInter {
 
-    private Skill getSkill(ResultSet rs) throws Exception {
-        return new Skill(rs.getInt("id"), rs.getString("name"));
-    }
-
     @Override
     public List<Skill> getAll() {
         EntityManager em = em();
 
-        String jpql = "select a from Skill a";
+        String jpql = "select s from Skill s";
         Query query = em.createQuery(jpql, Skill.class);
         List<Skill> list = query.getResultList();
 
@@ -47,30 +43,11 @@ public class SkillDaoImpl extends AbstractDAO implements SkillDaoInter {
     }
 
     @Override
-    public Skill getByName(String skillName) {
-        EntityManager em = em();
-
-        String jpql = "SELECT s FROM Skill s WHERE s.name = :name";
-        Query query = em.createQuery(jpql, Skill.class);
-        query.setParameter("name", skillName);
-
-        List<Skill> list = query.getResultList();
-        em.close();
-        
-        if (list.size() == 1) {
-            return list.get(0);
-        }
-        return null;
-    }
-
-    @Override
     public boolean add(Skill skill) {
         EntityManager em = em();
         em.getTransaction().begin();
 
-        Query query = em.createNativeQuery("INSERT INTO skill (name) VALUES (?);");
-        query.setParameter(1, skill.getName());
-        query.executeUpdate();
+        em.persist(skill);
 
         em.getTransaction().commit();
         em.close();
@@ -78,15 +55,37 @@ public class SkillDaoImpl extends AbstractDAO implements SkillDaoInter {
     }
 
     @Override
-    public boolean delete(int id) {
+    public boolean update(Skill skill) {
         EntityManager em = em();
-
-        Skill skill = em.find(Skill.class, id);
-
         em.getTransaction().begin();
-        em.remove(skill);
-        em.getTransaction().commit();
 
+        em.merge(skill);
+
+        em.getTransaction().commit();
+        em.close();
+        return true;
+    }
+
+    @Override
+    public boolean delete(Skill skill) {
+        EntityManager em = em();
+        em.getTransaction().begin();
+
+        em.remove(em.find(Skill.class, skill.getId()));
+
+        em.getTransaction().commit();
+        em.close();
+        return true;
+    }
+
+    @Override
+    public boolean deleteById(int id) {
+        EntityManager em = em();
+        em.getTransaction().begin();
+
+        em.remove(em.find(Skill.class, id));
+
+        em.getTransaction().commit();
         em.close();
         return true;
     }

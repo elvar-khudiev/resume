@@ -19,10 +19,12 @@ public interface SkillDaoInter {
     public List<Skill> getAll();
 
     public Skill getById(int id);
-    
-    public Skill getByName(String skillName);
 
     public boolean add(Skill skill);
 
-    public boolean delete(int id);
+    public boolean update(Skill skill);
+
+    public boolean delete(Skill skill);
+
+    public boolean deleteById(int id);
 }

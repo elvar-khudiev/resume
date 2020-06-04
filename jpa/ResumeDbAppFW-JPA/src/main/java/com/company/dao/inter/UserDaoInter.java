@@ -17,13 +17,19 @@ public interface UserDaoInter {
 
     public List<User> getAll(String name, String surname, Integer nationalityId);
 
+    public List<User> getAll();
+
     public User getById(int userId);
 
     public User getByEmail(String email);
-    
+
     public boolean update(User u);
 
     public boolean add(User u);
 
-    public boolean delete(int id);
+    public boolean delete(User user);
+
+    public boolean deleteById(int id);
+
+    public boolean deleteByEmail(String email);
 }
