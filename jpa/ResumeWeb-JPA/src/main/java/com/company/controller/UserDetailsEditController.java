@@ -66,11 +66,11 @@ public class UserDetailsEditController extends HttpServlet {
 
             for (Country c : countries) {
                 if (birthPlace.equals(c.getName())) {                            // label-deki country ve nationality
-                    user.setBirthPlace(c);                                       // Db-da movcud birthP. ve natio. lar arasindan sechilir
+                    user.setBirthplaceId(c);                                     // Db-da movcud birthP. ve natio. lar arasindan sechilir
                 }                                                                // ve user-e set edilir
 
                 if (nationality.equals(c.getNationality())) {
-                    user.setNationality(c);
+                    user.setNationalityId(c);
                 }
             }
 
@@ -80,7 +80,7 @@ public class UserDetailsEditController extends HttpServlet {
             user.setEmail(email);
             user.setProfileDescription(profileDescription);
             user.setAddress(address);
-            user.setBirthDate(sqlDate);
+            user.setBirthdate(sqlDate);
 
             userDao.update(user);                        // update olunur, evvelki sehifeye qayidilir
             response.sendRedirect("users");
@@ -90,7 +90,7 @@ public class UserDetailsEditController extends HttpServlet {
             response.sendRedirect("users");
         } else if (action.equals("delete")) {
 
-            userDao.delete(id);
+            userDao.deleteById(id);
             response.sendRedirect("users");
         }
     }

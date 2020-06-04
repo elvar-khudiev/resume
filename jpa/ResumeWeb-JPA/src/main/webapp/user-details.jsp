@@ -79,7 +79,7 @@
 
             <%
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-                Date utilDate = new Date(u.getBirthDate().getTime());
+                Date utilDate = new Date(u.getBirthdate().getTime());
                 String dateStr = format.format(utilDate);
             %>
             <div class="div-side-by-side birth-date">
@@ -90,13 +90,13 @@
 
             <div class="div-side-by-side">
                 <label for="birthPlace">Birth Place</label></br>
-                <h5 type="text" name="birthplace" class="col-8"><%=u.getBirthPlace().getName()%>
+                <h5 type="text" name="birthplace" class="col-8"><%=u.getBirthplaceId().getName()%>
                 </h5>
             </div>
 
             <div class="div-side-by-side">
                 <label for="nationality">Nationality</label></br>
-                <h5 type="text" name="nationality" class="col-8"><%=u.getNationality().getNationality()%>
+                <h5 type="text" name="nationality" class="col-8"><%=u.getNationalityId().getNationality()%>
                 </h5>
             </div>
         </div>

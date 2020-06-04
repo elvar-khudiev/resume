@@ -95,7 +95,7 @@
         <div class="div-3">
             <%
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-                Date utilDate = new Date(u.getBirthDate().getTime());
+                Date utilDate = new Date(u.getBirthdate().getTime());
                 String dateStr = format.format(utilDate);
             %>
             <div class="div-side-by-side birth-date">
@@ -107,8 +107,8 @@
             <div class="div-side-by-side">
                 <label for="birthPlace" class="birthPlace">Birth Place</label></br>
                 <select name="birthPlace" class="input-xlarge">
-                    <option value="<%=u.getBirthPlace().getName()%>"
-                            selected="selected"><%=u.getBirthPlace().getName()%>
+                    <option value="<%=u.getBirthplaceId().getName()%>"
+                            selected="selected"><%=u.getBirthplaceId().getName()%>
                     </option>
                     <% for (Country c : countryDao.getAll()) {%>
                     <option><%=c.getName()%>
@@ -120,8 +120,8 @@
             <div class="div-side-by-side">
                 <label for="nationality" class="nationality">Nationality</label></br>
                 <select name="nationality" class="input-xlarge">
-                    <option value="<%=u.getNationality().getNationality()%>"
-                            selected="selected"><%=u.getNationality().getNationality()%>
+                    <option value="<%=u.getNationalityId().getNationality()%>"
+                            selected="selected"><%=u.getNationalityId().getNationality()%>
                     </option>
                     <% for (Country c : countryDao.getAll()) {%>
                     <option><%=c.getNationality()%>

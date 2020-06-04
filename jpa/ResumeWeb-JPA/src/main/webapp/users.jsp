@@ -117,7 +117,7 @@
                 </td>
                 <td><%=u.getSurname()%>
                 </td>
-                <td><%=u.getNationality().getNationality() == null ? "N/A" : u.getNationality().getNationality()%>
+                <td><%=u.getNationalityId().getNationality() == null ? "N/A" : u.getNationalityId().getNationality()%>
                 </td>
                 <%
                     if (request.getSession().getAttribute("loggedInUser") != null) {

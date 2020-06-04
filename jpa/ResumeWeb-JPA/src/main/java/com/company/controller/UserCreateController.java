@@ -48,7 +48,7 @@ public class UserCreateController extends HttpServlet {
 
             if (datepicker != null && !datepicker.equals("")) {
                 java.sql.Date sqlDate = java.sql.Date.valueOf(datepicker);     // String sql.Date-e chevrilir
-                user.setBirthDate(sqlDate);
+                user.setBirthdate(sqlDate);
             }
 
             CountryDaoInter countryDao = Context.instanceCountryDao();
@@ -56,11 +56,11 @@ public class UserCreateController extends HttpServlet {
 
             for (Country c : countries) {
                 if (birthPlace.equals(c.getName())) {                         // label-deki country ve nationality
-                    user.setBirthPlace(c);                                    // Db-da movcud birthP. ve natio. lar arasindan sechilir
+                    user.setBirthplaceId(c);                                  // Db-da movcud birthP. ve natio. lar arasindan sechilir
                 }                                                             // ve user-e set edilir
 
                 if (nationality.equals(c.getNationality())) {
-                    user.setNationality(c);
+                    user.setNationalityId(c);
                 }
             }
 
