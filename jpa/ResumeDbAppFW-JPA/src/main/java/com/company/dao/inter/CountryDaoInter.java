@@ -20,6 +20,8 @@ public interface CountryDaoInter {
 
     public boolean update(Country u);
 
+    public boolean add(Country country);
+
     public boolean delete(Country country);
 
     public boolean deleteById(int id);

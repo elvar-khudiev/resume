@@ -6,6 +6,8 @@
 package com.company.main;
 
 import com.company.dao.inter.*;
+import com.company.entity.Country;
+import com.company.entity.EmploymentHistory;
 import com.company.entity.Skill;
 import com.company.entity.UserSkill;
 
@@ -16,7 +18,6 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        EmploymentHistoryDaoInter dao = Context.instanceEmploymentHistoryDao();
-        System.out.println(dao.getAll());
+        System.out.println("Salam World :o");
     }
 }

@@ -47,7 +47,9 @@ public class SkillDaoImpl extends AbstractDAO implements SkillDaoInter {
         EntityManager em = em();
         em.getTransaction().begin();
 
-        em.persist(skill);
+        Query query = em.createNativeQuery("INSERT INTO skill (name) VALUES (?);");
+        query.setParameter(1, skill.getName());
+        query.executeUpdate();
 
         em.getTransaction().commit();
         em.close();

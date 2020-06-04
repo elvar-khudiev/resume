@@ -47,11 +47,26 @@ public class CountryDaoImpl extends AbstractDAO implements CountryDaoInter {
     }
 
     @Override
-    public boolean update(Country c) {
+    public boolean update(Country country) {
         EntityManager em = em();
         em.getTransaction().begin();
 
-        em.merge(c);
+        em.merge(country);
+
+        em.getTransaction().commit();
+        em.close();
+        return true;
+    }
+
+    @Override
+    public boolean add(Country country) {
+        EntityManager em = em();
+        em.getTransaction().begin();
+
+        Query query = em.createNativeQuery("INSERT INTO country (name, nationality) VALUES (?, ?);");
+        query.setParameter(1, country.getName());
+        query.setParameter(2, country.getNationality());
+        query.executeUpdate();
 
         em.getTransaction().commit();
         em.close();

@@ -68,23 +68,6 @@ public class UserSkillDaoImpl extends AbstractDAO implements UserSkillDaoInter {
         return true;
     }
 
-//     JDBC
-//    @Override
-//    public boolean add(UserSkill userSkill) {
-//        EntityManager em = em();
-//        em.getTransaction().begin();
-//
-//        Query query = em.createNativeQuery("INSERT INTO user_skill (user_id, skill_id, power) VALUES (?, ?, ?);");
-//        query.setParameter(1, userSkill.getUserId().getId());
-//        query.setParameter(2, userSkill.getSkillId().getId());
-//        query.setParameter(3, userSkill.getPower());
-//        query.executeUpdate();
-//
-//        em.getTransaction().commit();
-//        em.close();
-//        return true;
-//    }
-
     @Override
     public boolean update(UserSkill userSkill) {
         EntityManager em = em();
