@@ -1,4 +1,4 @@
-package main.com.company.ResumeWeb.controller;
+package main.java.com.company.controller;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.company.dao.inter.UserDaoInter;
@@ -42,7 +42,7 @@ public class LoginController extends HttpServlet {
             }
 
             if(user.getAuthority().equals("ADMIN")) {
-                request.getSession().setAttribute("admin", user);
+                request.getSession().setAttribute("admin", "admin");
             }
             request.getSession().setAttribute("user", "user");
             response.sendRedirect("users");

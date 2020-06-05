@@ -38,6 +38,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
         if (nationalityId != null) {
             jpql += "and u.nationalityId.id= :nid";
         }
+        jpql = jpql + " ORDER BY id ASC";
 
         Query query = em.createQuery(jpql, User.class);
 

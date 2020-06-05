@@ -1,4 +1,4 @@
-package main.com.company.ResumeWeb.filter;
+package com.company.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -13,8 +13,6 @@ public class SecurityFilter implements Filter {
                          FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
-
-        System.out.println(req.getRequestURI());
 
         if (req.getSession().getAttribute("user") == null &&
                 !req.getRequestURI().equals("/ResumeWeb/login") &&

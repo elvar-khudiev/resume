@@ -39,11 +39,11 @@ public class UsersController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        if (request.getParameter("action").equals("logout") || request.getParameter("action").equals("withoutLogin")) {
+        if (request.getParameter("action").equals("logout")) {
 
-            request.getSession().removeAttribute("loggedInUser");
-            response.sendRedirect("users");
-
+            request.getSession().removeAttribute("user");
+            request.getSession().removeAttribute("admin");
+            response.sendRedirect("login");
         } else if (request.getParameter("action").equals("signin")) {
             response.sendRedirect("login");
         }

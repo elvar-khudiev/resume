@@ -2,7 +2,9 @@ package com.company.controller;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.company.dao.inter.AdminDaoInter;
+import com.company.dao.inter.UserDaoInter;
 import com.company.entity.Admin;
+import com.company.entity.User;
 import com.company.main.Context;
 
 import javax.servlet.ServletException;
@@ -15,7 +17,7 @@ import java.io.IOException;
 @WebServlet(name = "com.company.controller.LoginController", urlPatterns = {"/login"})
 public class LoginController extends HttpServlet {
 
-    private AdminDaoInter adminDao = Context.instanceAdminDao();
+    private UserDaoInter adminDao = Context.instanceUserDao();
     private BCrypt.Verifyer verifyer = BCrypt.verifyer();
 
     @Override
@@ -30,20 +32,24 @@ public class LoginController extends HttpServlet {
             String email = request.getParameter("email");
             String password = request.getParameter("password");
 
-            Admin admin = adminDao.getByEmail(email);
+            User user = adminDao.getByEmail(email);
 
-            System.out.println(admin);
+            System.out.println(user);
 
-            if (admin == null) {
+            if (user == null) {
                 throw new IllegalArgumentException("User doesn't exist !");
             }
 
-            BCrypt.Result rs = verifyer.verify(password.toCharArray(), admin.getPassword().toCharArray());
+            BCrypt.Result rs = verifyer.verify(password.toCharArray(), user.getPassword().toCharArray());
             if (!rs.verified) {
                 throw new IllegalArgumentException("Password is incorrect !");
             }
 
-            request.getSession().setAttribute("loggedInUser", admin);
+            if(user.getAuthorityId().getName().equals("ADMIN")) {
+                request.getSession().setAttribute("admin", "admin");
+            }
+
+            request.getSession().setAttribute("user", "user");
             response.sendRedirect("users");
         } catch (Exception ex) {
             // setAttribute "login or password is incorrect"

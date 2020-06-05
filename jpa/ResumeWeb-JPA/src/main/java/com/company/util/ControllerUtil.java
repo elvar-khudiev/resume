@@ -1,4 +1,4 @@
-package com.company.resume.util;
+package com.company.util;
 
 import javax.servlet.http.HttpServletResponse;
 

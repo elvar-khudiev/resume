@@ -32,11 +32,13 @@ label{
 
 .div-image{
     position: absolute;
-    top: 133px;
-    left: 600px;
-    width: 450px;
-    height: 350px;
-    background-image: url("../images/sorry.png");
+    top: 154px;
+    left: 560px;
+    width: 544px;
+    height: 312px;
+    background-position: center;
+    background-image: url(../images/sorry.png);
+    background-repeat: no-repeat;
     border: 3px gray solid;
     border-radius: 15px;
 }
@@ -69,7 +71,7 @@ label{
 
 .ad {
     overflow: hidden;
-    background-color: #d0c9c9;
+    background-color: #e3e3e3;
     padding: 93px 10px;
     position: fixed;
     top: 30px;
@@ -79,7 +81,7 @@ label{
 
 .ad2 {
     overflow: hidden;
-    background-color: #d0c9c9;
+    background-color: #e3e3e3;
     padding: 150px 10px;
     position: fixed;
     top: 288px;

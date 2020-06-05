@@ -5,7 +5,8 @@
 --%>
 
 <%@page import="com.company.dao.inter.CountryDaoInter" %>
-<%@ page import="com.company.entity.Country" %>
+<%@page import="com.company.entity.Country" %>
+<%@page import="com.company.main.Context" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -41,7 +42,7 @@
     </script>
 <body>
 <%
-        CountryDaoInter countryDao = com.company.main.Context.instanceCountryDao();
+        CountryDaoInter countryDao = Context.instanceCountryDao();
 %>
 <div class="dt-container">
     <form action="user-create" method="POST" style="margin-bottom: 75px;">
@@ -60,6 +61,10 @@
         <div>
             <label for="email">Email</label>
             <input class="w3-input" type="text" name="email" value=""/>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input class="w3-input" type="password" name="password" value=""/>
         </div>
         <div>
             <label for="phone">Phone</label>

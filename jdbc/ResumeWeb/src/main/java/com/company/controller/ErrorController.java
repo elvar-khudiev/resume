@@ -1,7 +1,4 @@
-package main.com.company.ResumeWeb.controller;
-
-import com.company.dao.inter.UserDaoInter;
-import com.company.main.Context;
+package com.company.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

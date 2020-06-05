@@ -30,7 +30,25 @@
 <body>
 <%
     List<User> users = (List<User>) request.getAttribute("users");
+    boolean isAdmin = false;
+    if (request.getSession().getAttribute("admin") != null) {
+        isAdmin = true;
+    }
 %>
+
+<% if (isAdmin) {%>
+<div style="position: fixed;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: larger;
+        background-color: black;
+        padding: 5px 7px;">
+
+    You'r is admin
+</div>
+<%}%>
+
 <div class="ad">
     <h2 style="text-align: center">Your ad here</h2>
 </div>
@@ -38,7 +56,6 @@
     <h2 style="text-align: center">Your ad here</h2>
 </div>
 <div class="user_container">
-
     <center style="margin-bottom: 170px;">
         <h1 class="display-4">Users</h1>
     </center>
@@ -60,7 +77,7 @@
         </div>
         <div style="float: left;">
             <%
-                if (request.getSession().getAttribute("loggedInUser") == null) {
+                if (!isAdmin) {
             %>
 
             <div class="div-2" style="padding-left: 495px; bottom: 16px;">
@@ -81,8 +98,7 @@
 
             <%
                 }
-
-                if (request.getSession().getAttribute("loggedInUser") != null) {
+                if (isAdmin) {
             %>
             <div class="div-2" style="bottom: -38px; left: 780px">
                 <form action="user-create" method="GET">
@@ -100,7 +116,7 @@
                 <th>Surname</th>
                 <th>Nationality</th>
                 <%
-                    if (request.getSession().getAttribute("loggedInUser") != null) {
+                    if (isAdmin) {
                 %>
                 <th></th>
                 <th></th>
@@ -120,7 +136,7 @@
                 <td><%=u.getNationalityId().getNationality() == null ? "N/A" : u.getNationalityId().getNationality()%>
                 </td>
                 <%
-                    if (request.getSession().getAttribute("loggedInUser") != null) {
+                    if (isAdmin) {
                 %>
                 <td style="width: 1px">
                     <form action="user-details-edit" method="GET">
@@ -143,8 +159,8 @@
                 <td style="width: 1px">
                     <form action="user-details" method="GET">
                         <input type="hidden" name="id" value="<%=u.getId()%>">
-                        <button class="btn_table btn-info" style="border-radius: 20px; font-size: 20px;" type="submit"
-                                value="info" onclick="test()">
+                        <button class="btn_table btn-info" style="border-radius:20px; font-size: 20px;" type="submit"
+                                value="info">
                             <i class="fas fa-question-circle"></i>
                         </button>
                     </form>

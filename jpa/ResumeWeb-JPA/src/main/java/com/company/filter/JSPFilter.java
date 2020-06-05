@@ -1,4 +1,4 @@
-package com.company.resume.filter;
+package com.company.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

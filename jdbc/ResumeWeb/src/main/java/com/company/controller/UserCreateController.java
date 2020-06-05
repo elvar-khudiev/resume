@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package main.com.company.ResumeWeb.controller;
+package com.company.controller;
 
 import com.company.dao.inter.CountryDaoInter;
 import com.company.dao.inter.UserDaoInter;
@@ -36,10 +31,14 @@ public class UserCreateController extends HttpServlet {
         if (action.equals("create")) {
             User user = new User();
 
+            System.out.println(request.getParameter("name"));
+            System.out.println(request.getParameter("email"));
+
             String name = request.getParameter("name");                     // label-lerden melumatlar alinir
             String surname = request.getParameter("surname");
             String phone = request.getParameter("phone");
             String email = request.getParameter("email");
+            String password = request.getParameter("password");
             String profileDescription = request.getParameter("profile-description");
             String address = request.getParameter("address");
             String datepicker = request.getParameter("datepicker");
@@ -68,6 +67,7 @@ public class UserCreateController extends HttpServlet {
             user.setSurname(surname);
             user.setPhone(phone);
             user.setEmail(email);
+            user.setPassword(password);
             user.setProfileDescription(profileDescription);
             user.setAddress(address);
 

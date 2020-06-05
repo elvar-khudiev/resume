@@ -1,4 +1,4 @@
-package main.com.company.ResumeWeb.controller;
+package com.company.controller;
 
 import com.company.dao.inter.UserDaoInter;
 import com.company.entity.User;
@@ -40,9 +40,8 @@ public class UsersController extends HttpServlet {
 
         if (request.getParameter("action").equals("logout")) {
 
-            request.getSession().removeAttribute("admin");
             request.getSession().removeAttribute("user");
-
+            request.getSession().removeAttribute("admin");
             response.sendRedirect("login");
         } else if (request.getParameter("action").equals("signin")) {
             response.sendRedirect("login");
