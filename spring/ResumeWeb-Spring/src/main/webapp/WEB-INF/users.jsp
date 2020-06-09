@@ -104,7 +104,7 @@
                 <tr>
                     <td>${u.getName()}</td>
                     <td>${u.getSurname()}</td>
-                    <td>${u.getNationality().getNationality()}</td>
+                    <td>${u.getNationalityId().getNationality()}</td>
                     <%
                         if (isAdmin) {
                     %>

@@ -8,35 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7f3a1a05-440f-4a55-a462-265996b5b8ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/CountryRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/CountryRepositoryCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/CountryRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/CountryRepositoryCustomImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/EmploymentHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/EmploymentHistoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/EmploymentHistoryRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/EmploymentHistoryRepositoryCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/EmploymentHistoryRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/EmploymentHistoryRepositoryCustomImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/SkillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/SkillRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/SkillRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/SkillRepositoryCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/SkillRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/SkillRepositoryCustomImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserRepositoryCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserSkillRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserSkillRepositoryCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserSkillRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserSkillRepositoryCustomImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/Authority.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/Authority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/EmploymentHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/EmploymentHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/Skill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/UserSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/UserSkill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/impl/CountryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/impl/CountryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/inter/AdminServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/inter/AdminServiceInter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/inter/CountryServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/inter/CountryServiceInter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/inter/UserServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/inter/UserServiceInter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/test/java/com/company/UserRepositoryCustomImplIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/test/java/com/company/UserRepositoryCustomImplIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/test/java/com/company/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/test/java/com/company/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -249,7 +223,7 @@
       <workItem from="1588606539207" duration="3700000" />
       <workItem from="1588676425064" duration="733000" />
       <workItem from="1588688687930" duration="259000" />
-      <workItem from="1591710790619" duration="1431000" />
+      <workItem from="1591710790619" duration="2319000" />
     </task>
     <servers />
   </component>

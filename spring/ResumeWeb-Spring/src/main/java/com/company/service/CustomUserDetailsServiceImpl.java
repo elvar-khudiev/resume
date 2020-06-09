@@ -25,13 +25,15 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
         System.err.println("\n----- loadUserByUsername (email) -----\n");
 
         User user = userService.getByEmail(email);
-
+        System.err.println(user);
         if (user != null) {
             UserBuilder builder = org.springframework.security.core.userdetails.User.withUsername(email);
 
             builder.disabled(false);
             builder.password(user.getPassword());
             String[] authoritiesArr = null;
+
+            System.err.println(user.getAuthorityId().getName());
 
             if (user.getAuthorityId().getName().equals("ADMIN")) {
                 GLOBAL.isAdmin = true;
