@@ -6,6 +6,8 @@
 package com.company.dao.impl;
 
 import com.company.entity.Country;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
 /**
@@ -16,9 +18,13 @@ public interface CountryRepositoryCustom {
 
     public List<Country> getAll();
 
-    public Country getById(int userId);
+    public Country getById(int id);
 
-    public boolean update(Country u);
+    public boolean add(Country c);
+
+    public boolean update(Country c);
+
+    public boolean deleteByObject(Country c);
 
     public boolean delete(int id);
 }

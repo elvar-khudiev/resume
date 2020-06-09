@@ -15,7 +15,6 @@ import java.util.List;
  * @author HP
  */
 
-@Service
 public interface AdminServiceInter {
 
     public List<Admin> getAll();

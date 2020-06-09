@@ -1,14 +1,18 @@
 package com.company;
 
 import com.company.dao.impl.UserRepository;
+import com.company.entity.Country;
 import com.company.entity.User;
+import com.company.entity.UserSkill;
 import com.company.service.impl.UserServiceImpl;
+import com.company.service.inter.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import com.company.service.inter.UserServiceInter;
+
+import java.util.List;
 
 @SpringBootApplication
 public class ResumeDbAppFwJpaSpringApplication {
@@ -20,28 +24,37 @@ public class ResumeDbAppFwJpaSpringApplication {
     @Autowired
     UserServiceInter userService;
 
+    @Autowired
+    UserSkillServiceInter userSkillService;
+
+    @Autowired
+    SkillServiceInter skillService;
+
+    @Autowired
+    CountryServiceInter countryService;
+
+    @Autowired
+    EmploymentHistoryServiceInter employmentHistoryService;
+
     @Bean
     public CommandLineRunner run() {
-        CommandLineRunner clr = new CommandLineRunner() {
-            @Override
-            public void run(String... args) throws Exception {
-//				List<User> list = userService.getAll(null, null, null);
-//				for (int i = 0; i < list.size(); i++) {
-//					User user = list.get(i);
-//					System.out.println("User " + (i + 1) + " - " + user.getName() + " - " + user.getEmail() + " - " + user.getPassword());
-//                }
+        CommandLineRunner clr = args -> {
 
-                System.out.println(userService.getAll(null, null, null));
+//            System.out.println("--------------------------------");
+//            System.err.println(userService.getById(1));
+//            System.out.println("--------------------------------");
+//            System.err.println(userSkillService.getById(1016));
+//            System.out.println("--------------------------------");
+//            System.err.println(skillService.getById(1));
+//            System.out.println("--------------------------------");
+//            System.err.println(countryService.getById(1));
+//            System.out.println("--------------------------------");
+//            System.err.println(employmentHistoryService.getById(1));
+//            System.out.println("--------------------------------");
 
-//                User user = new User();
-//                user.setEmail("elvarkhudiev" +
-//                        (userService.getAll(null, null, null).size() + 1)
-//                        + "@mail.ru");
-//                System.out.println(userService.add(user));
-
-//                List<UserSkill> list = userSkillRepo.getAllUserSkill();
-//                System.out.println(list);
-            }
+//            UserSkill c = userSkillService.getAllByUserId(2).get(0);
+//            c.setPower(5);
+//            userSkillService.update(c);
         };
 
         return clr;

@@ -5,19 +5,9 @@
  */
 package com.company.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 /**
  *
@@ -26,10 +16,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @Table(name = "user_skill")
 @XmlRootElement
-//@NamedQueries({
-//    @NamedQuery(name = "UserSkill.findAll", query = "SELECT u FROM UserSkill u"),
-//    @NamedQuery(name = "UserSkill.findById", query = "SELECT u FROM UserSkill u WHERE u.id = :id"),
-//    @NamedQuery(name = "UserSkill.findByPower", query = "SELECT u FROM UserSkill u WHERE u.power = :power")})
+@NamedQueries({
+    @NamedQuery(name = "UserSkill.findAll", query = "SELECT u FROM UserSkill u"),
+    @NamedQuery(name = "UserSkill.findById", query = "SELECT u FROM UserSkill u WHERE u.id = :id"),
+    @NamedQuery(name = "UserSkill.findByUserId", query = "SELECT u FROM UserSkill u WHERE u.userId.id = :userId"),
+    @NamedQuery(name = "UserSkill.findByPower", query = "SELECT u FROM UserSkill u WHERE u.power = :power")})
 public class UserSkill implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -40,13 +31,13 @@ public class UserSkill implements Serializable {
     private Integer id;
     @Basic(optional = false)
     @Column(name = "power")
-    private String power;
+    private int power;
     @JoinColumn(name = "skill_id", referencedColumnName = "id")
     @ManyToOne(optional = false)
-    private Skill skill;
+    private Skill skillId;
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     @ManyToOne(optional = false)
-    private User user;
+    private User userId;
 
     public UserSkill() {
     }
@@ -55,7 +46,7 @@ public class UserSkill implements Serializable {
         this.id = id;
     }
 
-    public UserSkill(Integer id, String power) {
+    public UserSkill(Integer id, int power) {
         this.id = id;
         this.power = power;
     }
@@ -68,28 +59,28 @@ public class UserSkill implements Serializable {
         this.id = id;
     }
 
-    public String getPower() {
+    public int getPower() {
         return power;
     }
 
-    public void setPower(String power) {
+    public void setPower(int power) {
         this.power = power;
     }
 
-    public Skill getSkill() {
-        return skill;
+    public Skill getSkillId() {
+        return skillId;
     }
 
-    public void setSkill(Skill skill) {
-        this.skill = skill;
+    public void setSkillId(Skill skillId) {
+        this.skillId = skillId;
     }
 
-    public User getUser() {
-        return user;
+    public User getUserId() {
+        return userId;
     }
 
-    public void setUser(User userId) {
-        this.user = user;
+    public void setUserId(User userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -114,7 +105,12 @@ public class UserSkill implements Serializable {
 
     @Override
     public String toString() {
-        return "com.company.entity.UserSkill[ id=" + id + " ]";
+        return "UserSkill{"
+                + "id=" + id
+                + ", power=" + power
+                + ", skill id=" + skillId.getId()
+                + ", skill name=" + skillId.getName()
+                + ", user id=" + userId.getId()
+                + ", user name=" + userId.getName() + '}';
     }
-    
 }

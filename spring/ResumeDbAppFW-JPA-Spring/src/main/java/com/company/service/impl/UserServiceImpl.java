@@ -6,12 +6,10 @@
 package com.company.service.impl;
 
 import com.company.dao.impl.UserRepository;
-import com.company.dao.impl.UserRepositoryCustomImpl;
 import com.company.entity.User;
 import com.company.service.inter.UserServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -21,11 +19,10 @@ import java.util.List;
  */
 
 @Service
-@Transactional
 public class UserServiceImpl implements UserServiceInter {
 
     @Autowired
-    private UserRepositoryCustomImpl userDao;
+    private UserRepository userDao;
 
     @Override
     public List<User> getAll(String name, String surname, Integer nationalityId) {
@@ -33,13 +30,13 @@ public class UserServiceImpl implements UserServiceInter {
     }
 
     @Override
-    public User getById(int userId) {
-        return userDao.getById(userId);
+    public List<User> getAll() {
+        return userDao.getAll();
     }
 
     @Override
-    public User getByName(String name) {
-        return userDao.getByName(name);
+    public User getById(int userId) {
+        return userDao.getById(userId);
     }
 
     @Override
@@ -55,6 +52,11 @@ public class UserServiceImpl implements UserServiceInter {
     @Override
     public boolean add(User user) {
         return userDao.add(user);
+    }
+
+    @Override
+    public boolean deleteByObject(User user) {
+        return userDao.deleteByObject(user);
     }
 
     @Override

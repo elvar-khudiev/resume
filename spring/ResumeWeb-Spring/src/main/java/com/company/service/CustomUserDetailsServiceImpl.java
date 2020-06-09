@@ -33,10 +33,10 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
             builder.password(user.getPassword());
             String[] authoritiesArr = null;
 
-            if (user.getAuthority().getAuthority().equals("ADMIN")) {
+            if (user.getAuthorityId().getName().equals("ADMIN")) {
                 GLOBAL.isAdmin = true;
                 authoritiesArr = new String[]{"ADMIN", "USER"};
-            } else if (user.getAuthority().getAuthority().equals("USER")) {
+            } else if (user.getAuthorityId().getName().equals("USER")) {
                 GLOBAL.isAdmin = false;
                 authoritiesArr = new String[]{"USER"};
             }

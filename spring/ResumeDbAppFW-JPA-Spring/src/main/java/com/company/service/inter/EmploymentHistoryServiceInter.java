@@ -3,12 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.company.dao.impl;
+package com.company.service.inter;
 
 import com.company.entity.EmploymentHistory;
-import com.company.entity.User;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -16,15 +14,16 @@ import java.util.List;
  *
  * @author HP
  */
-public interface EmploymentHistoryRepositoryCustom {
-    
+
+public interface EmploymentHistoryServiceInter {
+
     public List<EmploymentHistory> getAll();
 
     public EmploymentHistory getById(int id);
 
-    public boolean add(EmploymentHistory e);
-    
     public boolean update(EmploymentHistory e);
+
+    public boolean add(EmploymentHistory e);
 
     public boolean deleteByObject(EmploymentHistory e);
 

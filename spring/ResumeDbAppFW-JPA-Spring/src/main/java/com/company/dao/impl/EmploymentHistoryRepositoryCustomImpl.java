@@ -7,6 +7,7 @@ package com.company.dao.impl;
 
 import com.company.entity.EmploymentHistory;
 import com.company.entity.User;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
@@ -19,6 +20,7 @@ import java.util.List;
  * @author HP
  */
 
+@Repository
 @Transactional
 public class EmploymentHistoryRepositoryCustomImpl implements EmploymentHistoryRepositoryCustom {
 
@@ -27,16 +29,23 @@ public class EmploymentHistoryRepositoryCustomImpl implements EmploymentHistoryR
 
     @Override
     public List<EmploymentHistory> getAll() {
-        String jpql = "select e from EmploymentHistory e";
-        Query query = em.createQuery(jpql, EmploymentHistory.class);
-        List<EmploymentHistory> list = query.getResultList();
+        return em.createQuery("select e from EmploymentHistory e", EmploymentHistory.class).getResultList();
+    }
 
-        return list;
+    @Override
+    public EmploymentHistory getById(int id) {
+        return em.find(EmploymentHistory.class, id);
     }
 
     @Override
     public boolean add(EmploymentHistory history) {
-        em.persist(history);
+        Query query = em.createNativeQuery("INSERT INTO employment_history (header, begin_date, end_date, job_description, user_id) VALUES (?, ?, ?, ?, ?);");
+        query.setParameter(1, history.getHeader());
+        query.setParameter(2, history.getBeginDate());
+        query.setParameter(3, history.getEndDate());
+        query.setParameter(4, history.getJobDescription());
+        query.setParameter(5, history.getUserId().getId());
+        query.executeUpdate();
         return true;
     }
 
@@ -47,10 +56,15 @@ public class EmploymentHistoryRepositoryCustomImpl implements EmploymentHistoryR
     }
 
     @Override
-    public boolean delete(int userId) {
-        User user = em.find(User.class, userId);
-        em.remove(user);
+    public boolean deleteByObject(EmploymentHistory e) {
+        em.remove(em.find(EmploymentHistory.class, e.getId()));
+        return true;
+    }
 
+    @Override
+    public boolean delete(int id) {
+        EmploymentHistory e = em.find(EmploymentHistory.class, id);
+        em.remove(e);
         return true;
     }
 }

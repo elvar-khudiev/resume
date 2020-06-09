@@ -5,8 +5,9 @@
  */
 package com.company.dao.impl;
 
-import com.company.entity.User;
 import com.company.entity.UserSkill;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
 /**
@@ -14,12 +15,18 @@ import java.util.List;
  * @author HP
  */
 public interface UserSkillRepositoryCustom {
-    
+
     public List<UserSkill> getAllUserSkill();
-    
+
+    public List<UserSkill> getAllUserSkillByUserId(int userId);
+
+    public UserSkill getById(int userId);
+
     public boolean add(UserSkill userSkill);
     
     public boolean update(UserSkill userSkill);
-    
+
     public boolean delete(int id);
+
+    public boolean deleteByObject(UserSkill us);
 }

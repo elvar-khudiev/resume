@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.company.dao.impl;
+package com.company.service.inter;
 
 import com.company.entity.Skill;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -14,7 +14,8 @@ import java.util.List;
  *
  * @author HP
  */
-public interface SkillRepositoryCustom {
+
+public interface SkillServiceInter {
 
     public List<Skill> getAll();
 
@@ -22,7 +23,7 @@ public interface SkillRepositoryCustom {
 
     public boolean add(Skill s);
 
-    public boolean update(Skill s);
+    public boolean update(Skill skill);
 
     public boolean deleteByObject(Skill s);
 

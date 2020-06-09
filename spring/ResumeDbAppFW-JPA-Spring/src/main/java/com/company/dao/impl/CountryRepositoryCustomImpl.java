@@ -6,6 +6,7 @@
 package com.company.dao.impl;
 
 import com.company.entity.Country;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
@@ -17,7 +18,7 @@ import java.util.List;
  *
  * @author HP
  */
-
+@Repository
 @Transactional
 public class CountryRepositoryCustomImpl implements CountryRepositoryCustom {
 
@@ -34,9 +35,9 @@ public class CountryRepositoryCustomImpl implements CountryRepositoryCustom {
     }
 
     @Override
-    public Country getById(int userId) {
-        Country country = em.find(Country.class, userId);
-        return country;
+    public Country getById(int id) {
+        Country c = em.find(Country.class, id);
+        return c;
     }
 
     @Override
@@ -46,10 +47,23 @@ public class CountryRepositoryCustomImpl implements CountryRepositoryCustom {
     }
 
     @Override
-    public boolean delete(int userId) {
-        Country country = em.find(Country.class, userId);
-        em.remove(country);
+    public boolean add(Country c) {
+        Query query = em.createNativeQuery("INSERT INTO country (name, nationality) VALUES (?, ?);");
+        query.setParameter(1, c.getName());
+        query.setParameter(2, c.getNationality());
+        query.executeUpdate();
+        return true;
+    }
 
+    @Override
+    public boolean deleteByObject(Country c) {
+        em.remove(em.find(Country.class, c.getId()));
+        return true;
+    }
+
+    @Override
+    public boolean delete(int id) {
+        em.remove(em.find(Country.class, id));
         return true;
     }
 }

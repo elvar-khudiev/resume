@@ -15,14 +15,13 @@ import java.util.List;
  * @author HP
  */
 
-@Service
 public interface UserServiceInter {
 
     public List<User> getAll(String name, String surname, Integer nationalityId);
 
-    public User getById(int userId);
+    public List<User> getAll();
 
-    public User getByName(String name);
+    public User getById(int userId);
 
     public User getByEmail(String email);
     
@@ -30,5 +29,7 @@ public interface UserServiceInter {
 
     public boolean add(User u);
 
-    public boolean delete(int id);
+    public boolean deleteByObject(User user);
+
+    public boolean delete(int userId);
 }

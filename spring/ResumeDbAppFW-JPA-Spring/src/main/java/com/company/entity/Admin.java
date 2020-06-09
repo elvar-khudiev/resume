@@ -5,17 +5,9 @@
  */
 package com.company.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 /**
  *
@@ -25,8 +17,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "admin")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Admin.findByEmail", query = "SELECT a FROM Admin a WHERE a.email = :email")
-})
+    @NamedQuery(name = "Admin.findAll", query = "SELECT a FROM Admin a"),
+    @NamedQuery(name = "Admin.findById", query = "SELECT a FROM Admin a WHERE a.id = :id"),
+    @NamedQuery(name = "Admin.findByName", query = "SELECT a FROM Admin a WHERE a.name = :name"),
+    @NamedQuery(name = "Admin.findBySurname", query = "SELECT a FROM Admin a WHERE a.surname = :surname"),
+    @NamedQuery(name = "Admin.findByEmail", query = "SELECT a FROM Admin a WHERE a.email = :email"),
+    @NamedQuery(name = "Admin.findByPassword", query = "SELECT a FROM Admin a WHERE a.password = :password")})
 public class Admin implements Serializable {
 
     private static final long serialVersionUID = 1L;

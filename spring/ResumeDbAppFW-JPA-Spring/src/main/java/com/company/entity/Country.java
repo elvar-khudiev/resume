@@ -5,18 +5,11 @@
  */
 package com.company.entity;
 
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
 /**
  *
@@ -24,11 +17,12 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "country")
-//@NamedQueries({
-//    @NamedQuery(name = "Country.findAll", query = "SELECT c FROM Country c"),
-//    @NamedQuery(name = "Country.findById", query = "SELECT c FROM Country c WHERE c.id = :id"),
-//    @NamedQuery(name = "Country.findByName", query = "SELECT c FROM Country c WHERE c.name = :name"),
-//    @NamedQuery(name = "Country.findByNationality", query = "SELECT c FROM Country c WHERE c.nationality = :nationality")})
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Country.findAll", query = "SELECT c FROM Country c"),
+    @NamedQuery(name = "Country.findById", query = "SELECT c FROM Country c WHERE c.id = :id"),
+    @NamedQuery(name = "Country.findByName", query = "SELECT c FROM Country c WHERE c.name = :name"),
+    @NamedQuery(name = "Country.findByNationality", query = "SELECT c FROM Country c WHERE c.nationality = :nationality")})
 public class Country implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -43,9 +37,9 @@ public class Country implements Serializable {
     @Basic(optional = false)
     @Column(name = "nationality")
     private String nationality;
-    @OneToMany(mappedBy = "nationality")
+    @OneToMany(mappedBy = "nationalityId")
     private List<User> userList;
-    @OneToMany(mappedBy = "birthPlace")
+    @OneToMany(mappedBy = "birthplaceId")
     private List<User> userList1;
 
     public Country() {
@@ -85,6 +79,7 @@ public class Country implements Serializable {
         this.nationality = nationality;
     }
 
+    @XmlTransient
     public List<User> getUserList() {
         return userList;
     }
@@ -93,6 +88,7 @@ public class Country implements Serializable {
         this.userList = userList;
     }
 
+    @XmlTransient
     public List<User> getUserList1() {
         return userList1;
     }
@@ -123,7 +119,8 @@ public class Country implements Serializable {
 
     @Override
     public String toString() {
-        return "com.company.entity.Country[ id=" + id + " ]";
+        return "Country{" + "id=" + id
+                + ", name=" + name
+                + ", nationality=" + nationality + '}';
     }
-
 }

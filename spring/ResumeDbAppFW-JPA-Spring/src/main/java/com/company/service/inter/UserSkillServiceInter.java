@@ -5,8 +5,7 @@
  */
 package com.company.service.inter;
 
-import com.company.entity.Country;
-import com.company.entity.User;
+import com.company.entity.UserSkill;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,17 +15,19 @@ import java.util.List;
  * @author HP
  */
 
-public interface CountryServiceInter {
+public interface UserSkillServiceInter {
 
-    public List<Country> getAll();
+    public List<UserSkill> getAll();
 
-    public Country getById(int id);
+    public List<UserSkill> getAllByUserId(int userId);
 
-    public boolean update(Country c);
+    public UserSkill getById(int id);
 
-    public boolean add(Country c);
+    public boolean update(UserSkill us);
 
-    public boolean deleteByObject(Country c);
+    public boolean add(UserSkill us);
+
+    public boolean deleteByObject(UserSkill us);
 
     public boolean delete(int id);
 }

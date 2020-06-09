@@ -5,15 +5,11 @@
  */
 package com.company.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
+import java.util.List;
 
 /**
  *
@@ -22,10 +18,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @Table(name = "authority")
 @XmlRootElement
-//@NamedQueries({
-//    @NamedQuery(name = "Authority.findAll", query = "SELECT a FROM Authority a"),
-//    @NamedQuery(name = "Authority.findById", query = "SELECT a FROM Authority a WHERE a.id = :id"),
-//    @NamedQuery(name = "Authority.findByName", query = "SELECT a FROM Authority a WHERE a.name = :name")})
+@NamedQueries({
+    @NamedQuery(name = "Authority.findAll", query = "SELECT a FROM Authority a"),
+    @NamedQuery(name = "Authority.findById", query = "SELECT a FROM Authority a WHERE a.id = :id"),
+    @NamedQuery(name = "Authority.findByName", query = "SELECT a FROM Authority a WHERE a.name = :name")})
 public class Authority implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -34,7 +30,9 @@ public class Authority implements Serializable {
     @Column(name = "id")
     private Integer id;
     @Column(name = "name")
-    private String authority;
+    private String name;
+    @OneToMany(mappedBy = "authorityId")
+    private List<User> userList;
 
     public Authority() {
     }
@@ -51,12 +49,21 @@ public class Authority implements Serializable {
         this.id = id;
     }
 
-    public String getAuthority() {
-        return authority;
+    public String getName() {
+        return name;
     }
 
-    public void setAuthority(String authority) {
-        this.authority = authority;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @XmlTransient
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
     }
 
     @Override
@@ -81,7 +88,8 @@ public class Authority implements Serializable {
 
     @Override
     public String toString() {
-        return "com.company.entity.Authority[ id=" + id + " ]";
+        return "Authority{"
+                + "id=" + id
+                + ", name=" + name + '}';
     }
-    
 }

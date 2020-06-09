@@ -6,6 +6,8 @@
 package com.company.dao.impl;
 
 import com.company.entity.UserSkill;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,6 +18,8 @@ import java.util.List;
  *
  * @author HP
  */
+@Repository
+@Transactional
 public class UserSkillRepositoryCustomImpl implements UserSkillRepositoryCustom {
 
     @PersistenceContext
@@ -25,14 +29,28 @@ public class UserSkillRepositoryCustomImpl implements UserSkillRepositoryCustom 
     public List<UserSkill> getAllUserSkill() {
         String jpql = "select u from UserSkill u";
         Query query = em.createQuery(jpql, UserSkill.class);
-        List<UserSkill> list = query.getResultList();
+        return query.getResultList();
+    }
 
-        return list;
+    @Override
+    public List<UserSkill> getAllUserSkillByUserId(int userId) {
+        Query query = em.createNamedQuery("UserSkill.findByUserId", UserSkill.class);
+        query.setParameter("userId", userId);
+        return query.getResultList();
+    }
+
+    @Override
+    public UserSkill getById(int userId) {
+        return em.find(UserSkill.class, userId);
     }
 
     @Override
     public boolean add(UserSkill userSkill) {
-        em.merge(userSkill);
+        Query query = em.createNativeQuery("INSERT INTO user_skill (user_id, skill_id, power) VALUES (?, ?, ?);");
+        query.setParameter(1, userSkill.getUserId().getId());
+        query.setParameter(2, userSkill.getSkillId().getId());
+        query.setParameter(3, userSkill.getPower());
+        query.executeUpdate();
         return true;
     }
 
@@ -43,10 +61,14 @@ public class UserSkillRepositoryCustomImpl implements UserSkillRepositoryCustom 
     }
 
     @Override
-    public boolean delete(int id) {
-        UserSkill userSkill = em.find(UserSkill.class, id);
-        em.remove(userSkill);
+    public boolean deleteByObject(UserSkill userSkill) {
+        em.remove(em.find(UserSkill.class, userSkill.getId()));
+        return true;
+    }
 
+    @Override
+    public boolean delete(int id) {
+        em.remove(em.find(UserSkill.class, id));
         return true;
     }
 }

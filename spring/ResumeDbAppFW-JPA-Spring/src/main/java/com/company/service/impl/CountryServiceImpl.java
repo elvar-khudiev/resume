@@ -10,7 +10,6 @@ import com.company.entity.Country;
 import com.company.service.inter.CountryServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -20,7 +19,6 @@ import java.util.List;
  */
 
 @Service
-@Transactional
 public class CountryServiceImpl implements CountryServiceInter {
 
     @Autowired
@@ -32,13 +30,23 @@ public class CountryServiceImpl implements CountryServiceInter {
     }
 
     @Override
-    public Country getById(int userId) {
-        return countryRepository.getById(userId);
+    public Country getById(int id) {
+        return countryRepository.getById(id);
     }
 
     @Override
-    public boolean update(Country country) {
-        return countryRepository.update(country);
+    public boolean update(Country c) {
+        return countryRepository.update(c);
+    }
+
+    @Override
+    public boolean add(Country c) {
+        return countryRepository.add(c);
+    }
+
+    @Override
+    public boolean deleteByObject(Country c) {
+        return countryRepository.deleteByObject(c);
     }
 
     @Override
