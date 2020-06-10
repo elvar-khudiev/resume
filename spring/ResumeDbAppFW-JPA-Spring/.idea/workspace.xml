@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1362dbc0-5761-45a3-a6ea-121144be181e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/impl/AdminDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/impl/CountryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/impl/CountryDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/inter/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/inter/AbstractDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/inter/AdminDaoInter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/entity/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/main/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/main/Context.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/AdminRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/AdminRepositoryCustom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/AdminRepositoryCustomImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/impl/AdminServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/inter/AdminServiceInter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/logout.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -261,7 +244,7 @@
       <workItem from="1591608606754" duration="11729000" />
       <workItem from="1591685338027" duration="1520000" />
       <workItem from="1591707464199" duration="5576000" />
-      <workItem from="1591784252829" duration="4872000" />
+      <workItem from="1591784252829" duration="5720000" />
     </task>
     <servers />
   </component>

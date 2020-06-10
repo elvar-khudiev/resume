@@ -1,9 +1,7 @@
 package com.company.controller;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
-import com.company.dao.inter.AdminDaoInter;
 import com.company.dao.inter.UserDaoInter;
-import com.company.entity.Admin;
 import com.company.entity.User;
 import com.company.main.Context;
 
@@ -17,7 +15,7 @@ import java.io.IOException;
 @WebServlet(name = "com.company.controller.LoginController", urlPatterns = {"/login"})
 public class LoginController extends HttpServlet {
 
-    private UserDaoInter adminDao = Context.instanceUserDao();
+    private UserDaoInter userDao = Context.instanceUserDao();
     private BCrypt.Verifyer verifyer = BCrypt.verifyer();
 
     @Override
@@ -32,7 +30,7 @@ public class LoginController extends HttpServlet {
             String email = request.getParameter("email");
             String password = request.getParameter("password");
 
-            User user = adminDao.getByEmail(email);
+            User user = userDao.getByEmail(email);
 
             System.out.println(user);
 
