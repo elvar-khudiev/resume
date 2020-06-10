@@ -7,10 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f3a1a05-440f-4a55-a462-265996b5b8ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/impl/AdminDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/impl/CountryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/impl/CountryDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/inter/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/inter/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/inter/AdminDaoInter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/entity/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/main/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/main/Context.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/AdminRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/AdminRepositoryCustom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/AdminRepositoryCustomImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/impl/AdminServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/inter/AdminServiceInter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logout.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +110,7 @@
     </configuration>
     <configuration name="Tomcat 9.0.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8083/ResumeWeb-Spring/users" />
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="BROWSER_ID" value="53e2f627-b1a7-4dfa-bfa7-5b83cc034776" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
@@ -224,6 +238,7 @@
       <workItem from="1588676425064" duration="733000" />
       <workItem from="1588688687930" duration="259000" />
       <workItem from="1591710790619" duration="2319000" />
+      <workItem from="1591786393227" duration="2715000" />
     </task>
     <servers />
   </component>

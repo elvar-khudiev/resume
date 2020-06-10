@@ -27,14 +27,6 @@
                         style="width: 100%; margin-bottom: 5px; border-radius: 0;">Sign in
                 </button>
             </form>
-            <form action="login" method="POST">
-                <button class="btn-w-login" name="action" value="withoutLogin"
-                        style="border: none; background: none; cursor: pointer;">
-                    <small>
-                        Without login
-                    </small>
-                </button>
-            </form>
         </div>
     </center>
 </div>

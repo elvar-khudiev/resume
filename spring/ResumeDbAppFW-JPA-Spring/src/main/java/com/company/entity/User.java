@@ -65,7 +65,7 @@ public class User implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "userId")
     private List<EmploymentHistory> employmentHistoryList;
     @JoinColumn(name = "authority_id", referencedColumnName = "id")
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Authority authorityId;
     @JoinColumn(name = "nationality_id", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.EAGER)

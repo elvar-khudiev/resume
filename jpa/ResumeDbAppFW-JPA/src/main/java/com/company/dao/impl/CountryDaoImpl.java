@@ -7,16 +7,10 @@ package com.company.dao.impl;
 
 import com.company.dao.inter.AbstractDAO;
 import com.company.dao.inter.CountryDaoInter;
-import com.company.entity.Admin;
 import com.company.entity.Country;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

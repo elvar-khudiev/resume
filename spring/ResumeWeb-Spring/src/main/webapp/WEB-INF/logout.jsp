@@ -11,13 +11,13 @@
 <div class="cont">
     <center>
         <div class="col-3">
-            <h2 class="display-4"
+            <h1 class="display-4"
                 style="margin-top: 20px; padding-bottom: 10px;">
-                Log out</h2>
+                Log out</h1>
             <form action="logout" method="POST">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 <button type="submit" class="btn btn-primary"
-                        style="width: 100%; border-radius: 0;">
+                        style="width: 60%; border-radius: 0;">
                     Log out
                 </button>
             </form>

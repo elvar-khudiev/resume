@@ -22,8 +22,7 @@ public abstract class AbstractDAO {
         String url = "jdbc:mysql://localhost:3306/filemansys";
         String username = "root";
         String password = "12345";
-        Connection c = null;
-        c = DriverManager.getConnection(url, username, password);
+        Connection c = DriverManager.getConnection(url, username, password);
         return c;
     }
     

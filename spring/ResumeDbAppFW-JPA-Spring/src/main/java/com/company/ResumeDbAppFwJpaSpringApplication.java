@@ -1,10 +1,6 @@
 package com.company;
 
-import com.company.dao.impl.UserRepository;
-import com.company.entity.Country;
 import com.company.entity.User;
-import com.company.entity.UserSkill;
-import com.company.service.impl.UserServiceImpl;
 import com.company.service.inter.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -41,7 +37,7 @@ public class ResumeDbAppFwJpaSpringApplication {
         CommandLineRunner clr = args -> {
 
 //            System.out.println("--------------------------------");
-//            System.err.println(userService.getById(1));
+//            System.err.println(userService.getAll());
 //            System.out.println("--------------------------------");
 //            System.err.println(userSkillService.getById(1016));
 //            System.out.println("--------------------------------");
