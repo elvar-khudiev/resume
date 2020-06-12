@@ -87,6 +87,7 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
 
         return null;
     }
+
     //     JPQL
 //    @Override
 //    public User getByEmail(String email) {
@@ -140,24 +141,27 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
     @Override
     public boolean add(User user) {
         user.setPassword(crypt.hashToString(4, user.getPassword().toCharArray()));
-
-        Query query = em.createNativeQuery("INSERT INTO"
-                + "user(name, surname, email, phone, password, profile_description, address,"
-                + "birthdate, birthplace_id, nationality_id, authority_id)"
-                + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
-        query.setParameter(1, user.getName());
-        query.setParameter(2, user.getSurname());
-        query.setParameter(3, user.getEmail());
-        query.setParameter(4, user.getPhone());
-        query.setParameter(5, user.getPassword());
-        query.setParameter(6, user.getProfileDescription());
-        query.setParameter(7, user.getAddress());
-        query.setParameter(8, user.getBirthdate());
-        query.setParameter(9, user.getBirthplaceId().getId());
-        query.setParameter(10, user.getNationalityId().getId());
-        query.setParameter(11, user.getAuthorityId().getId());
-        query.executeUpdate();
+        User u = createUser(user);
+        em.persist(u);
         return true;
+    }
+
+    private static User createUser(User u) {
+        return new User(
+                null,
+                u.getName(),
+                u.getSurname(),
+                u.getEmail(),
+                u.getPassword(),
+                u.getPhone(),
+                u.getProfileDescription(),
+                u.getAddress(),
+                u.getBirthdate(),
+                u.getUserSkillList(),
+                u.getEmploymentHistoryList(),
+                u.getAuthorityId(),
+                u.getNationalityId(),
+                u.getBirthplaceId());
     }
 
     @Override

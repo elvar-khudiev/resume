@@ -1,7 +1,6 @@
 package com.company.service;
 
 import com.company.entity.User;
-import com.company.global.GLOBAL;
 import com.company.service.inter.UserServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User.UserBuilder;
@@ -36,10 +35,8 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
             System.err.println(user.getAuthorityId().getName());
 
             if (user.getAuthorityId().getName().equals("ADMIN")) {
-                GLOBAL.isAdmin = true;
                 authoritiesArr = new String[]{"ADMIN", "USER"};
             } else if (user.getAuthorityId().getName().equals("USER")) {
-                GLOBAL.isAdmin = false;
                 authoritiesArr = new String[]{"USER"};
             }
 

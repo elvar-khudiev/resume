@@ -1,8 +1,8 @@
-<%@ page import="com.company.global.GLOBAL" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <!DOCTYPE html>
 <html>
@@ -25,9 +25,8 @@
     <title>Users</title>
 </head>
 <body>
-<%
-    boolean isAdmin = GLOBAL.isAdmin;
-%>
+<sec:authorize access="hasAuthority('USER')">
+</sec:authorize>
 <div class="user_container">
     <center style="margin-bottom: 170px;">
         <h1 class="display-4">Users</h1>
@@ -52,35 +51,25 @@
             </form:form>
         </div>
         <div style="float: left;">
-            <%
-                if (!isAdmin) {
-            %>
-
-            <div class="div-2" style="padding-left: 495px; bottom: 16px;">
-                <form action="login" method="GET">
-                    <input class="btn btn-info" type="submit" style="width: 105px" value="Sign in"/>
-                </form>
-            </div>
-
-            <%} else {%>
-
-            <div class="div-2" style="padding-left: 495px; bottom: 16px;">
-                <form action="logout" method="GET">
-                    <input class="btn btn-danger" type="submit" style="width: 105px" value="Log out"/>
-                </form>
-            </div>
-
-            <%
-                }
-                if (isAdmin) {
-            %>
-
-            <div class="div-2" style="bottom: -38px; left: 780px">
-                <form action="user-create" method="GET">
-                    <input class="btn btn-success" type="submit" name="create" value="Create new"/>
-                </form>
-            </div>
-            <%}%>
+            <sec:authorize access="!hasAuthority('ADMIN')">
+                <div class="div-2" style="padding-left: 495px; bottom: 16px;">
+                    <form action="login" method="GET">
+                        <input class="btn btn-info" type="submit" style="width: 105px" value="Sign in"/>
+                    </form>
+                </div>
+            </sec:authorize>
+            <sec:authorize access="hasAuthority('ADMIN')">
+                <div class="div-2" style="padding-left: 495px; bottom: 16px;">
+                    <form action="logout" method="GET">
+                        <input class="btn btn-danger" type="submit" style="width: 105px" value="Log out"/>
+                    </form>
+                </div>
+                <div class="div-2" style="bottom: -38px; left: 780px">
+                    <form action="user-create" method="GET">
+                        <input class="btn btn-success" type="submit" name="create" value="Create new"/>
+                    </form>
+                </div>
+            </sec:authorize>
         </div>
     </div>
     <div class="table_user">
@@ -90,12 +79,10 @@
                 <th>Name</th>
                 <th>Surname</th>
                 <th>Nationality</th>
-                <%
-                    if (isAdmin) {
-                %>
-                <th></th>
-                <th></th>
-                <%}%>
+                <sec:authorize access="hasAuthority('ADMIN')">
+                    <th></th>
+                    <th></th>
+                </sec:authorize>
                 <th></th>
             </tr>
             </thead>
@@ -105,27 +92,26 @@
                     <td>${u.getName()}</td>
                     <td>${u.getSurname()}</td>
                     <td>${u.getNationalityId().getNationality()}</td>
-                    <%
-                        if (isAdmin) {
-                    %>
-                    <td style="width: 1px">
-                        <form action="user-details-edit" method="GET">
-                            <input type="hidden" name="id" value="${u.getId()}">
-                            <input type="hidden" name="action" value="update">
+                    <sec:authorize access="hasAuthority('ADMIN')">
+                        <td style="width: 1px">
+                            <form action="user-details-edit" method="GET">
+                                <input type="hidden" name="id" value="${u.getId()}">
+                                <input type="hidden" name="action" value="update">
 
-                            <button class="btn_table btn_update btn-secondary" type="submit" value="update">
-                                <i class="fas fa-pen-square"></i>
+                                <button class="btn_table btn_update btn-secondary" type="submit" value="update">
+                                    <i class="fas fa-pen-square"></i>
+                                </button>
+                            </form>
+                        </td>
+                        <td style="width: 1px">
+                            <button class="btn_table btn_delete btn-danger" type="button" value="delete"
+                                    data-toggle="modal" data-target="#exampleModal"
+                                    onclick="setIdForDelete(${u.getId()})">
+                                <i class="far fa-trash-alt"></i>
                             </button>
-                        </form>
-                    </td>
-                    <td style="width: 1px">
-                        <button class="btn_table btn_delete btn-danger" type="button" value="delete"
-                                data-toggle="modal" data-target="#exampleModal" onclick="setIdForDelete(${u.getId()})">
-                            <i class="far fa-trash-alt"></i>
-                        </button>
-                        </form>
-                    </td>
-                    <%}%>
+                            </form>
+                        </td>
+                    </sec:authorize>
                     <td style="width: 1px">
                         <form action="user-details" method="GET">
                             <input type="hidden" name="id" value="${u.getId()}">

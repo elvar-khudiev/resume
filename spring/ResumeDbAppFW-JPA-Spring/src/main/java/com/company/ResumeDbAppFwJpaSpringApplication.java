@@ -36,9 +36,12 @@ public class ResumeDbAppFwJpaSpringApplication {
     public CommandLineRunner run() {
         CommandLineRunner clr = args -> {
 
-//            System.out.println("--------------------------------");
+            System.out.println("--------------------------------");
 //            System.err.println(userService.getAll());
-//            System.out.println("--------------------------------");
+            User u = userService.getById(1);
+            u.setEmail("test");
+            userService.add(u);
+            System.out.println("--------------------------------");
 //            System.err.println(userSkillService.getById(1016));
 //            System.out.println("--------------------------------");
 //            System.err.println(skillService.getById(1));

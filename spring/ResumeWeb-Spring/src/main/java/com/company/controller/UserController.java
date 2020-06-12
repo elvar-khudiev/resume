@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -29,11 +30,9 @@ public class UserController {
     @Autowired
     private UserServiceInter userService;
 
+    /* With spring tags */
     @RequestMapping(method = RequestMethod.GET, value = "/users")
     public ModelAndView users(
-
-//            /* With spring tags */
-//
             @Valid
             @ModelAttribute("user") UserForm u,
             BindingResult bindingResult) {
@@ -49,7 +48,8 @@ public class UserController {
     }
 
     /* With HTML tags */
-
+//    @RequestMapping(method = RequestMethod.GET, value = "/users")
+//    public ModelAndView users(
 //            @RequestParam(value = "name", required = false) String name,
 //            @RequestParam(value = "surname", required = false) String surname,
 //            @RequestParam(value = "nid", required = false) Integer nationalityId) {
@@ -74,26 +74,9 @@ public class UserController {
 
     @ModelAttribute("user")
     public UserForm getEmptyUserForm() {
-//        if (1==1) {
+//        if (true) {
 //            throw new MyException("ay daaa xeta bash verdi !");
 //        }
         return new UserForm(null, null, null);
-    }
-
-    @RequestMapping(method = RequestMethod.POST)
-    public String post(HttpServletRequest request, HttpServletResponse response) {
-        try {
-            if (request.getParameter("action").equals("logout") || request.getParameter("action").equals("withoutLogin")) {
-
-                request.getSession().removeAttribute("loggedInUser");
-                response.sendRedirect("users");
-
-            } else if (request.getParameter("action").equals("signin")) {
-                response.sendRedirect("login");
-            }
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        return "users";
     }
 }

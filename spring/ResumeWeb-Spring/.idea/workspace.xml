@@ -7,24 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f3a1a05-440f-4a55-a462-265996b5b8ef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/impl/AdminDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/impl/CountryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/impl/CountryDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/inter/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/inter/AbstractDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/dao/inter/AdminDaoInter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/entity/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/main/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/main/Context.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_acl_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_3_2_10_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/AdminRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/AdminRepositoryCustom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/AdminRepositoryCustomImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/impl/AdminServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/service/inter/AdminServiceInter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ResumeWeb_Spring_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ResumeWeb_Spring_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResumeWeb-Spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ResumeWeb-Spring.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/global/GLOBAL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +49,7 @@
   <component name="ProjectId" id="1ZZEBhKfocJStasyjNU3GtEXMrL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -239,6 +237,8 @@
       <workItem from="1588688687930" duration="259000" />
       <workItem from="1591710790619" duration="2319000" />
       <workItem from="1591786393227" duration="2727000" />
+      <workItem from="1591865900944" duration="429000" />
+      <workItem from="1591941411025" duration="4531000" />
     </task>
     <servers />
   </component>

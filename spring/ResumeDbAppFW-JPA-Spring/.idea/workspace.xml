@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1362dbc0-5761-45a3-a6ea-121144be181e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/libraries/Maven__org_springframework_security_spring_security_acl_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_3_2_10_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/artifacts/ResumeWeb_Spring_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/artifacts/ResumeWeb_Spring_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/ResumeWeb-Spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/ResumeWeb-Spring.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/users.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +55,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ResumeWeb-Spring" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -245,6 +257,8 @@
       <workItem from="1591685338027" duration="1520000" />
       <workItem from="1591707464199" duration="5576000" />
       <workItem from="1591784252829" duration="5720000" />
+      <workItem from="1591862632220" duration="3675000" />
+      <workItem from="1591938416258" duration="2274000" />
     </task>
     <servers />
   </component>
