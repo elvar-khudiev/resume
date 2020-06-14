@@ -32,16 +32,12 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
             builder.password(user.getPassword());
             String[] authoritiesArr = null;
 
-            System.err.println(user.getAuthorityId().getName());
-
             if (user.getAuthorityId().getName().equals("ADMIN")) {
                 authoritiesArr = new String[]{"ADMIN", "USER"};
             } else if (user.getAuthorityId().getName().equals("USER")) {
                 authoritiesArr = new String[]{"USER"};
             }
-
             builder.authorities(authoritiesArr);
-
             return builder.build();
         } else {
             throw new UsernameNotFoundException("User not found");

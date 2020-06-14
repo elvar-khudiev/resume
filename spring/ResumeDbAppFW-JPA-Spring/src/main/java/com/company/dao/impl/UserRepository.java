@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> , UserRepositoryCustom  {
+public interface UserRepository extends JpaRepository<User, Integer> , UserRepositoryCustom {
 
     User findByName(String name);
     User findByNameAndSurname(String name, String surname);

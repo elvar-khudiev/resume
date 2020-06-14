@@ -1,9 +1,7 @@
 package com.company.controller;
 
 import com.company.entity.User;
-import com.company.exception.MyException;
 import com.company.form.UserForm;
-import com.company.service.DummyService;
 import com.company.service.inter.UserServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,15 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.io.IOException;
 import java.util.List;
-
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 
 @Controller
 public class UserController {
@@ -30,7 +21,7 @@ public class UserController {
     @Autowired
     private UserServiceInter userService;
 
-    /* With spring tags */
+    /* Spring tags */
     @RequestMapping(method = RequestMethod.GET, value = "/users")
     public ModelAndView users(
             @Valid
@@ -47,7 +38,7 @@ public class UserController {
         return mv;
     }
 
-    /* With HTML tags */
+    /* HTML tags */
 //    @RequestMapping(method = RequestMethod.GET, value = "/users")
 //    public ModelAndView users(
 //            @RequestParam(value = "name", required = false) String name,
@@ -61,16 +52,6 @@ public class UserController {
 //
 //        return mv;
 //    }
-
-    @Autowired
-    DummyService dummyService;
-
-    @RequestMapping(method = {RequestMethod.GET}, value = "/foo")
-    public String foo() {
-        System.err.println("dummy service invoked");
-        dummyService.foo();
-        return "users";
-    }
 
     @ModelAttribute("user")
     public UserForm getEmptyUserForm() {

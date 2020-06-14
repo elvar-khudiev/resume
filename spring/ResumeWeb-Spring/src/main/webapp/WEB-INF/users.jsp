@@ -37,12 +37,12 @@
                 <div class="form-group">
                     <label for="name">Name: </label>
                     <form:input path="name" placeolder="Enter name" class="form-control"/>
-                    <form:errors path="name" cssClass="error/"/>
+                    <form:errors path="name" cssClass="error/" cssStyle="color: #1e6086"/>
                 </div>
                 <div class="form-group">
                     <label for="surname">Surname: </label>
                     <form:input path="surname" placeolder="Enter surname" class="form-control"/>
-                    <form:errors path="surname" cssClass="error/"/>
+                    <form:errors path="surname" cssClass="error/" cssStyle="color: #1e6086"/>
                 </div>
 
                 <form:button type="submit" class="btn btn-primary" id="btn_search">
@@ -65,9 +65,12 @@
                     </form>
                 </div>
                 <div class="div-2" style="bottom: -38px; left: 780px">
-                    <form action="user-create" method="GET">
-                        <input class="btn btn-success" type="submit" name="create" value="Create new"/>
-                    </form>
+                    <form:form action="user-create" method="GET" modelAttribute="user">
+                        <form:button class="btn btn-success"
+                                type="submit">
+                            Create new
+                        </form:button>
+                    </form:form>
                 </div>
             </sec:authorize>
         </div>
@@ -113,13 +116,13 @@
                         </td>
                     </sec:authorize>
                     <td style="width: 1px">
-                        <form action="user-details" method="GET">
+                        <form:form action="user-details" method="GET">
                             <input type="hidden" name="id" value="${u.getId()}">
                             <button class="btn_table btn-info" style="border-radius: 20px; font-size: 20px;"
-                                    type="submit" value="info" onclick="test()">
+                                    type="submit" value="info">
                                 <i class="fas fa-question-circle"></i>
                             </button>
-                        </form>
+                        </form:form>
                     </td>
                 </tr>
             </c:forEach>

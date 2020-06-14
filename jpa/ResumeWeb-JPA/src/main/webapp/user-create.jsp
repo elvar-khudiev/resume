@@ -69,6 +69,10 @@
             <input class="w3-input" type="text" name="email" value=""/>
         </div>
         <div>
+            <label for="password">Password</label>
+            <input class="w3-input" type="password" name="password" value=""/>
+        </div>
+        <div>
             <label for="phone">Phone</label>
             <input class="w3-input" type="text" name="phone" value=""/>
         </div>

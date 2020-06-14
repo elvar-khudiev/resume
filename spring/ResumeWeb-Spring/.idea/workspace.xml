@@ -7,20 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f3a1a05-440f-4a55-a462-265996b5b8ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_acl_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_3_2_10_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserCreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/webapp/user-create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/webapp/user-create.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ResumeWeb_Spring_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ResumeWeb_Spring_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeDbAppFW-JPA-Spring/src/main/java/com/company/dao/impl/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResumeWeb-Spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ResumeWeb-Spring.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/global/GLOBAL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/controller/UserCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/controller/UserCreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/controller/UserDeatilsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/controller/UserDeatilsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/controller/UserDetailsEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/controller/UserDetailsEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/form/UserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/form/UserForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/DummyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user-create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user-create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user-details.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,7 +54,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,7 +62,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33962265" />
   </component>
@@ -238,7 +240,13 @@
       <workItem from="1591710790619" duration="2319000" />
       <workItem from="1591786393227" duration="2727000" />
       <workItem from="1591865900944" duration="429000" />
-      <workItem from="1591941411025" duration="4531000" />
+      <workItem from="1591941411025" duration="5209000" />
+      <workItem from="1591960293885" duration="9448000" />
+      <workItem from="1592029986735" duration="2911000" />
+      <workItem from="1592046575171" duration="2563000" />
+      <workItem from="1592052615659" duration="2798000" />
+      <workItem from="1592066966467" duration="5788000" />
+      <workItem from="1592120201717" duration="7848000" />
     </task>
     <servers />
   </component>

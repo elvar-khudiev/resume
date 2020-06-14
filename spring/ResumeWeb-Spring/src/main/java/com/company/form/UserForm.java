@@ -6,6 +6,7 @@ public class UserForm {
     @Size(min = 3, message = "'Name' can not be less than 3")
     private String name;
 
+    @Size(min = 3, message = "'Surname' can not be less than 3")
     private String surname;
     private Integer nationalityId;
 

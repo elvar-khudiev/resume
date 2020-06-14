@@ -7,6 +7,7 @@ package com.company.controller;
 
 import com.company.dao.inter.CountryDaoInter;
 import com.company.dao.inter.UserDaoInter;
+import com.company.entity.Authority;
 import com.company.entity.Country;
 import com.company.entity.User;
 import com.company.main.Context;
@@ -40,8 +41,10 @@ public class UserCreateController extends HttpServlet {
             String surname = request.getParameter("surname");
             String phone = request.getParameter("phone");
             String email = request.getParameter("email");
+            String password = request.getParameter("password");
             String profileDescription = request.getParameter("profile-description");
             String address = request.getParameter("address");
+//            String authority = request.getParameter("authority");
             String datepicker = request.getParameter("datepicker");
             String birthPlace = request.getParameter("birthPlace");
             String nationality = request.getParameter("nationality");
@@ -68,8 +71,10 @@ public class UserCreateController extends HttpServlet {
             user.setSurname(surname);
             user.setPhone(phone);
             user.setEmail(email);
+            user.setPassword(password);
             user.setProfileDescription(profileDescription);
             user.setAddress(address);
+//            user.setAuthorityId(new Authority(1));
 
             UserDaoInter userDao = Context.instanceUserDao();
             userDao.add(user);                                              // add olunur, evvelki sehifeye qayidilir
