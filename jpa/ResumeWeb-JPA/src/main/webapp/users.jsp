@@ -45,7 +45,7 @@
         background-color: black;
         padding: 5px 7px;">
 
-    You'r is admin
+    You are admin
 </div>
 <%}%>
 

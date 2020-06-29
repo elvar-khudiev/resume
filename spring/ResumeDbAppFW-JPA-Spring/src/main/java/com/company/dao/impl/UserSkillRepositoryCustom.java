@@ -6,7 +6,6 @@
 package com.company.dao.impl;
 
 import com.company.entity.UserSkill;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

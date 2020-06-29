@@ -5,7 +5,6 @@ import com.company.dto.UserDTO;
 import com.company.entity.User;
 import com.company.service.inter.UserServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +24,6 @@ public class UserRestController {
             @RequestParam(name = "surname", required = false) String surname,
             @RequestParam(name = "nid", required = false) Integer nid
     ) {
-        System.out.println("alma2");        
         List<User> users = userService.getAll(name, surname, nid);
 
         List<UserDTO> userDTOS = new ArrayList<>();
@@ -79,14 +77,9 @@ public class UserRestController {
         user.setPassword(userDTO.getPassword());
 
         userService.add(user);
+        userDTO.setPassword("PROTECTED");
 
-        UserDTO resultDTO = new UserDTO();
-
-        resultDTO.setId(userDTO.getId());
-        resultDTO.setName(userDTO.getName());
-        resultDTO.setSurname(userDTO.getSurname());
-
-        return ResponseEntity.ok(ResponseDTO.of(resultDTO, "Successfully added"));
+        return ResponseEntity.ok(ResponseDTO.of(userDTO, "Successfully added"));
     }
 
     @CrossOrigin(exposedHeaders = "Access-Control-Allow-Origin")

@@ -6,8 +6,6 @@
 package com.company.dao.impl;
 
 import com.company.entity.User;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -35,4 +33,9 @@ public interface UserRepositoryCustom {
     public boolean deleteByObject(User user);
 
     public boolean deleteByEmail(String email);
+
+    //  test for @Spy
+    public Integer getI();
+    public String test();
+    //
 }

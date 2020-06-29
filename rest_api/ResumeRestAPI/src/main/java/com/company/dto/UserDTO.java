@@ -22,6 +22,8 @@ public class UserDTO {
         this.id = user.getId();
         this.name = user.getName();
         this.surname = user.getSurname();
+        this.email = user.getEmail();
+        this.phone = user.getPhone();
 
         List<UserSkillDTO> list = new ArrayList<>();
         List<UserSkill> userSkills = user.getUserSkillList();
@@ -34,10 +36,12 @@ public class UserDTO {
         this.skills = list;
     }
 
-    public UserDTO(Integer id, String name, String surname) {
+    public UserDTO(Integer id, String name, String surname, String email, String phone) {
         this.id = id;
         this.name = name;
         this.surname = surname;
+        this.email = email;
+        this.phone = phone;
     }
 
     public Integer getId() {

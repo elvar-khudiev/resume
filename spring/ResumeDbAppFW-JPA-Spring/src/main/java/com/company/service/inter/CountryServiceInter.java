@@ -6,8 +6,6 @@
 package com.company.service.inter;
 
 import com.company.entity.Country;
-import com.company.entity.User;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

@@ -6,9 +6,6 @@
 package com.company.dao.impl;
 
 import com.company.entity.EmploymentHistory;
-import com.company.entity.User;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

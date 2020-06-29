@@ -6,7 +6,6 @@
 package com.company.service.inter;
 
 import com.company.entity.UserSkill;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

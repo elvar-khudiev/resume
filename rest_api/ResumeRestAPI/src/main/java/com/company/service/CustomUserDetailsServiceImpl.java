@@ -32,9 +32,9 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
             builder.password(user.getPassword());
 
             String[] authoritiesArr = null;
-            if (user.getAuthority().getAuthority().equals("ADMIN")) {
+            if (user.getAuthorityId().getName().equals("ADMIN")) {
                 authoritiesArr = new String[]{"ADMIN", "ROLE_ADMIN", "USER", "ROLE_USER"};
-            } else if (user.getAuthority().getAuthority().equals("USER")) {
+            } else if (user.getAuthorityId().getName().equals("USER")) {
                 authoritiesArr = new String[]{"USER", "ROLE_USER"};
             }
 

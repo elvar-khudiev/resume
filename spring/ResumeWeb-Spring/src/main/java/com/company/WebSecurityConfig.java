@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -40,21 +41,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
+    public void configure(WebSecurity web) throws Exception {
+        web
+                .ignoring()
+                .antMatchers("/assets/**", "/css/**", "/js/**", "/images/**");
+    }
+
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
         System.err.println("\n----- configure (http) -----\n");
 
         http
-                .authorizeRequests().antMatchers("/login**").permitAll()
+                .authorizeRequests().antMatchers("/login").permitAll()
                 .and()
-                .authorizeRequests().antMatchers("/users").hasAnyAuthority("USER")
+                .authorizeRequests().antMatchers("/users", "/user-details").authenticated()
                 .and()
-                .authorizeRequests().antMatchers("/user-details").hasAnyAuthority("USER")
+                .formLogin().loginPage("/login").defaultSuccessUrl("/users").permitAll()
                 .and()
                 .logout().logoutUrl("/logout").logoutSuccessUrl("/login")
                 .and()
-                .formLogin().loginPage("/login").defaultSuccessUrl("/users").permitAll()
-                .and().
-                authorizeRequests().anyRequest().hasAnyAuthority("ADMIN")
-        ;
+                .authorizeRequests().anyRequest().hasAnyAuthority("ADMIN");
     }
 }

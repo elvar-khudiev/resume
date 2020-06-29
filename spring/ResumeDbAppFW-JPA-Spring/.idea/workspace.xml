@@ -2,10 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1362dbc0-5761-45a3-a6ea-121144be181e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestClient/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserRepositoryCustomImplIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/.idea/artifacts/ResumeRestAPI_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/.idea/artifacts/ResumeRestAPI_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/ResumeRestAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/ResumeRestAPI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/src/main/java/com/company/controller/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/src/main/java/com/company/controller/UserRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/src/main/java/com/company/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/src/main/java/com/company/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/src/main/java/com/company/dto/UserSkillDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/src/main/java/com/company/dto/UserSkillDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestClient/.idea/artifacts/ResumeRestClient_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestClient/.idea/artifacts/ResumeRestClient_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestClient/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestClient/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestClient/ResumeRestClient.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/CountryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/CountryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/CountryRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/CountryRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/EmploymentHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/EmploymentHistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/EmploymentHistoryRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/EmploymentHistoryRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/EmploymentHistoryRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/EmploymentHistoryRepositoryCustomImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/SkillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/SkillRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/SkillRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/SkillRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/SkillRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/SkillRepositoryCustomImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserSkillRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserSkillRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserSkillRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserSkillRepositoryCustomImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/entity/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/UserSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/entity/UserSkill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/impl/CountryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/impl/CountryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/impl/EmploymentHistoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/impl/EmploymentHistoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/inter/CountryServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/inter/CountryServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/inter/EmploymentHistoryServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/inter/EmploymentHistoryServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/inter/SkillServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/inter/SkillServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/inter/UserServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/inter/UserServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/service/inter/UserSkillServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/service/inter/UserSkillServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/UserRepositoryCustomImplIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/UserServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/aspect/ExceptionLogAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/aspect/ExceptionLogAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/aspect/LoggingAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/controller/UserCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/controller/UserCreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/controller/UserDetailsEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/java/com/company/controller/UserDetailsEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/logout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/user-create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/user-create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/user-details-edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/user-details-edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/user-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/user-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/src/main/webapp/WEB-INF/users.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,10 +106,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="com.company" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -84,7 +140,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ResumeDbAppFwJpaSpringApplication">
+  <component name="RunManager" selected="JUnit.UserRepositoryCustomImplIT">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="ResumeDbAppFW-JPA-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ResumeDbAppFwJpaSpringApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.ResumeDbAppFwJpaSpringApplication" />
       <module name="ResumeDbAppFW-JPA-Spring" />
@@ -106,8 +175,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.UserRepositoryCustomImplIT" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserRepositoryCustomImplIT" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,8 +190,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.UserRepositoryCustomImplIT" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserRepositoryCustomImplIT" />
       <option name="METHOD_NAME" value="testGetAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -131,8 +200,8 @@
     </configuration>
     <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ResumeDbAppFW-JPA-Spring" />
-      <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.UserServiceTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,8 +209,8 @@
     </configuration>
     <configuration name="UserServiceTest.testGivenAllParamsGetAllByFilter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ResumeDbAppFW-JPA-Spring" />
-      <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.UserServiceTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
       <option name="METHOD_NAME" value="testGivenAllParamsGetAllByFilter" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -171,6 +240,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.ResumeDbAppFwJpaSpringApplication" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.UserServiceTest" />
       <item itemvalue="JUnit.UserServiceTest.testGivenAllParamsGetAllByFilter" />
       <item itemvalue="JUnit.UserRepositoryCustomImplIT.testGetAll" />
@@ -181,8 +251,9 @@
       <list>
         <item itemvalue="JUnit.UserRepositoryCustomImplIT" />
         <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.UserRepositoryCustomImplIT.testGetAll" />
         <item itemvalue="JUnit.UserServiceTest.testGivenAllParamsGetAllByFilter" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UserRepositoryCustomImplIT.testGetAll" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +321,13 @@
       <workItem from="1591784252829" duration="5720000" />
       <workItem from="1591862632220" duration="3675000" />
       <workItem from="1591938416258" duration="2695000" />
+      <workItem from="1592300273751" duration="999000" />
+      <workItem from="1592899321360" duration="1482000" />
+      <workItem from="1592917342212" duration="1642000" />
+      <workItem from="1592979689601" duration="8785000" />
+      <workItem from="1593068361061" duration="7206000" />
+      <workItem from="1593152887877" duration="12403000" />
+      <workItem from="1593189154860" duration="765000" />
     </task>
     <servers />
   </component>

@@ -182,15 +182,19 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
         return true;
     }
 
-//    public Integer getI() {
-//        return 1;
-//    }
-//
-//    public String test() {
-//        Integer i = getI();
-//        System.out.println(i.toString());
-//        System.out.println("test called");
-//
-//        return "test";
-//    }
+    //  test for @Spy
+    @Override
+    public Integer getI() {
+        return 1;
+    }
+
+    @Override
+    public String test() {
+        Integer i = getI();
+        System.out.println(i.toString());
+        System.out.println("test called");
+
+        return "test";
+    }
+    //
 }

@@ -1,7 +1,22 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="ResumeRestClient:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/ResumeRestClient_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/ResumeRestClient</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>ResumeRestClient</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ResumeRestClient" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/ResumeRestClient/META-INF/MANIFEST.MF" />
+      </element>
       <element id="javaee-facet-resources" facet="ResumeRestClient/web/Web" />
     </root>
   </artifact>

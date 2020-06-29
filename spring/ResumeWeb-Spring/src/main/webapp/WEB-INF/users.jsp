@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/users.css">
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
@@ -23,6 +24,13 @@
     <script src="https://kit.fontawesome.com/9bfc143a49.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/users.js"></script>
     <title>Users</title>
+
+    <script>
+        function setIdForDelete(id) {
+            var elem = document.getElementById("idForDelete");
+            elem.value = id;
+        }
+    </script>
 </head>
 <body>
 <sec:authorize access="hasAuthority('USER')">
@@ -37,12 +45,12 @@
                 <div class="form-group">
                     <label for="name">Name: </label>
                     <form:input path="name" placeolder="Enter name" class="form-control"/>
-                    <form:errors path="name" cssClass="error/" cssStyle="color: #1e6086"/>
+                    <form:errors path="name" cssClass="error/" cssStyle="color: red"/>
                 </div>
                 <div class="form-group">
                     <label for="surname">Surname: </label>
                     <form:input path="surname" placeolder="Enter surname" class="form-control"/>
-                    <form:errors path="surname" cssClass="error/" cssStyle="color: #1e6086"/>
+                    <form:errors path="surname" cssClass="error/" cssStyle="color: red"/>
                 </div>
 
                 <form:button type="submit" class="btn btn-primary" id="btn_search">
@@ -97,14 +105,12 @@
                     <td>${u.getNationalityId().getNationality()}</td>
                     <sec:authorize access="hasAuthority('ADMIN')">
                         <td style="width: 1px">
-                            <form action="user-details-edit" method="GET">
+                            <form:form action="user-details-edit" method="GET">
                                 <input type="hidden" name="id" value="${u.getId()}">
-                                <input type="hidden" name="action" value="update">
-
                                 <button class="btn_table btn_update btn-secondary" type="submit" value="update">
                                     <i class="fas fa-pen-square"></i>
                                 </button>
-                            </form>
+                            </form:form>
                         </td>
                         <td style="width: 1px">
                             <button class="btn_table btn_delete btn-danger" type="button" value="delete"
@@ -112,7 +118,6 @@
                                     onclick="setIdForDelete(${u.getId()})">
                                 <i class="far fa-trash-alt"></i>
                             </button>
-                            </form>
                         </td>
                     </sec:authorize>
                     <td style="width: 1px">
@@ -144,12 +149,11 @@
                 Are you sure ?
             </div>
             <div class="modal-footer">
-                <form action="user-details-edit" method="POST">
+                <form:form action="users" method="POST">
                     <input type="hidden" name="id" value="" id="idForDelete"/>
-                    <input type="hidden" name="action" value="delete"/>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+                </form:form>
             </div>
         </div>
     </div>

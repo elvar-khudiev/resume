@@ -22,7 +22,7 @@
 
 <body>
 <div class="dt-container">
-    <form:form action="users" method="GET" modelAttribute="user">
+    <form action="users" method="GET">
         <center>
             <h1 class="display-4">Details</h1>
         </center>
@@ -59,11 +59,11 @@
                 <label for="address">Address</label>
                 <h5 type="text" name="address" class="col-8">${user.getAddress()}</h5>
             </div>
-                <%--                <%--%>
-                <%--                    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");--%>
-                <%--                    Date utilDate = new Date(u.getBirthDate().getTime());--%>
-                <%--                    String dateStr = format.format(utilDate);--%>
-                <%--                %>--%>
+            <%--                <%--%>
+            <%--                    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");--%>
+            <%--                    Date utilDate = new Date(u.getBirthDate().getTime());--%>
+            <%--                    String dateStr = format.format(utilDate);--%>
+            <%--                %>--%>
             <div class="div-side-by-side birth-date">
                 <label class="control-label" for="datepicker">Birth Date</label>
                 <h5 type="text" name="datepicker" class="col-8">${user.getBirthdate()}</h5>
@@ -80,11 +80,11 @@
             </div>
         </div>
         <div align="center">
-            <form:button type="submit" class="btn btn-secondary" style="width: 100px;" name="action" value="back">
+            <button type="submit" class="btn btn-secondary" style="width: 100px;" name="action" value="back">
                 Back
-            </form:button>
+            </button>
         </div>
-    </form:form>
+    </form>
 </div>
 </body>
 </html>

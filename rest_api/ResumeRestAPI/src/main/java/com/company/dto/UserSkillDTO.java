@@ -1,11 +1,10 @@
 package com.company.dto;
 
-import com.company.entity.Skill;
 import com.company.entity.UserSkill;
 
 public class UserSkillDTO {
     private Integer id;
-    private String power;
+    private Integer power;
     private SkillDTO skill;
 
     public UserSkillDTO() {
@@ -20,7 +19,7 @@ public class UserSkillDTO {
 
         this.id = userSkill.getId();
         this.power = userSkill.getPower();
-        this.skill = new SkillDTO(userSkill.getSkill());
+        this.skill = new SkillDTO(userSkill.getSkillId());
     }
 
     public Integer getId() {
@@ -31,11 +30,11 @@ public class UserSkillDTO {
         this.id = id;
     }
 
-    public String getPower() {
+    public Integer getPower() {
         return power;
     }
 
-    public void setPower(String power) {
+    public void setPower(Integer power) {
         this.power = power;
     }
 

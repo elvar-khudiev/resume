@@ -5,114 +5,74 @@
  */
 package com.company.controller;
 
-import com.company.dao.inter.CountryDaoInter;
-import com.company.dao.inter.UserDaoInter;
 import com.company.entity.Country;
 import com.company.entity.User;
-import com.company.main.Context;
+import com.company.form.UserDetailsForm;
+import com.company.form.UserForm;
+import com.company.service.inter.CountryServiceInter;
+import com.company.service.inter.UserServiceInter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.sql.Date;
 import java.util.List;
 
 /**
- *
  * @author HP
  */
-@WebServlet(name = "UserDetailsEditController", urlPatterns = {"/user-details-edit"})
-public class UserDetailsEditController extends HttpServlet {
+@Controller
+public class UserDetailsEditController {
 
-    private UserDaoInter userDao = Context.instanceUserDao();
+    @Autowired
+    private UserServiceInter userService;
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    @Autowired
+    private CountryServiceInter countryService;
 
-        System.out.println("action = " + request.getParameter("action"));
-
-        String idStr = request.getParameter("id");
-        Integer id = null;
-
-        if(idStr != null && !idStr.trim().isEmpty()) {
-            id = Integer.parseInt(request.getParameter("id"));
-        } else {
-            System.out.println("Id is empty !");
-        }
-
-        User user = userDao.getById(id);                                         // uygun user bazadan chekilir
-
-        String action = request.getParameter("action");                       // emeliyyatin novu mueyyen olunur
-
-        if (action.equals("update")) {
-            String name = request.getParameter("name");                       // label-lerden melumatlar alinir
-            String surname = request.getParameter("surname");
-            String phone = request.getParameter("phone");
-            String email = request.getParameter("email");
-            String profileDescription = request.getParameter("profile-description");
-            String address = request.getParameter("address");
-            String datepicker = request.getParameter("datepicker");
-            String birthPlace = request.getParameter("birthPlace");
-            String nationality = request.getParameter("nationality");
-
-            Date sqlDate = Date.valueOf(datepicker);         // String sql.Date-e chevrilir
-
-            CountryDaoInter countryDao = Context.instanceCountryDao();
-            List<Country> countries = countryDao.getAll();                       // country ve nationality-ler bazadan chekilir
-
-            for (Country c : countries) {
-                if (birthPlace.equals(c.getName())) {                            // label-deki country ve nationality
-                    user.setBirthPlace(c);                                       // Db-da movcud birthP. ve natio. lar arasindan sechilir
-                }                                                                // ve user-e set edilir
-
-                if (nationality.equals(c.getNationality())) {
-                    user.setNationality(c);
-                }
-            }
-
-            user.setName(name);                                                  // qalan melumatlar user-e set edilir
-            user.setSurname(surname);
-            user.setPhone(phone);
-            user.setEmail(email);
-            user.setProfileDescription(profileDescription);
-            user.setAddress(address);
-            user.setBirthDate(sqlDate);
-
-            userDao.update(user);                        // update olunur, evvelki sehifeye qayidilir
-            response.sendRedirect("users");
-
-        } else if (action.equals("back")) {
-            response.sendRedirect("users");
-        } else if (action.equals("delete")) {
-
-            userDao.delete(id);
-            response.sendRedirect("users");
-        }
+    @RequestMapping(method = RequestMethod.GET, value = "/user-details-edit")
+    public ModelAndView userDetailsEdit(@RequestParam(value = "id") Integer id) {
+        UserDetailsForm user = getForm(userService.getById(id));
+        ModelAndView mv = new ModelAndView("user-details-edit");
+        mv.addObject("user", user);
+        mv.addObject("countries", countryService.getAll());
+        mv.addObject("userId", id);
+        return mv;
     }
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            String userIdStr = request.getParameter("id");
-            if (userIdStr == null || userIdStr.trim().isEmpty()) {
-                throw new IllegalArgumentException("Id is not specified !");
-            }
+    @RequestMapping(method = RequestMethod.POST, value = "/user-details-edit")
+    public String userDetailsEdit(
+            @ModelAttribute("user") UserDetailsForm u,
+            @RequestParam(value = "userId") Integer id,
+            @RequestParam(value = "birthPlace", required = false) String birthPlace,
+            @RequestParam(value = "nationality", required = false) String nationality,
+            @RequestParam(value = "dateStr", required = false) String dateStr) {
 
-            Integer userId = Integer.parseInt(request.getParameter("id"));
-            UserDaoInter userDao = Context.instanceUserDao();
-            User u = userDao.getById(userId);
-            if (u == null) {
-                throw new IllegalArgumentException("There is no user with this id");
-            }
-            request.setAttribute("user", u);
-            request.getRequestDispatcher("user-details-edit.jsp").forward(request, response);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            response.sendRedirect("error?msg=" + ex.getMessage());
-        }
+        User user = userService.getById(id);
+
+        user.setName(u.getName());
+        user.setSurname(u.getSurname());
+        user.setPhone(u.getPhone());
+        user.setEmail(u.getEmail());
+        user.setProfileDescription(u.getProfileDescription());
+        user.setAddress(u.getAddress());
+
+        userService.update(user);
+        return "redirect:/users";
+    }
+
+    private UserDetailsForm getForm(User user) {
+        return new UserDetailsForm(
+                user.getName(),
+                user.getSurname(),
+                user.getPhone(),
+                user.getAddress(),
+                user.getEmail(),
+                user.getPassword(),
+                user.getProfileDescription());
     }
 }

@@ -6,7 +6,6 @@
 package com.company.dao.impl;
 
 import com.company.entity.EmploymentHistory;
-import com.company.entity.User;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

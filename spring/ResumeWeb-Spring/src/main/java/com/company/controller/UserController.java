@@ -21,7 +21,7 @@ public class UserController {
     @Autowired
     private UserServiceInter userService;
 
-    /* Spring tags */
+    /* MODEL_AND_VIEW */
     @RequestMapping(method = RequestMethod.GET, value = "/users")
     public ModelAndView users(
             @Valid
@@ -38,7 +38,7 @@ public class UserController {
         return mv;
     }
 
-    /* HTML tags */
+    /* PARAMETERS */
 //    @RequestMapping(method = RequestMethod.GET, value = "/users")
 //    public ModelAndView users(
 //            @RequestParam(value = "name", required = false) String name,
@@ -53,11 +53,20 @@ public class UserController {
 //        return mv;
 //    }
 
+    @RequestMapping(method = RequestMethod.POST, value = "/users") //*******************************
+    public String users(
+            @RequestParam("id") Integer id) {
+
+        System.out.println(id + "---------------------");
+        userService.delete(id);
+        return "redirect:/users";
+    }
+
     @ModelAttribute("user")
     public UserForm getEmptyUserForm() {
 //        if (true) {
 //            throw new MyException("ay daaa xeta bash verdi !");
 //        }
-        return new UserForm(null, null, null);
+        return new UserForm();
     }
 }
