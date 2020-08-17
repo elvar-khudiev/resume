@@ -40,14 +40,16 @@ public class ResumeDbAppFwJpaSpringApplication {
     public CommandLineRunner run() {
         CommandLineRunner clr = args -> {
             System.err.println("CommandLineRunner");
-            System.out.println("--------------------------------");
+
 //            userService.deleteByObject(userService.getByEmail("x"));
 //            User u = new User(1, "x", "x", "x", "x", "x");
 //            System.err.println(userService.add(u));
 
 //            User u = userService.getByEmail("elvarkhudiev@mail.ru");
+//
+//            System.out.println("--------------------------------");
 //            System.out.println("User: " + u);
-            System.out.println("--------------------------------");
+//            System.out.println("--------------------------------");
 //            System.err.println(userSkillService.getById(1016));
 //            System.out.println("--------------------------------");
 //            System.err.println(skillService.getById(1));

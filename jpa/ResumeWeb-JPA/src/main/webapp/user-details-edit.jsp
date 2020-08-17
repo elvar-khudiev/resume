@@ -133,10 +133,13 @@
             <button type="submit" class="btn-save btn btn-success" name="save" value="save">Save</button>
         </div>
     </form>
-    <form action="user-details-edit" method="POST" style="margin-bottom: -25px;">
-        <input type="hidden" name="id" value="<%=u.getId()%>"/>
+<%--    <form action="user-details-edit" method="POST" style="margin-bottom: -25px;">--%>
+<%--        <input type="hidden" name="id" value="<%=u.getId()%>"/>--%>
+<%--        <button type="submit" class="btn-back btn btn-secondary" name="action" value="back">Back</button>--%>
+<%--    </form>--%>
+    <a href="<%=request.getAttribute("backUrl")%>">
         <button type="submit" class="btn-back btn btn-secondary" name="action" value="back">Back</button>
-    </form>
+    </a>
 </div>
 </body>
 </html>

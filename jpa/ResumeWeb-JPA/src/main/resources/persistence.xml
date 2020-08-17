@@ -5,7 +5,6 @@
         <class>com.company.entity.Country</class>
         <class>com.company.entity.Skill</class>
         <class>com.company.entity.User</class>
-        <class>com.company.entity.Admin</class>
         <class>com.company.entity.EmploymentHistory</class>
         <class>com.company.entity.UserSkill</class>
         <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>

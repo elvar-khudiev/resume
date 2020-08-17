@@ -57,10 +57,8 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        profilePanel1 = new com.company.resume.panel.ProfilePanel();
-        skillsPanel1 = new com.company.resume.panel.SkillsPanel();
         separator = new javax.swing.JSeparator();
-        tp = new javax.swing.JTabbedPane();
+        pnl = new javax.swing.JTabbedPane();
         panelProfile = new com.company.resume.panel.ProfilePanel();
         panelDetails = new com.company.resume.panel.DetailsPanel();
         panelSkills = new com.company.resume.panel.SkillsPanel();
@@ -82,10 +80,10 @@ public class Main extends javax.swing.JFrame {
 
         separator.setBackground(new java.awt.Color(195, 215, 206));
 
-        tp.addTab("Profile", panelProfile);
-        tp.addTab("Details", panelDetails);
-        tp.addTab("Skills", panelSkills);
-        tp.addTab("Employment History", panelHistory);
+        pnl.addTab("Profile", panelProfile);
+        pnl.addTab("Details", panelDetails);
+        pnl.addTab("Skills", panelSkills);
+        pnl.addTab("Employment History", panelHistory);
 
         lblName.setText("Name");
 
@@ -141,7 +139,7 @@ public class Main extends javax.swing.JFrame {
 
         pnlImage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lblImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\IdeaProjects\\resume\\swing\\ResumeDesktopApp\\src\\main\\java\\com\\company\\resume\\panel\\Images\\image.jpg")); // NOI18N
+        lblImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Projects\\image.jpg")); // NOI18N
 
         javax.swing.GroupLayout pnlImageLayout = new javax.swing.GroupLayout(pnlImage);
         pnlImage.setLayout(pnlImageLayout);
@@ -149,7 +147,7 @@ public class Main extends javax.swing.JFrame {
             pnlImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlImageLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 95, Short.MAX_VALUE))
+                .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlImageLayout.setVerticalGroup(
             pnlImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,7 +218,7 @@ public class Main extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(separator)
-            .addComponent(tp, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE)
+            .addComponent(pnl, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE)
             .addComponent(pnlUserInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -230,7 +228,7 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tp, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE))
+                .addComponent(pnl, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE))
         );
 
         pack();
@@ -305,14 +303,12 @@ public class Main extends javax.swing.JFrame {
     private com.company.resume.panel.EmploymentHistoryPanel panelHistory;
     private com.company.resume.panel.ProfilePanel panelProfile;
     private com.company.resume.panel.SkillsPanel panelSkills;
+    private javax.swing.JTabbedPane pnl;
     private javax.swing.JPanel pnlImage;
     private javax.swing.JPanel pnlUserInfo;
     private javax.swing.JPanel pnlUserInfo1;
     private javax.swing.JPanel pnlUserInfo2;
-    private com.company.resume.panel.ProfilePanel profilePanel1;
     private javax.swing.JSeparator separator;
-    private com.company.resume.panel.SkillsPanel skillsPanel1;
-    private javax.swing.JTabbedPane tp;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtSurname;
     // End of variables declaration//GEN-END:variables

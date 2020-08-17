@@ -21,7 +21,6 @@ import java.sql.Date;
 import java.util.List;
 
 /**
- *
  * @author HP
  */
 @WebServlet(name = "UserDetailsEditController", urlPatterns = {"/user-details-edit"})
@@ -38,7 +37,7 @@ public class UserDetailsEditController extends HttpServlet {
         String idStr = request.getParameter("id");
         Integer id = null;
 
-        if(idStr != null && !idStr.trim().isEmpty()) {
+        if (idStr != null && !idStr.trim().isEmpty()) {
             id = Integer.parseInt(request.getParameter("id"));
         } else {
             System.out.println("Id is empty !");
@@ -85,9 +84,6 @@ public class UserDetailsEditController extends HttpServlet {
             userDao.update(user);                        // update olunur, evvelki sehifeye qayidilir
             response.sendRedirect("users");
 
-        } else if (action.equals("back")) {
-
-            response.sendRedirect("users");
         } else if (action.equals("delete")) {
 
             userDao.deleteById(id);
@@ -110,6 +106,13 @@ public class UserDetailsEditController extends HttpServlet {
                 throw new IllegalArgumentException("There is no user with this id");
             }
             request.setAttribute("user", u);
+            request.setAttribute("backUrl",
+                    "http://" +
+                            request.getServerName() +
+                            ":" +
+                            request.getLocalPort() +
+                            request.getContextPath() +
+                            "/users");
             request.getRequestDispatcher("user-details-edit.jsp").forward(request, response);
         } catch (Exception ex) {
             ex.printStackTrace();

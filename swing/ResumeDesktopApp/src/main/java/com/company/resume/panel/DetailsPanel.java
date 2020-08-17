@@ -80,9 +80,9 @@ public class DetailsPanel extends javax.swing.JPanel {
             for (Country c : countries) {
                 cbBirthplace.addItem(c);
                 cbNationality.addItem(c);
-                System.out.println("cb size: " + cbBirthplace.getItemCount());
-                System.out.println("birthplace size: " + cbBirthplace.getComponentCount());
-                System.out.println("nationality size: " + cbBirthplace.getComponentCount());
+//                System.out.println("cb size: " + cbBirthplace.getItemCount());
+//                System.out.println("birthplace size: " + cbBirthplace.getComponentCount());
+//                System.out.println("nationality size: " + cbBirthplace.getComponentCount());
             }
         }
     }

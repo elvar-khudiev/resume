@@ -41,7 +41,7 @@
     </script>
 <body>
 <%
-        CountryDaoInter countryDao = com.company.main.Context.instanceCountryDao();
+    CountryDaoInter countryDao = com.company.main.Context.instanceCountryDao();
 %>
 <div class="ad">
     <h2 style="text-align: center">Your ad here</h2>
@@ -121,9 +121,9 @@
             <button type="submit" class="btn-save btn btn-success" name="save" value="Save">Create</button>
         </div>
     </form>
-    <form action="user-create" method="POST" style="margin-bottom: -110px;">
+    <a href="<%=request.getAttribute("backUrl")%>">
         <button type="submit" class="btn-back btn btn-secondary" name="action" value="back">Back</button>
-    </form>
+    </a>
 </div>
 </body>
 </html>

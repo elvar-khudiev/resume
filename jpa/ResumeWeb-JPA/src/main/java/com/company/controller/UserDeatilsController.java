@@ -24,13 +24,6 @@ import java.io.IOException;
 public class UserDeatilsController extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        response.sendRedirect("users");
-    }
-
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             String userIdStr = request.getParameter("id");
@@ -45,6 +38,13 @@ public class UserDeatilsController extends HttpServlet {
                 throw new IllegalArgumentException("There is no user with this id");
             }
             request.setAttribute("user", u);
+            request.setAttribute("backUrl",
+                    "http://" +
+                            request.getServerName() +
+                            ":" +
+                            request.getLocalPort() +
+                            request.getContextPath() +
+                            "/users");
             request.getRequestDispatcher("user-details.jsp").forward(request, response);
         } catch (Exception ex) {
             ex.printStackTrace();

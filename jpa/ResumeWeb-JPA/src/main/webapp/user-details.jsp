@@ -29,82 +29,84 @@
     <h2 style="text-align: center">Your ad here</h2>
 </div>
 <div class="dt-container">
-    <form action="user-details" method="POST">
-        <center>
-            <h1 class="display-4">Details</h1>
-        </center>
+    <center>
+        <h1 class="display-4">Details</h1>
+    </center>
 
-        <input type="hidden" name="action" value="info"/>
-        <input type="hidden" name="id" value="<%=u.getId()%>"/>
+    <input type="hidden" name="action" value="info"/>
+    <input type="hidden" name="id" value="<%=u.getId()%>"/>
 
-        <div>
-            <label for="name">Name</label>
-            <h5 type="text" name="name" class="col-4"><%=u.getName()%>
-            </h5>
-        </div>
-        <div>
-            <label for="surname">Surname</label>
-            <h5 type="text" name="surname" class="col-4"><%=u.getSurname()%>
-            </h5>
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <h5 type="text" name="email" class="col-4"><%=u.getEmail()%>
-            </h5>
-        </div>
-        <div>
-            <label for="phone">Phone</label>
-            <h5 type="text" name="phone" class="col-4"><%=u.getPhone()%>
-            </h5>
-        </div>
+    <div>
+        <label for="name">Name</label>
+        <h5 type="text" name="name" class="col-4"><%=u.getName()%>
+        </h5>
+    </div>
+    <div>
+        <label for="surname">Surname</label>
+        <h5 type="text" name="surname" class="col-4"><%=u.getSurname()%>
+        </h5>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <h5 type="text" name="email" class="col-4"><%=u.getEmail()%>
+        </h5>
+    </div>
+    <div>
+        <label for="phone">Phone</label>
+        <h5 type="text" name="phone" class="col-4"><%=u.getPhone()%>
+        </h5>
+    </div>
 
-        <div class="div-image">
+    <div class="div-image">
 
-        </div>
+    </div>
 
-        <div>
-            <label for="profile-description">Profile Description</label>
-            <h5>
+    <div>
+        <label for="profile-description">Profile Description</label>
+        <h5>
                 <textarea disabled class="form-control" rows="10" name="profile-description"
                           style="font-size: 18px; border: none; background-color: #f5eded;"><%=u.getProfileDescription()%></textarea>
+        </h5>
+    </div>
+
+    <div class="div-3">
+        <div class="div-side-by-side">
+            <label for="address">Address</label>
+            <h5 type="text" name="address" class="col-8"><%=u.getAddress()%>
             </h5>
         </div>
 
-        <div class="div-3">
-            <div class="div-side-by-side">
-                <label for="address">Address</label>
-                <h5 type="text" name="address" class="col-8"><%=u.getAddress()%>
-                </h5>
-            </div>
-
-            <%
-                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-                Date utilDate = new Date(u.getBirthdate().getTime());
-                String dateStr = format.format(utilDate);
-            %>
-            <div class="div-side-by-side birth-date">
-                <label class="control-label" for="datepicker">Birth Date</label>
-                <h5 type="text" name="datepicker" class="col-8"><%=dateStr%>
-                </h5>
-            </div>
-
-            <div class="div-side-by-side">
-                <label for="birthPlace">Birth Place</label></br>
-                <h5 type="text" name="birthplace" class="col-8"><%=u.getBirthplaceId().getName()%>
-                </h5>
-            </div>
-
-            <div class="div-side-by-side">
-                <label for="nationality">Nationality</label></br>
-                <h5 type="text" name="nationality" class="col-8"><%=u.getNationalityId().getNationality()%>
-                </h5>
-            </div>
+        <%
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+            Date utilDate = new Date(u.getBirthdate().getTime());
+            String dateStr = format.format(utilDate);
+        %>
+        <div class="div-side-by-side birth-date">
+            <label class="control-label" for="datepicker">Birth Date</label>
+            <h5 type="text" name="datepicker" class="col-8"><%=dateStr%>
+            </h5>
         </div>
 
-        <div align="center">
+        <div class="div-side-by-side">
+            <label for="birthPlace">Birth Place</label></br>
+            <h5 type="text" name="birthplace" class="col-8"><%=u.getBirthplaceId().getName()%>
+            </h5>
+        </div>
+
+        <div class="div-side-by-side">
+            <label for="nationality">Nationality</label></br>
+            <h5 type="text" name="nationality" class="col-8"><%=u.getNationalityId().getNationality()%>
+            </h5>
+        </div>
+    </div>
+
+    <div align="center">
+        <a href="<%=request.getAttribute("backUrl")%>">
             <button type="submit" class="btn btn-secondary" style="width: 100px;" name="back" value="back">Back</button>
-        </div>
-    </form>
+        </a>
+    </div>
+
+
 </div>
 </body>
 </html>

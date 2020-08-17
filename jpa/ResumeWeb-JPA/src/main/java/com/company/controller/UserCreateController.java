@@ -79,13 +79,18 @@ public class UserCreateController extends HttpServlet {
             UserDaoInter userDao = Context.instanceUserDao();
             userDao.add(user);                                              // add olunur, evvelki sehifeye qayidilir
             response.sendRedirect("users");
-        } else if (action.equals("back")) {
-            response.sendRedirect("users");
         }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("backUrl",
+                "http://" +
+                        request.getServerName() +
+                        ":" +
+                        request.getLocalPort() +
+                        request.getContextPath() +
+                        "/users");
         request.getRequestDispatcher("user-create.jsp").forward(request, response);
     }
 }
