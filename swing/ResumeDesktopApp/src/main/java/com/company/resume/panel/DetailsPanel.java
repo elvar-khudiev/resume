@@ -34,7 +34,7 @@ public class DetailsPanel extends javax.swing.JPanel {
         initComponents();
     }
 
-    public void fillUserComponents() {                   // loggedInUser --> text fields
+    public void fillUserComponents() {     // loggedInUser --> text fields
         fillWindow();
 
         User loggedInUser = Config.loggedInUser;
@@ -50,7 +50,7 @@ public class DetailsPanel extends javax.swing.JPanel {
         cbNationality.setSelectedItem(loggedInUser.getNationality());
     }
 
-    public void fillUser(User user) {                     // User fieldlere uygun yenilendi
+    public void fillUser(User user) {      // User fieldlere uygun yenilendi
         try {
             String birthDate = txtBirthdate.getText();
             String phone = txtPhone.getText();

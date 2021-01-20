@@ -66,7 +66,7 @@ public class UserRestController {
 
     @CrossOrigin(exposedHeaders = "Access-Control-Allow-Origin")
     @PostMapping("/users")
-    public ResponseEntity<ResponseDTO> addUser (@RequestBody UserDTO userDTO) {
+    public ResponseEntity<ResponseDTO> addUser(@RequestBody UserDTO userDTO) {
 
         User user = new User();
 
@@ -90,6 +90,9 @@ public class UserRestController {
         User user = userService.getById(id);
         userService.delete(id);
 
-        return ResponseEntity.ok(ResponseDTO.of(new UserDTO(user), "Successfully deleted"));
+        return ResponseEntity.ok(
+                ResponseDTO.of(
+                        new UserDTO(user),
+                        "Successfully deleted"));
     }
 }

@@ -20,72 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1362dbc0-5761-45a3-a6ea-121144be181e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../jdbc/ResumeDbAppFW/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/.idea/ResumeWeb.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/ResumeDbAppFW-JPA.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/.idea/ResumeWeb-JPA.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeDbAppFW/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeDbAppFW/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeDbAppFW/src/main/java/com/company/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeDbAppFW/src/main/java/com/company/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jdbc/ResumeWeb/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdbc/ResumeWeb/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__at_favre_lib_bcrypt_0_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__at_favre_lib_bytes_0_4_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_12_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_4_12_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_jboss_jandex_2_1_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/ResumeDbAppFW-JPA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/ResumeDbAppFW-JPA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/java/com/company/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserCreateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserDeatilsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserDeatilsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserDetailsEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/java/com/company/controller/UserDetailsEditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/resources/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/resources/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/webapp/user-create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/webapp/user-create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/webapp/user-details-edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/webapp/user-details-edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/webapp/user-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/ResumeWeb-JPA/src/main/webapp/user-details.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest_api/ResumeRestAPI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResumeDbAppFW-JPA-Spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ResumeDbAppFW-JPA-Spring.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/ResumeDbAppFwJpaSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserRepositoryCustomImplIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRepositoryCustomImplIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/ResumeWeb-Spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/ResumeWeb-Spring.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../swing/ResumeDesktopApp/src/main/java/com/company/resume/main/Main.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../swing/ResumeDesktopApp/src/main/java/com/company/resume/main/Main.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../swing/ResumeDesktopApp/src/main/java/com/company/resume/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../swing/ResumeDesktopApp/src/main/java/com/company/resume/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWeb-Spring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWeb-Spring/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../swing/ResumeDesktopApp/nbactions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../swing/ResumeDesktopApp/nbactions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../swing/ResumeDesktopApp/src/main/java/com/company/resume/main/MainTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../swing/ResumeDesktopApp/src/main/java/com/company/resume/panel/DetailsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../swing/ResumeDesktopApp/src/main/java/com/company/resume/panel/DetailsPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +73,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ResumeWeb-Spring" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jpa/ResumeDbAppFW-JPA" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -352,6 +293,7 @@
       <workItem from="1593189154860" duration="765000" />
       <workItem from="1594026191927" duration="2043000" />
       <workItem from="1594278639574" duration="627000" />
+      <workItem from="1605448289024" duration="2943000" />
     </task>
     <servers />
   </component>
@@ -371,42 +313,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594026557252">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605456483103">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1594026557252" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1594278675447">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594278675447" />
-    <state width="1323" height="198" key="GridCell.Tab.0.bottom" timestamp="1594028256401">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="198" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594028256401" />
-    <state width="1323" height="198" key="GridCell.Tab.0.center" timestamp="1594028256401">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="198" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594028256401" />
-    <state width="1323" height="198" key="GridCell.Tab.0.left" timestamp="1594028256401">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="198" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594028256401" />
-    <state width="1323" height="198" key="GridCell.Tab.0.right" timestamp="1594028256401">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="198" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594028256401" />
-    <state x="154" y="0" key="SettingsEditor" timestamp="1594026630289">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="154" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594026630289" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1594026698703">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1594026698703" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1594026708255">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1594026708255" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605456483103" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ResumeDbAppFW_JPA_Spring$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1587715168854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
